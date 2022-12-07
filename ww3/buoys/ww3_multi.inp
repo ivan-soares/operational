@@ -1,0 +1,40 @@
+$ ---------------------------------------------------------
+$          WAVEWATCH III multi-grid input file
+$ ---------------------------------------------------------
+  2 1 T 1 F F
+$
+ 'gfs'  F F T F F F F
+ 'points'
+ 'pac1.00' 'no' 'no' 'gfs' 'no' 'no' 'no' 'no'  1 1  0.00 1.00  F
+ 'npo0.33' 'no' 'no' 'gfs' 'no' 'no' 'no' 'no'  2 1  0.00 1.00  F
+$
+   20211111 000000  20211112 000000
+$
+   T  F
+$
+   20211111 000000  3600  20211112 000000
+   N
+   /home/ivans/operational/ww3/inpfiles DPT WND HS LM T01 T02 FP DIR DP SPR PHS PLP PTP PDIR PSPR PWS TWS PNR TUS USS
+   20211111 000000  3600  20211112 000000
+$
+$ Four additional output types:
+$
+$  track output
+$  restart files
+$  boundary output
+$  separated wave field data
+$
+   20211111 000000      0  20211112 000000
+   20211112 000000      1  20211112 000000
+   20211111 000000      0  20211112 000000
+   20211111 000000      0  20211112 000000
+$
+$    0 999 1 0 999 1 T
+$
+  'the_end'  0
+$
+  'STP'
+$
+$ ---------------------------------------------------------
+$                   End of input file
+$ ---------------------------------------------------------
