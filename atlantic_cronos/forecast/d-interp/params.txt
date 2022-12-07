@@ -1,0 +1,85 @@
+#!/bin/bash
+#
+
+	region='brz'
+	domain='brz0.05'
+	version='01d'
+	ogcm='glby'
+
+	echo
+	echo " ... acessing names and sigma params for $domain_$version"
+	echo
+
+	nsig=30
+	ndep=40
+	incr=5.00e-02
+
+	# in this cases we have 1 file per day
+	# with time interval of 6 hours, resulting in 
+	# 4 times per file
+	dh=6
+	let ntimes=24/$dh  
+	let ndat=${ntimes}*${ndays}
+
+	#### hncoda GLBy domain name
+	hncoda_domain='brz0.08'
+	#hncoda_domain='55W23W-35S12N_06h'
+
+	#### info for remapbil of ogcm
+	ogcm_lon1='-53.0'
+	ogcm_lat1='-31.0'
+	ogcm_nlon='363'
+	ogcm_nlat='526'
+	ogcm_dlon='0.08'
+	ogcm_dlat='0.08'
+
+	#### sigma coordinate params: needed when running step01b
+
+	spheri='1'
+	vtrans='2'
+	vstret='4'
+	thetas='4.0'
+	thetab='4.0'
+	tcline='100'
+	hc='100'
+
+	sigparams="$spheri $vtrans $vstret $thetas $thetab $tcline $hc $nsig"
+
+	#### dir & file names
+
+        operdir="$HOME/operational/forecast_new/atlantic"
+        romsdir="$operdir/d-code-roms"
+
+	grdfile="grid_${domain}_${version}.nc"
+	clmfile="input_clm_${domain}_${version}_${today}_${ogcm}.nc"
+	bryfile="input_bry_${domain}_${version}_${today}_${ogcm}.nc"
+
+        ogcm01="$operdir/d-out-storage/$today/${ogcm}_${hncoda_domain}_${today}.nc"
+	etopofile="$HOME/remote/sli/data/etopo/ETOPO_GLOBAL_REMO_BR.nc"
+
+	#cdo="/home/$user/apps/cdo-1.9.7/bin/cdo"
+	cdo="cdo"
+
+	#### get roms grid dimensions from grdfile
+
+	if [ -e $grdfile ]; then rm $grdfile; fi
+	cp $romsdir/grids/$grdfile .
+
+	nx=`$cdo -s --no_warnings -griddes $grdfile | grep xsize  | grep -m1 "" | awk '{print $3}'`
+	ny=`$cdo -s --no_warnings -griddes $grdfile | grep ysize  | grep -m1 "" | awk '{print $3}'`
+	x1=`$cdo -s --no_warnings  info    $grdfile | grep "23 : 0000-00-00" | awk '{print $9}'`
+	x2=`$cdo -s --no_warnings  info    $grdfile | grep "23 : 0000-00-00" | awk '{print $11}'`
+	y1=`$cdo -s --no_warnings  info    $grdfile | grep "24 : 0000-00-00" | awk '{print $9}'`
+	y2=`$cdo -s --no_warnings  info    $grdfile | grep "24 : 0000-00-00" | awk '{print $11}'`
+
+	echo 
+	echo " ... grid size is $nx x $ny ..." 
+	echo " ... grid limits are: x1,x2 = $x1,$x2, y1,y2 = $y1,$y2"
+	echo " ... grid resolution is regular: $incr x $incr"
+	echo
+
+	nlon=$nx
+	nlat=$ny
+
+######################################## the end ##########################################################
+
