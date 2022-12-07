@@ -1,6 +1,6 @@
 #!/bin/bash
 
-	today=20221106
+	today=20221206
 	ndays=10
 	nn=1
 
