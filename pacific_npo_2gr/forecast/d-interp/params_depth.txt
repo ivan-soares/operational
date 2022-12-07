@@ -1,0 +1,130 @@
+#!/bin/bash
+#
+
+        #region='toc'
+        #domain='npo0.0267'
+        #version='01c'
+        #ogcm='jenny'
+
+        echo
+        echo " ... acessing names and sigma params for ${domain}_${version}"
+        echo
+
+        nsig=30
+        incr=0.08
+
+        rotang="0."
+        reftime='20000101'
+        wesn_ogcm="-167.0 -117.0 15.0 47.0"
+
+#        lon1=-50.
+#        lon2=-38.
+#        lat1=-30.
+#        lat2=-21.
+
+        #### sigma coordinate params: needed when running step01b
+
+        spheri='1'
+        vtrans='2'
+        vstret='4'
+        thetas='10.0'
+        thetab='4.0'
+        tcline='150'
+        hc='150'
+
+        sig_params="$spheri $vtrans $vstret $thetas $thetab $tcline $hc $nsig"
+
+        ##### file & dir names
+
+        interpdir="d-interp"
+        tmpmsk="roms_${domain}_${version}.tmpmsk"
+
+        ogcmdir="d-inputs/hncoda_npo0.08_${dh}h"
+        tmpogcm="$ogcmdir/${ogcm}_YYYYMMDD.nc"
+
+        interp4roms="$HOME/scripts/4roms"
+
+        romsgrd="grid_${domain}_${version}.nc"
+        tmpclm="roms_clm_YYYYMMDD.nc"
+        tmpbry="roms_bry_YYYYMMDD.nc"
+
+        grdfile=$romsgrd
+
+        cdo="$HOME/Applications/cdo-1.9.7/bin/cdo -s --no_warnings"
+        cdo="cdo -s --no_warnings"
+
+
+        #### get roms grid dimensions from grdfile
+
+        nx=`cdo -s --no_warnings -griddes $grdfile | grep xsize  | grep -m1 "" | awk '{print $3}'`
+        ny=`cdo -s --no_warnings -griddes $grdfile | grep ysize  | grep -m1 "" | awk '{print $3}'`
+        x1=`cdo -s --no_warnings  info    $grdfile | grep "23 : 0000-00-00" | awk '{print $9}'`
+        x2=`cdo -s --no_warnings  info    $grdfile | grep "23 : 0000-00-00" | awk '{print $11}'`
+        y1=`cdo -s --no_warnings  info    $grdfile | grep "24 : 0000-00-00" | awk '{print $9}'`
+        y2=`cdo -s --no_warnings  info    $grdfile | grep "24 : 0000-00-00" | awk '{print $11}'`
+
+        echo 
+        echo " ... grid size is $nx x $ny ..." 
+        echo " ... grid limits are: x1,x2 = $x1,$x2, y1,y2 = $y1,$y2"
+        echo " ... grid resolution is regular: $incr x $incr"
+        echo
+
+        nlon=$nx
+        nlat=$ny
+
+        grd_info="$x1 $x2 $y1 $y2 $incr"
+
+        #### choose the number of layers in OGCM data set ##########################  
+
+        if [ $ogcm == 'glby' ]; then
+                ogcm_dt=6
+                ndep=40
+        elif [ $ogcm == 'glbv' ]; then
+                ogcm_dt=6
+                ndep=40
+        elif [ $ogcm == 'nemo' ]; then
+                ogcm_dt=24
+                ndep=50
+        elif [ $ogcm == 'jenny' ]; then
+                ogcm_dt=24
+                ndep=8
+        elif [ $ogcm == 'mld' ]; then
+                ogcm_dt=24
+                ndep=22
+        else
+                echo; echo ' ... dont know this ogcm name, exiting' 
+                echo; exit
+        fi
+
+
+        #### depths for vertical interpolation
+
+        if [ "$ogcm" == "glbv" -o "$ogcm" == "glbu" -o "$ogcm" == "glby" ]; then
+        ogcm_depths="0., 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50,  \
+        60, 70, 80, 90, 100, 125, 150, 200, 250, 300, 350, 400, 500, 600, 700, \
+        800, 900, 1000, 1250, 1500, 2000, 2500, 3000, 4000, 7000"
+
+        elif [ "$ogcm" == "nemo" ]; then
+        ogcm_depths="0., 1.541375, 2.645669, 3.819495, 5.078224, 6.440614,    \
+        7.92956, 9.572997, 11.405, 13.46714, 15.81007, 18.49556, 21.59882,    \
+        25.21141, 29.44473, 34.43415, 40.34405, 47.37369, 55.76429, 65.80727, \
+        77.85385, 92.32607, 109.7293, 130.666, 155.8507, 186.1256, 222.4752,  \
+        266.0403, 318.1274, 380.213, 453.9377, 541.0889, 643.5668, 763.3331,  \
+        902.3393, 1062.44, 1245.291, 1452.251, 1684.284, 1941.893, 2225.078,  \
+        2533.336, 2865.703, 3220.82, 3597.032, 3992.484, 4405.224, 4833.291,  \
+        5274.784, 5727.917"
+
+        elif [ "$ogcm" == "jenny" ]; then
+        ogcm_depths="0, 2, 4, 6, 8, 10, 12, 14 "
+
+	elif [ "$ogcm" == "mld" ]; then
+        ogcm_depths="0, 2, 4, 6, 8, 10, 12, 14, 20, 30, 40, 50,  \
+        60, 70, 80, 90, 100, 125, 150, 175, 200, 250"
+
+
+
+        fi
+
+#### the end
+
+
