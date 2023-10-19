@@ -20,7 +20,7 @@
 
 	then, in your github create a repository and get its address, such as:
 
-	git@github.com:Atlantech-Servicos-Ambientais/operational.git (YOU GET IT BY CLICKING IN 'CODE')
+	git@github.com:ivan-soares/operational.git (YOU GET IT BY CLICKING IN 'CODE')
 
 	then, in the same bash shell in your PC, type:
 
@@ -35,7 +35,7 @@
 
 	git add 'dir or file names'
 	git commit -m "Commit message"
-	git push origin main
+	git push origin master
 
 	###### don't forget to update file .gitignore to avoid committing heavy files such as *.nc
 
