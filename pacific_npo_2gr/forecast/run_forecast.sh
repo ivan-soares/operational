@@ -53,7 +53,7 @@
 
 ####################################################################################################
 
-	sleep 2s
+	#sleep 2s
 
 	today=$1
 	ndays=$2
@@ -80,6 +80,8 @@
 	echo
 
 	args="$today $ogcm $here $log"
+	args01="$today glby $here $log"
+	args02="$today nemo $here $log"
 
 ##################################  DO IT ALL !!!  #################################################
 
@@ -163,13 +165,19 @@
                 ./step03_download_ogcm.sh   $args; wait
         fi
 
+
         if [ $N = 134 ]; then
                 ./step01_startup.sh         $args; wait
                 ./step03_download_ogcm.sh   $args; wait
                 ./step04_make_clim4roms.sh  $args; wait
         fi
 
-        if [ $N = 13 ]; then
+	if [ $N = 14 ]; then
+                ./step01_startup.sh         $args; wait
+                ./step04_make_clim4roms.sh  $args; wait
+        fi
+
+	if [ $N = 13 ]; then
                 ./step01_startup.sh         $args; wait
                 ./step03_download_ogcm.sh   $args; wait
         fi

@@ -83,7 +83,14 @@
            echo; echo " ... didnt find ROMS init file $romsini2"
            echo; echo " ... will use file $stodir/$today/$romsclm2"; echo
            if [ -e roms_ini_2.nc ]; then rm roms_ini_2.nc; fi
-           ln -s $stodir/$today/$romsclm2 roms_ini_2.nc
+	   $operdir/xtra_make_clim_grd2.sh $today
+	   if [ -e  $stodir/$today/$romsclm2  ]; then
+		echo " ... file $romsclm2 is OK"; echo
+                ln -s $stodir/$today/$romsclm2 roms_ini_2.nc
+           else
+		echo " ... DIDNT find file $romsclm2, exiting !!"; echo
+		exit
+	   fi
            #ramp_flag='tide_with_ramp' this flag applies to the larger grid only.
            nrrec2=0
         fi

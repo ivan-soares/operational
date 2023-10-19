@@ -1,12 +1,12 @@
 #!/bin/bash
 
-	today=20221206
-	ndays=10
-	nn=1
+	#today=20230707
+	#ndays=4
+	#nn=1
 
-	yr=${today:0:4}
-	mm=${today:4:2}
-	dd=${today:6:2}
+	#yr=${today:0:4}
+	#mm=${today:4:2}
+	#dd=${today:6:2}
 
 	#sleep 900s
 
@@ -14,13 +14,25 @@
 	echo " +++ Starting script to run roms many days +++"
 	echo
 
+
+	for dd in {12..23}; do
+
+	today="202308${dd}"
+	yr=${today:0:4}
+	mm=${today:4:2}
+
+
+	nn=1
+	ndays=1
+        
+
 	while [ $nn -le $ndays ]; do
 
 	    echo " ... running forecast for day $today"
 
 	    if [ ! -e d-storage/$today ]; then mkdir d-storage/$today ; fi
 
-	    ./run_forecast.sh $today 1 nemo 15 >& logfile_$today.log; wait 
+	    ./run_forecast.sh $today 1 nemo 14 >& logfile_${today}.log; wait 
 
 	    today=`find_tomorrow.sh $yr $mm $dd`
 	    yr=${today:0:4}
@@ -29,7 +41,9 @@
 
 	    let nn=$nn+1
 
-	done	
+	done
+	done
+
 
 	#./run_forecast.sh $today 7 'glby' 1; wait
 	#./run_forecast.sh $today 7 'glby' 5; wait

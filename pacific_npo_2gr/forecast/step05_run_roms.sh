@@ -119,7 +119,7 @@
 	echo " ... starting the model at $now"
 	echo
 
-	$HOME/apps/openmpi-4.1.1/bin/mpirun -np $ntiles $romsdir/codes/$roms_exec $inpdir/ocean_${expt}.in >& roms.log &
+	nice -n 1 $HOME/apps/openmpi-4.1.1/bin/mpirun -np $ntiles $romsdir/codes/$roms_exec $inpdir/ocean_${expt}.in >& roms.log &
 	#srun -n 60 --mpi=pmi2 $roms_codedir/$roms_exec $inpdir/ocean_${expt}.in >& roms.log &
 	wait
 

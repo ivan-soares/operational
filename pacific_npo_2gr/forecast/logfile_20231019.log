@@ -1,0 +1,1772 @@
+
+ ==> STARTING ROMS/WW3 7-DAY FORECAST @ 2023/10/19 01:11:01 <== 
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/19 01:11:01 HERE I am for step 01: start forecast <==
+
+
+ ... today is 2023-10-19
+
+ ... dir /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019 doesnt exist, will create it
+ ... dir /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary exists, will clean it
+
+ ... end of step 01 
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/19 01:11:02 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 02: download forcing gfs data <==
+
+
+ ... today is 2023-10-19
+ ... will download 24 hours
+ ... will store downloaded files in folder /home/ivans/operational/pacific_npo_2gr/forecast/d-storage
+
+
+ +++ Starting script get_gfs_nomads_oneday+forecast.sh +++
+
+ ... today is 20231019
+ ... will download 1 day(s)
+
+
+vars = :UGRD:10 m above|:VGRD:10 m above|:PREMSL|:RH:2 m above|:SPFH:2 m above|:TMP:2 m above|:PRMSL|:DSWRF|:DLWRF|:USWRF:surface|:ULWRF:surface|:PRATE:surface|:TMP:surface|:TCDC:entire atmosphere|:TCDC:high cloud layer|:TCDC:low cloud layer|:TCDC:middle cloud layer
+
+2023-10-19 01:11:39 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231018/18/atmos/gfs.t18z.pgrb2.0p25.f006 [546251571/546251571] -> "nomads.tmp" [1]
+1:0:d=2023101818:PRMSL:mean sea level:6 hour fcst:
+563:415728089:d=2023101818:TMP:surface:6 hour fcst:
+581:423154431:d=2023101818:TMP:2 m above ground:6 hour fcst:
+582:423660314:d=2023101818:SPFH:2 m above ground:6 hour fcst:
+584:425392421:d=2023101818:RH:2 m above ground:6 hour fcst:
+588:427726027:d=2023101818:UGRD:10 m above ground:6 hour fcst:
+589:428687977:d=2023101818:VGRD:10 m above ground:6 hour fcst:
+593:430788605:d=2023101818:PRATE:surface:6 hour fcst:
+595:432050204:d=2023101818:PRATE:surface:0-6 hour ave fcst:
+636:451361842:d=2023101818:TCDC:entire atmosphere:6 hour fcst:
+637:452196974:d=2023101818:TCDC:entire atmosphere:0-6 hour ave fcst:
+653:468308980:d=2023101818:DSWRF:surface:0-6 hour ave fcst:
+654:469267978:d=2023101818:DLWRF:surface:0-6 hour ave fcst:
+655:470191216:d=2023101818:USWRF:surface:0-6 hour ave fcst:
+656:471065357:d=2023101818:ULWRF:surface:0-6 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f003
+
+2023-10-19 01:11:52 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f003 [543611638/543611638] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:3 hour fcst:
+563:413797089:d=2023101900:TMP:surface:3 hour fcst:
+581:421444141:d=2023101900:TMP:2 m above ground:3 hour fcst:
+582:421948905:d=2023101900:SPFH:2 m above ground:3 hour fcst:
+584:423694482:d=2023101900:RH:2 m above ground:3 hour fcst:
+588:426381739:d=2023101900:UGRD:10 m above ground:3 hour fcst:
+589:427344793:d=2023101900:VGRD:10 m above ground:3 hour fcst:
+593:429452187:d=2023101900:PRATE:surface:3 hour fcst:
+595:430717085:d=2023101900:PRATE:surface:0-3 hour ave fcst:
+636:449480363:d=2023101900:TCDC:entire atmosphere:3 hour fcst:
+637:450307391:d=2023101900:TCDC:entire atmosphere:0-3 hour ave fcst:
+653:465571977:d=2023101900:DSWRF:surface:0-3 hour ave fcst:
+654:466368706:d=2023101900:DLWRF:surface:0-3 hour ave fcst:
+655:467321127:d=2023101900:USWRF:surface:0-3 hour ave fcst:
+656:468007536:d=2023101900:ULWRF:surface:0-3 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f006
+
+2023-10-19 01:13:15 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f006 [544791881/544791881] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:6 hour fcst:
+563:413379499:d=2023101900:TMP:surface:6 hour fcst:
+581:420845862:d=2023101900:TMP:2 m above ground:6 hour fcst:
+582:421720335:d=2023101900:SPFH:2 m above ground:6 hour fcst:
+584:423467771:d=2023101900:RH:2 m above ground:6 hour fcst:
+588:426509321:d=2023101900:UGRD:10 m above ground:6 hour fcst:
+589:427473290:d=2023101900:VGRD:10 m above ground:6 hour fcst:
+593:429655126:d=2023101900:PRATE:surface:6 hour fcst:
+595:431007113:d=2023101900:PRATE:surface:0-6 hour ave fcst:
+636:450215626:d=2023101900:TCDC:entire atmosphere:6 hour fcst:
+637:451046310:d=2023101900:TCDC:entire atmosphere:0-6 hour ave fcst:
+653:467090622:d=2023101900:DSWRF:surface:0-6 hour ave fcst:
+654:467998386:d=2023101900:DLWRF:surface:0-6 hour ave fcst:
+655:468917871:d=2023101900:USWRF:surface:0-6 hour ave fcst:
+656:469803538:d=2023101900:ULWRF:surface:0-6 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f009
+
+2023-10-19 01:14:27 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f009 [541545497/541545497] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:9 hour fcst:
+563:411132962:d=2023101900:TMP:surface:9 hour fcst:
+581:418603275:d=2023101900:TMP:2 m above ground:9 hour fcst:
+582:419479401:d=2023101900:SPFH:2 m above ground:9 hour fcst:
+584:421609322:d=2023101900:RH:2 m above ground:9 hour fcst:
+588:424664871:d=2023101900:UGRD:10 m above ground:9 hour fcst:
+589:425629684:d=2023101900:VGRD:10 m above ground:9 hour fcst:
+593:427819235:d=2023101900:PRATE:surface:9 hour fcst:
+595:429170466:d=2023101900:PRATE:surface:6-9 hour ave fcst:
+636:448173306:d=2023101900:TCDC:entire atmosphere:9 hour fcst:
+637:449012710:d=2023101900:TCDC:entire atmosphere:6-9 hour ave fcst:
+653:464369788:d=2023101900:DSWRF:surface:6-9 hour ave fcst:
+654:465172319:d=2023101900:DLWRF:surface:6-9 hour ave fcst:
+655:466123394:d=2023101900:USWRF:surface:6-9 hour ave fcst:
+656:466842427:d=2023101900:ULWRF:surface:6-9 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f012
+
+2023-10-19 01:15:33 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f012 [542795164/542795164] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:12 hour fcst:
+563:411213090:d=2023101900:TMP:surface:12 hour fcst:
+581:418687423:d=2023101900:TMP:2 m above ground:12 hour fcst:
+582:419567424:d=2023101900:SPFH:2 m above ground:12 hour fcst:
+584:421693037:d=2023101900:RH:2 m above ground:12 hour fcst:
+588:424745477:d=2023101900:UGRD:10 m above ground:12 hour fcst:
+589:425715679:d=2023101900:VGRD:10 m above ground:12 hour fcst:
+593:427897517:d=2023101900:PRATE:surface:12 hour fcst:
+595:429161070:d=2023101900:PRATE:surface:6-12 hour ave fcst:
+636:448405435:d=2023101900:TCDC:entire atmosphere:12 hour fcst:
+637:449238606:d=2023101900:TCDC:entire atmosphere:6-12 hour ave fcst:
+653:465361025:d=2023101900:DSWRF:surface:6-12 hour ave fcst:
+654:466307314:d=2023101900:DLWRF:surface:6-12 hour ave fcst:
+655:467227865:d=2023101900:USWRF:surface:6-12 hour ave fcst:
+656:468127058:d=2023101900:ULWRF:surface:6-12 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f015
+
+2023-10-19 01:15:51 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f015 [537936541/537936541] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:15 hour fcst:
+563:409322136:d=2023101900:TMP:surface:15 hour fcst:
+581:416793301:d=2023101900:TMP:2 m above ground:15 hour fcst:
+582:417303407:d=2023101900:SPFH:2 m above ground:15 hour fcst:
+584:419047542:d=2023101900:RH:2 m above ground:15 hour fcst:
+588:421391235:d=2023101900:UGRD:10 m above ground:15 hour fcst:
+589:422361195:d=2023101900:VGRD:10 m above ground:15 hour fcst:
+593:424547678:d=2023101900:PRATE:surface:15 hour fcst:
+595:425810594:d=2023101900:PRATE:surface:12-15 hour ave fcst:
+636:444537829:d=2023101900:TCDC:entire atmosphere:15 hour fcst:
+637:445371059:d=2023101900:TCDC:entire atmosphere:12-15 hour ave fcst:
+653:460651447:d=2023101900:DSWRF:surface:12-15 hour ave fcst:
+654:461471917:d=2023101900:DLWRF:surface:12-15 hour ave fcst:
+655:462424423:d=2023101900:USWRF:surface:12-15 hour ave fcst:
+656:463143351:d=2023101900:ULWRF:surface:12-15 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f018
+
+2023-10-19 01:16:20 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f018 [546166560/546166560] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:18 hour fcst:
+563:415694109:d=2023101900:TMP:surface:18 hour fcst:
+581:423170179:d=2023101900:TMP:2 m above ground:18 hour fcst:
+582:423683485:d=2023101900:SPFH:2 m above ground:18 hour fcst:
+584:425428756:d=2023101900:RH:2 m above ground:18 hour fcst:
+588:427774131:d=2023101900:UGRD:10 m above ground:18 hour fcst:
+589:428743927:d=2023101900:VGRD:10 m above ground:18 hour fcst:
+593:430929562:d=2023101900:PRATE:surface:18 hour fcst:
+595:432280990:d=2023101900:PRATE:surface:12-18 hour ave fcst:
+636:451476499:d=2023101900:TCDC:entire atmosphere:18 hour fcst:
+637:452304303:d=2023101900:TCDC:entire atmosphere:12-18 hour ave fcst:
+653:468371418:d=2023101900:DSWRF:surface:12-18 hour ave fcst:
+654:469335830:d=2023101900:DLWRF:surface:12-18 hour ave fcst:
+655:470257022:d=2023101900:USWRF:surface:12-18 hour ave fcst:
+656:471062387:d=2023101900:ULWRF:surface:12-18 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f021
+
+2023-10-19 01:20:18 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f021 [545072901/545072901] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:21 hour fcst:
+563:416673055:d=2023101900:TMP:surface:21 hour fcst:
+581:424141110:d=2023101900:TMP:2 m above ground:21 hour fcst:
+582:424651790:d=2023101900:SPFH:2 m above ground:21 hour fcst:
+584:426393229:d=2023101900:RH:2 m above ground:21 hour fcst:
+588:428739800:d=2023101900:UGRD:10 m above ground:21 hour fcst:
+589:429706075:d=2023101900:VGRD:10 m above ground:21 hour fcst:
+593:431885423:d=2023101900:PRATE:surface:21 hour fcst:
+595:433148791:d=2023101900:PRATE:surface:18-21 hour ave fcst:
+636:452039808:d=2023101900:TCDC:entire atmosphere:21 hour fcst:
+637:452859949:d=2023101900:TCDC:entire atmosphere:18-21 hour ave fcst:
+653:468095261:d=2023101900:DSWRF:surface:18-21 hour ave fcst:
+654:468922353:d=2023101900:DLWRF:surface:18-21 hour ave fcst:
+655:469873034:d=2023101900:USWRF:surface:18-21 hour ave fcst:
+656:470574608:d=2023101900:ULWRF:surface:18-21 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f024
+
+2023-10-19 01:20:35 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231019/00/atmos/gfs.t00z.pgrb2.0p25.f024 [543168083/543168083] -> "nomads.tmp" [1]
+1:0:d=2023101900:PRMSL:mean sea level:24 hour fcst:
+563:412936021:d=2023101900:TMP:surface:24 hour fcst:
+581:420399941:d=2023101900:TMP:2 m above ground:24 hour fcst:
+582:420904650:d=2023101900:SPFH:2 m above ground:24 hour fcst:
+584:422642857:d=2023101900:RH:2 m above ground:24 hour fcst:
+588:424974908:d=2023101900:UGRD:10 m above ground:24 hour fcst:
+589:425936721:d=2023101900:VGRD:10 m above ground:24 hour fcst:
+593:428112555:d=2023101900:PRATE:surface:24 hour fcst:
+595:429529809:d=2023101900:PRATE:surface:18-24 hour ave fcst:
+636:448819422:d=2023101900:TCDC:entire atmosphere:24 hour fcst:
+637:449631535:d=2023101900:TCDC:entire atmosphere:18-24 hour ave fcst:
+653:465621709:d=2023101900:DSWRF:surface:18-24 hour ave fcst:
+654:466576268:d=2023101900:DLWRF:surface:18-24 hour ave fcst:
+655:467493235:d=2023101900:USWRF:surface:18-24 hour ave fcst:
+656:468368309:d=2023101900:ULWRF:surface:18-24 hour ave fcst:
+cdo    mergetime: Processed 117 variables over 9 timesteps [2.07s 56MB].
+
+ +++ End of script get_gfs_nomads_oneday+forecast.sh +++
+
+
+ ==> HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary to execute check procedure on file gfs_20231019.nc <==
+
+
+ ... Initiating routine to check integrity of file 
+
+ ... gfs_20231019.nc exists !!!
+ ... No NaNs found !!!
+ ... $test_nan is empty
+ ... gfs file nbytes = 106683563
+ ... donwloaded file nbytes = 485918292
+ ... downloaded file is OK !!!
+ ... after checking procedure check status is 0
+
+ ==> FINISHED checking file <==
+
+ ... %%%%%% Downloaded file is OK !! %%%%%%
+
+ ... Starting script to fix GFS variables and attibutes for ROMS ...
+
+cdo    sellonlatbox: Processed 13 variables over 9 timesteps [0.85s 63MB].
+
+ ... add attribute time & coordinates to all vars
+
+
+ ... modify attribute long-name in all vars
+
+
+ ... modify attribute units in all vars
+
+
+ ... fix lon/lat
+
+
+ ... END of script to fix GFS variables and attibutes for ROMS ...
+
+
+ ==> 2023/10/19 01:20:48 FINISHED downloading of forcing gfs data <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/19 01:20:49 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 03: download ogcm nemo data <==
+
+
+ ... today is 2023-10-19, ogcm is nemo
+ ... will download 1 day(s), with interval of 24 hours 
+ ... will save outputs in file nemo_npo0.08_20231019.nc
+
+
+ ... File /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019/nemo_npo0.08_20231019.nc does not exist. Will download it !!!
+
+
+ ... This is try n. 1 to download ogcm file
+
+
+ ... downloading nemo
+
+
+ +++ Starting get nemo 06h +++
+
+
+ ... starting script to get nemo anfc ssh
+
+date ini = 2023-10-19 00:30:00
+date end = 2023-10-19 23:30:00
+
+ ... downloading ssh
+
+2023-10-19 01:20:49.824 [ INFO] Asynchronous mode set
+2023-10-19 01:20:49.827 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:20:55.057 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 01:21:02.806 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:21:14.483 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:21:24.493 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:21:35.914 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:21:45.925 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:21:57.550 [ INFO] The product is ready for download
+2023-10-19 01:21:57.550 [ INFO] Downloading file (this can take a while)...
+2023-10-19 01:21:58.516 [ INFO] File type: application/x-netcdf
+2023-10-19 01:21:58.516 [ INFO] File size: 22.2 MB (22219724 B)
+2023-10-19 01:21:58.517 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_ssh_20231019.nc
+2023-10-19 01:21:59.456 [ INFO] -  22.2 MB (1.2%)
+2023-10-19 01:21:59.692 [ INFO] -  22.2 MB (2.4%)
+2023-10-19 01:21:59.925 [ INFO] -  22.2 MB (3.5%)
+2023-10-19 01:21:59.931 [ INFO] -  22.2 MB (4.7%)
+2023-10-19 01:21:59.934 [ INFO] -  22.2 MB (5.9%)
+2023-10-19 01:22:00.161 [ INFO] -  22.2 MB (7.1%)
+2023-10-19 01:22:00.165 [ INFO] -  22.2 MB (8.3%)
+2023-10-19 01:22:00.168 [ INFO] -  22.2 MB (9.4%)
+2023-10-19 01:22:00.172 [ INFO] -  22.2 MB (10.6%)
+2023-10-19 01:22:00.175 [ INFO] -  22.2 MB (11.8%)
+2023-10-19 01:22:00.178 [ INFO] -  22.2 MB (13.0%)
+2023-10-19 01:22:00.395 [ INFO] -  22.2 MB (14.2%)
+2023-10-19 01:22:00.401 [ INFO] -  22.2 MB (15.3%)
+2023-10-19 01:22:00.404 [ INFO] -  22.2 MB (16.5%)
+2023-10-19 01:22:00.407 [ INFO] -  22.2 MB (17.7%)
+2023-10-19 01:22:00.411 [ INFO] -  22.2 MB (18.9%)
+2023-10-19 01:22:00.414 [ INFO] -  22.2 MB (20.1%)
+2023-10-19 01:22:00.417 [ INFO] -  22.2 MB (21.2%)
+2023-10-19 01:22:00.420 [ INFO] -  22.2 MB (22.4%)
+2023-10-19 01:22:00.424 [ INFO] -  22.2 MB (23.6%)
+2023-10-19 01:22:00.427 [ INFO] -  22.2 MB (24.8%)
+2023-10-19 01:22:00.668 [ INFO] -  22.2 MB (26.0%)
+2023-10-19 01:22:00.870 [ INFO] -  22.2 MB (27.1%)
+2023-10-19 01:22:00.875 [ INFO] -  22.2 MB (28.3%)
+2023-10-19 01:22:00.877 [ INFO] -  22.2 MB (29.5%)
+2023-10-19 01:22:00.879 [ INFO] -  22.2 MB (30.7%)
+2023-10-19 01:22:00.881 [ INFO] -  22.2 MB (31.9%)
+2023-10-19 01:22:00.883 [ INFO] -  22.2 MB (33.0%)
+2023-10-19 01:22:00.884 [ INFO] -  22.2 MB (34.2%)
+2023-10-19 01:22:00.886 [ INFO] -  22.2 MB (35.4%)
+2023-10-19 01:22:00.888 [ INFO] -  22.2 MB (36.6%)
+2023-10-19 01:22:00.905 [ INFO] -  22.2 MB (37.8%)
+2023-10-19 01:22:00.908 [ INFO] -  22.2 MB (38.9%)
+2023-10-19 01:22:01.110 [ INFO] -  22.2 MB (40.1%)
+2023-10-19 01:22:01.113 [ INFO] -  22.2 MB (41.3%)
+2023-10-19 01:22:01.117 [ INFO] -  22.2 MB (42.5%)
+2023-10-19 01:22:01.120 [ INFO] -  22.2 MB (43.7%)
+2023-10-19 01:22:01.379 [ INFO] -  22.2 MB (44.8%)
+2023-10-19 01:22:01.380 [ INFO] -  22.2 MB (46.0%)
+2023-10-19 01:22:01.382 [ INFO] -  22.2 MB (47.2%)
+2023-10-19 01:22:01.383 [ INFO] -  22.2 MB (48.4%)
+2023-10-19 01:22:01.390 [ INFO] -  22.2 MB (49.6%)
+2023-10-19 01:22:01.393 [ INFO] -  22.2 MB (50.7%)
+2023-10-19 01:22:01.396 [ INFO] -  22.2 MB (51.9%)
+2023-10-19 01:22:01.398 [ INFO] -  22.2 MB (53.1%)
+2023-10-19 01:22:01.399 [ INFO] -  22.2 MB (54.3%)
+2023-10-19 01:22:01.401 [ INFO] -  22.2 MB (55.4%)
+2023-10-19 01:22:01.402 [ INFO] -  22.2 MB (56.6%)
+2023-10-19 01:22:01.404 [ INFO] -  22.2 MB (57.8%)
+2023-10-19 01:22:01.626 [ INFO] -  22.2 MB (59.0%)
+2023-10-19 01:22:01.629 [ INFO] -  22.2 MB (60.2%)
+2023-10-19 01:22:01.633 [ INFO] -  22.2 MB (61.3%)
+2023-10-19 01:22:01.636 [ INFO] -  22.2 MB (62.5%)
+2023-10-19 01:22:01.639 [ INFO] -  22.2 MB (63.7%)
+2023-10-19 01:22:01.643 [ INFO] -  22.2 MB (64.9%)
+2023-10-19 01:22:01.646 [ INFO] -  22.2 MB (66.1%)
+2023-10-19 01:22:02.095 [ INFO] -  22.2 MB (67.2%)
+2023-10-19 01:22:02.100 [ INFO] -  22.2 MB (68.4%)
+2023-10-19 01:22:02.102 [ INFO] -  22.2 MB (69.6%)
+2023-10-19 01:22:02.104 [ INFO] -  22.2 MB (70.8%)
+2023-10-19 01:22:02.106 [ INFO] -  22.2 MB (72.0%)
+2023-10-19 01:22:02.109 [ INFO] -  22.2 MB (73.1%)
+2023-10-19 01:22:02.111 [ INFO] -  22.2 MB (74.3%)
+2023-10-19 01:22:02.113 [ INFO] -  22.2 MB (75.5%)
+2023-10-19 01:22:02.115 [ INFO] -  22.2 MB (76.7%)
+2023-10-19 01:22:02.118 [ INFO] -  22.2 MB (77.9%)
+2023-10-19 01:22:02.120 [ INFO] -  22.2 MB (79.0%)
+2023-10-19 01:22:02.122 [ INFO] -  22.2 MB (80.2%)
+2023-10-19 01:22:02.335 [ INFO] -  22.2 MB (81.4%)
+2023-10-19 01:22:02.338 [ INFO] -  22.2 MB (82.6%)
+2023-10-19 01:22:02.341 [ INFO] -  22.2 MB (83.8%)
+2023-10-19 01:22:02.344 [ INFO] -  22.2 MB (84.9%)
+2023-10-19 01:22:02.348 [ INFO] -  22.2 MB (86.1%)
+2023-10-19 01:22:02.587 [ INFO] -  22.2 MB (87.3%)
+2023-10-19 01:22:02.589 [ INFO] -  22.2 MB (88.5%)
+2023-10-19 01:22:02.591 [ INFO] -  22.2 MB (89.7%)
+2023-10-19 01:22:02.592 [ INFO] -  22.2 MB (90.8%)
+2023-10-19 01:22:02.594 [ INFO] -  22.2 MB (92.0%)
+2023-10-19 01:22:02.596 [ INFO] -  22.2 MB (93.2%)
+2023-10-19 01:22:02.597 [ INFO] -  22.2 MB (94.4%)
+2023-10-19 01:22:02.599 [ INFO] -  22.2 MB (95.6%)
+2023-10-19 01:22:02.803 [ INFO] -  22.2 MB (96.7%)
+2023-10-19 01:22:02.811 [ INFO] -  22.2 MB (97.9%)
+2023-10-19 01:22:02.815 [ INFO] -  22.2 MB (99.1%)
+2023-10-19 01:22:02.819 [ INFO] -  22.2 MB (100.0%)
+2023-10-19 01:22:02.819 [ INFO] Processing  time : 0:01:08.693121
+2023-10-19 01:22:02.820 [ INFO] Downloading time : 0:00:04.302858
+2023-10-19 01:22:02.820 [ INFO] Total time       : 0:01:12.995979
+2023-10-19 01:22:02.820 [ INFO] Download rate    : 4.2 MB/s
+2023-10-19 01:22:02.820 [ INFO] Done
+
+ ... starting script to get nemo anfc uvts
+
+date ini = 2023-10-19 00:00:00
+date end = 2023-10-19 23:59:59
+
+
+ ... downloading var thetao
+
+2023-10-19 01:22:03.279 [ INFO] Asynchronous mode set
+2023-10-19 01:22:03.283 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:22:07.549 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 01:22:14.780 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:22:26.052 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:22:36.064 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:22:48.561 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:22:58.572 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:23:11.114 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:23:21.123 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:23:33.706 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:23:43.717 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:23:56.148 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:24:06.158 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:24:19.445 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:24:29.451 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:24:40.745 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:24:50.756 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:25:02.011 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:25:12.022 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:25:23.374 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:25:33.385 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:25:44.703 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:25:54.711 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:26:05.981 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:26:15.988 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:26:27.834 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:26:37.844 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:26:49.121 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:26:59.131 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:27:10.431 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:27:20.439 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:27:31.691 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:27:41.702 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:27:53.194 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:28:03.204 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:28:14.451 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:28:24.462 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:28:36.182 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:28:46.194 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:28:57.500 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:29:07.511 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:29:18.737 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:29:28.748 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:29:39.935 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:29:49.947 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:30:01.198 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:30:11.207 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:30:22.390 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:30:32.399 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:30:43.845 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:30:53.855 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:31:06.544 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:31:16.555 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:31:28.491 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:31:38.502 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:31:49.903 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:31:59.910 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:32:11.205 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:32:21.216 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:32:32.548 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:32:42.559 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:32:53.841 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:33:03.852 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:33:15.137 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:33:25.147 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:33:36.535 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:33:46.546 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:33:58.191 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:34:08.202 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:34:20.030 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:34:30.041 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:34:41.408 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:34:51.419 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:35:02.685 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:35:12.695 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:35:23.920 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:35:33.931 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:35:45.194 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:35:55.203 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:36:06.515 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:36:16.523 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:36:29.256 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:36:39.263 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:36:50.569 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:37:00.579 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:37:11.807 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:37:21.818 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:37:33.030 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:37:43.039 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:37:54.496 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:38:04.508 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:38:15.896 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:38:25.906 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:38:37.917 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:38:47.928 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:38:59.378 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:39:09.386 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:39:23.713 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:39:33.723 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:39:44.979 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:39:54.986 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:40:06.132 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:40:16.143 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:40:27.290 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:40:37.300 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:40:48.548 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:40:58.559 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:41:13.354 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:41:23.360 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:41:34.737 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:41:44.747 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:41:56.009 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:42:06.019 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:42:17.207 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:42:27.215 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:42:39.500 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:42:49.511 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:43:00.922 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:43:10.933 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:43:22.431 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:43:32.441 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:43:43.771 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:43:53.778 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:44:07.422 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:44:17.433 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:44:28.794 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:44:38.805 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:44:50.232 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:45:00.243 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:45:11.671 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:45:21.679 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:45:33.042 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:45:43.051 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:45:54.307 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:46:04.315 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:46:16.299 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:46:26.310 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:46:37.585 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:46:47.595 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:46:59.476 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:47:09.482 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:47:20.770 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:47:30.781 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:47:41.992 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:47:51.999 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:48:03.337 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:48:13.347 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:48:24.714 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:48:34.724 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:48:46.013 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:48:56.023 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:49:07.399 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:49:17.407 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:49:28.627 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:49:38.638 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:49:49.975 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:49:59.986 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:50:11.368 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:50:21.379 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:50:32.644 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:50:42.655 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:50:54.042 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:51:04.050 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:51:15.692 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:51:25.699 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:51:37.137 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:51:47.147 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:51:58.495 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:52:08.503 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:52:20.083 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:52:30.094 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:52:41.501 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:52:51.512 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:53:02.963 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:53:12.970 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:53:24.289 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:53:34.300 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:53:45.600 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:53:55.610 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:54:07.410 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:54:17.420 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:54:28.784 [ INFO] The product is ready for download
+2023-10-19 01:54:28.785 [ INFO] Downloading file (this can take a while)...
+2023-10-19 01:54:29.747 [ INFO] File type: application/x-netcdf
+2023-10-19 01:54:29.747 [ INFO] File size: 185.1 MB (185115212 B)
+2023-10-19 01:54:29.747 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_thetao.nc
+2023-10-19 01:54:31.358 [ INFO] - 185.1 MB (1.0%)
+2023-10-19 01:54:31.592 [ INFO] - 185.1 MB (2.1%)
+2023-10-19 01:54:31.849 [ INFO] - 185.1 MB (3.1%)
+2023-10-19 01:54:32.065 [ INFO] - 185.1 MB (4.1%)
+2023-10-19 01:54:32.541 [ INFO] - 185.1 MB (5.1%)
+2023-10-19 01:54:32.555 [ INFO] - 185.1 MB (6.2%)
+2023-10-19 01:54:32.790 [ INFO] - 185.1 MB (7.2%)
+2023-10-19 01:54:33.246 [ INFO] - 185.1 MB (8.2%)
+2023-10-19 01:54:33.470 [ INFO] - 185.1 MB (9.2%)
+2023-10-19 01:54:33.722 [ INFO] - 185.1 MB (10.3%)
+2023-10-19 01:54:33.947 [ INFO] - 185.1 MB (11.3%)
+2023-10-19 01:54:34.398 [ INFO] - 185.1 MB (12.3%)
+2023-10-19 01:54:34.640 [ INFO] - 185.1 MB (13.3%)
+2023-10-19 01:54:35.088 [ INFO] - 185.1 MB (14.4%)
+2023-10-19 01:54:35.330 [ INFO] - 185.1 MB (15.4%)
+2023-10-19 01:54:35.572 [ INFO] - 185.1 MB (16.4%)
+2023-10-19 01:54:36.020 [ INFO] - 185.1 MB (17.5%)
+2023-10-19 01:54:36.261 [ INFO] - 185.1 MB (18.5%)
+2023-10-19 01:54:36.707 [ INFO] - 185.1 MB (19.5%)
+2023-10-19 01:54:36.948 [ INFO] - 185.1 MB (20.5%)
+2023-10-19 01:54:37.188 [ INFO] - 185.1 MB (21.6%)
+2023-10-19 01:54:37.627 [ INFO] - 185.1 MB (22.6%)
+2023-10-19 01:54:37.872 [ INFO] - 185.1 MB (23.6%)
+2023-10-19 01:54:38.114 [ INFO] - 185.1 MB (24.6%)
+2023-10-19 01:54:38.544 [ INFO] - 185.1 MB (25.7%)
+2023-10-19 01:54:38.797 [ INFO] - 185.1 MB (26.7%)
+2023-10-19 01:54:39.036 [ INFO] - 185.1 MB (27.7%)
+2023-10-19 01:54:39.275 [ INFO] - 185.1 MB (28.7%)
+2023-10-19 01:54:39.718 [ INFO] - 185.1 MB (29.8%)
+2023-10-19 01:54:39.961 [ INFO] - 185.1 MB (30.8%)
+2023-10-19 01:54:40.197 [ INFO] - 185.1 MB (31.8%)
+2023-10-19 01:54:40.627 [ INFO] - 185.1 MB (32.9%)
+2023-10-19 01:54:40.879 [ INFO] - 185.1 MB (33.9%)
+2023-10-19 01:54:41.120 [ INFO] - 185.1 MB (34.9%)
+2023-10-19 01:54:41.527 [ INFO] - 185.1 MB (35.9%)
+2023-10-19 01:54:41.792 [ INFO] - 185.1 MB (37.0%)
+2023-10-19 01:54:42.036 [ INFO] - 185.1 MB (38.0%)
+2023-10-19 01:54:42.280 [ INFO] - 185.1 MB (39.0%)
+2023-10-19 01:54:42.705 [ INFO] - 185.1 MB (40.0%)
+2023-10-19 01:54:42.956 [ INFO] - 185.1 MB (41.1%)
+2023-10-19 01:54:43.197 [ INFO] - 185.1 MB (42.1%)
+2023-10-19 01:54:43.603 [ INFO] - 185.1 MB (43.1%)
+2023-10-19 01:54:43.870 [ INFO] - 185.1 MB (44.1%)
+2023-10-19 01:54:44.115 [ INFO] - 185.1 MB (45.2%)
+2023-10-19 01:54:44.358 [ INFO] - 185.1 MB (46.2%)
+2023-10-19 01:54:44.777 [ INFO] - 185.1 MB (47.2%)
+2023-10-19 01:54:45.030 [ INFO] - 185.1 MB (48.3%)
+2023-10-19 01:54:45.271 [ INFO] - 185.1 MB (49.3%)
+2023-10-19 01:54:45.514 [ INFO] - 185.1 MB (50.3%)
+2023-10-19 01:54:45.938 [ INFO] - 185.1 MB (51.3%)
+2023-10-19 01:54:46.185 [ INFO] - 185.1 MB (52.4%)
+2023-10-19 01:54:46.428 [ INFO] - 185.1 MB (53.4%)
+2023-10-19 01:54:46.667 [ INFO] - 185.1 MB (54.4%)
+2023-10-19 01:54:47.084 [ INFO] - 185.1 MB (55.4%)
+2023-10-19 01:54:47.334 [ INFO] - 185.1 MB (56.5%)
+2023-10-19 01:54:47.575 [ INFO] - 185.1 MB (57.5%)
+2023-10-19 01:54:47.813 [ INFO] - 185.1 MB (58.5%)
+2023-10-19 01:54:48.051 [ INFO] - 185.1 MB (59.5%)
+2023-10-19 01:54:48.449 [ INFO] - 185.1 MB (60.6%)
+2023-10-19 01:54:48.704 [ INFO] - 185.1 MB (61.6%)
+2023-10-19 01:54:48.944 [ INFO] - 185.1 MB (62.6%)
+2023-10-19 01:54:49.180 [ INFO] - 185.1 MB (63.7%)
+2023-10-19 01:54:49.418 [ INFO] - 185.1 MB (64.7%)
+2023-10-19 01:54:49.653 [ INFO] - 185.1 MB (65.7%)
+2023-10-19 01:54:49.886 [ INFO] - 185.1 MB (66.7%)
+2023-10-19 01:54:50.119 [ INFO] - 185.1 MB (67.8%)
+2023-10-19 01:54:50.352 [ INFO] - 185.1 MB (68.8%)
+2023-10-19 01:54:50.582 [ INFO] - 185.1 MB (69.8%)
+2023-10-19 01:54:50.813 [ INFO] - 185.1 MB (70.8%)
+2023-10-19 01:54:51.042 [ INFO] - 185.1 MB (71.9%)
+2023-10-19 01:54:51.272 [ INFO] - 185.1 MB (72.9%)
+2023-10-19 01:54:51.498 [ INFO] - 185.1 MB (73.9%)
+2023-10-19 01:54:51.721 [ INFO] - 185.1 MB (74.9%)
+2023-10-19 01:54:51.945 [ INFO] - 185.1 MB (76.0%)
+2023-10-19 01:54:52.164 [ INFO] - 185.1 MB (77.0%)
+2023-10-19 01:54:52.386 [ INFO] - 185.1 MB (78.0%)
+2023-10-19 01:54:52.588 [ INFO] - 185.1 MB (79.1%)
+2023-10-19 01:54:52.668 [ INFO] - 185.1 MB (80.1%)
+2023-10-19 01:54:52.892 [ INFO] - 185.1 MB (81.1%)
+2023-10-19 01:54:53.107 [ INFO] - 185.1 MB (82.1%)
+2023-10-19 01:54:53.320 [ INFO] - 185.1 MB (83.2%)
+2023-10-19 01:54:53.528 [ INFO] - 185.1 MB (84.2%)
+2023-10-19 01:54:53.594 [ INFO] - 185.1 MB (85.2%)
+2023-10-19 01:54:53.810 [ INFO] - 185.1 MB (86.2%)
+2023-10-19 01:54:54.020 [ INFO] - 185.1 MB (87.3%)
+2023-10-19 01:54:54.224 [ INFO] - 185.1 MB (88.3%)
+2023-10-19 01:54:54.289 [ INFO] - 185.1 MB (89.3%)
+2023-10-19 01:54:54.502 [ INFO] - 185.1 MB (90.3%)
+2023-10-19 01:54:54.711 [ INFO] - 185.1 MB (91.4%)
+2023-10-19 01:54:54.911 [ INFO] - 185.1 MB (92.4%)
+2023-10-19 01:54:54.982 [ INFO] - 185.1 MB (93.4%)
+2023-10-19 01:54:55.193 [ INFO] - 185.1 MB (94.5%)
+2023-10-19 01:54:55.399 [ INFO] - 185.1 MB (95.5%)
+2023-10-19 01:54:55.592 [ INFO] - 185.1 MB (96.5%)
+2023-10-19 01:54:55.669 [ INFO] - 185.1 MB (97.5%)
+2023-10-19 01:54:55.881 [ INFO] - 185.1 MB (98.6%)
+2023-10-19 01:54:56.083 [ INFO] - 185.1 MB (99.6%)
+2023-10-19 01:54:56.112 [ INFO] - 185.1 MB (100.0%)
+2023-10-19 01:54:56.113 [ INFO] Processing  time : 0:32:26.468738
+2023-10-19 01:54:56.114 [ INFO] Downloading time : 0:00:26.365308
+2023-10-19 01:54:56.114 [ INFO] Total time       : 0:32:52.834046
+2023-10-19 01:54:56.114 [ INFO] Download rate    : 6.8 MB/s
+2023-10-19 01:54:56.114 [ INFO] Done
+
+ ... downloading var so
+
+2023-10-19 01:54:56.502 [ INFO] Asynchronous mode set
+2023-10-19 01:54:56.503 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:55:00.723 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 01:55:08.047 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:55:19.441 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:55:29.452 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:55:40.752 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:55:50.762 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:56:02.012 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:56:12.022 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:56:24.075 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:56:34.086 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:56:45.461 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:56:55.470 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:57:06.728 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:57:16.733 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:57:28.071 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:57:38.082 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:57:49.471 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:57:59.478 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:58:10.903 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:58:20.914 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:58:32.124 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:58:42.131 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:58:53.477 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:59:03.486 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:59:15.501 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:59:25.511 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:59:36.778 [ INFO] Product is not yet available (request in progress)
+2023-10-19 01:59:46.789 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 01:59:58.534 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:00:08.545 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:00:21.225 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:00:31.236 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:00:45.294 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:00:55.305 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:01:07.627 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:01:17.638 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:01:29.662 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:01:39.673 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:01:50.995 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:02:01.002 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:02:12.293 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:02:22.303 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:02:33.884 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:02:43.894 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:02:55.161 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:03:05.172 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:03:16.445 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:03:26.455 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:03:37.905 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:03:47.916 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:04:00.132 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:04:10.142 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:04:22.573 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:04:32.582 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:04:43.819 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:04:53.829 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:05:05.276 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:05:15.287 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:05:26.562 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:05:36.570 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:05:47.917 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:05:57.928 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:06:09.258 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:06:19.262 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:06:31.172 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:06:41.183 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:06:52.606 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:07:02.615 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:07:13.970 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:07:23.980 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:07:35.337 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:07:45.346 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:07:56.729 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:08:06.740 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:08:18.038 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:08:28.049 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:08:39.492 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:08:49.502 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:09:01.519 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:09:11.527 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:09:22.881 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:09:32.891 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:09:44.243 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:09:54.254 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:10:05.528 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:10:15.534 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:10:27.020 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:10:37.027 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:10:48.620 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:10:58.630 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:11:10.667 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:11:20.675 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:11:32.391 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:11:42.402 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:11:54.158 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:12:04.166 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:12:15.452 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:12:25.463 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:12:36.726 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:12:46.734 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:12:58.118 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:13:08.126 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:13:19.362 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:13:29.373 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:13:40.646 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:13:50.657 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:14:01.995 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:14:12.005 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:14:23.515 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:14:33.525 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:14:44.700 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:14:54.710 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:15:05.971 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:15:15.978 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:15:27.774 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:15:37.785 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:15:50.839 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:16:00.850 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:16:12.495 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:16:22.503 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:16:33.838 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:16:43.846 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:16:55.925 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:17:05.934 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:17:17.251 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:17:27.261 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:17:39.212 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:17:49.214 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:18:01.200 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:18:11.204 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:18:22.794 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:18:32.803 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:18:44.112 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:18:54.118 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:19:05.384 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:19:15.390 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:19:26.830 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:19:36.838 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:19:48.249 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:19:58.259 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:20:10.367 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:20:20.378 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:20:32.271 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:20:42.279 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:20:54.700 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:21:04.702 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:21:15.976 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:21:25.986 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:21:37.345 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:21:47.356 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:21:59.135 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:22:09.145 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:22:21.654 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:22:31.665 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:22:43.783 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:22:53.793 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:23:05.110 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:23:15.118 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:23:26.632 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:23:36.639 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:23:48.079 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:23:58.089 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:24:09.325 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:24:19.334 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:24:30.555 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:24:40.565 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:24:51.817 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:25:01.826 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:25:13.249 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:25:23.259 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:25:34.667 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:25:44.678 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:25:56.811 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:26:06.822 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:26:18.109 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:26:28.120 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:26:39.669 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:26:49.680 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:27:00.973 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:27:10.983 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:27:22.205 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:27:32.215 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:27:43.867 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:27:53.875 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:28:05.235 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:28:15.246 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:28:26.572 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:28:36.582 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:28:47.834 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:28:57.843 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:29:09.133 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:29:19.144 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:29:30.442 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:29:40.452 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:29:51.707 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:30:01.714 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:30:14.155 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:30:24.166 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:30:35.512 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:30:45.522 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:30:57.106 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:31:07.114 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:31:18.574 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:31:28.585 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:31:39.814 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:31:49.824 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:32:01.053 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:32:11.063 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:32:22.401 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:32:32.405 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:32:43.753 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:32:53.762 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:33:05.169 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:33:15.180 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:33:27.203 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:33:37.213 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:33:48.586 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:33:58.595 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:34:09.987 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:34:19.995 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:34:31.204 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:34:41.210 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:34:52.634 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:35:02.642 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:35:15.634 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:35:25.644 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:35:37.814 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:35:47.822 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:36:01.580 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:36:11.582 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:36:22.992 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:36:33.003 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:36:44.272 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:36:54.279 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:37:06.219 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:37:16.229 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:37:27.696 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:37:37.702 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:37:50.581 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:38:00.592 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:38:14.210 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:38:24.218 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:38:36.816 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:38:46.822 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:38:58.123 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:39:08.130 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:39:22.520 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:39:32.523 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:39:46.707 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:39:56.715 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:40:08.565 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:40:18.576 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:40:29.852 [ INFO] The product is ready for download
+2023-10-19 02:40:29.853 [ INFO] Downloading file (this can take a while)...
+2023-10-19 02:40:30.806 [ INFO] File type: application/x-netcdf
+2023-10-19 02:40:30.806 [ INFO] File size: 185.1 MB (185115188 B)
+2023-10-19 02:40:30.810 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_so.nc
+2023-10-19 02:40:32.419 [ INFO] - 185.1 MB (1.0%)
+2023-10-19 02:40:32.653 [ INFO] - 185.1 MB (2.1%)
+2023-10-19 02:40:32.908 [ INFO] - 185.1 MB (3.1%)
+2023-10-19 02:40:33.122 [ INFO] - 185.1 MB (4.1%)
+2023-10-19 02:40:33.599 [ INFO] - 185.1 MB (5.1%)
+2023-10-19 02:40:33.803 [ INFO] - 185.1 MB (6.2%)
+2023-10-19 02:40:33.854 [ INFO] - 185.1 MB (7.2%)
+2023-10-19 02:40:34.309 [ INFO] - 185.1 MB (8.2%)
+2023-10-19 02:40:34.320 [ INFO] - 185.1 MB (9.2%)
+2023-10-19 02:40:34.552 [ INFO] - 185.1 MB (10.3%)
+2023-10-19 02:40:35.012 [ INFO] - 185.1 MB (11.3%)
+2023-10-19 02:40:35.244 [ INFO] - 185.1 MB (12.3%)
+2023-10-19 02:40:35.692 [ INFO] - 185.1 MB (13.3%)
+2023-10-19 02:40:35.936 [ INFO] - 185.1 MB (14.4%)
+2023-10-19 02:40:36.176 [ INFO] - 185.1 MB (15.4%)
+2023-10-19 02:40:36.625 [ INFO] - 185.1 MB (16.4%)
+2023-10-19 02:40:36.864 [ INFO] - 185.1 MB (17.5%)
+2023-10-19 02:40:37.308 [ INFO] - 185.1 MB (18.5%)
+2023-10-19 02:40:37.548 [ INFO] - 185.1 MB (19.5%)
+2023-10-19 02:40:37.787 [ INFO] - 185.1 MB (20.5%)
+2023-10-19 02:40:38.225 [ INFO] - 185.1 MB (21.6%)
+2023-10-19 02:40:38.468 [ INFO] - 185.1 MB (22.6%)
+2023-10-19 02:40:38.705 [ INFO] - 185.1 MB (23.6%)
+2023-10-19 02:40:38.943 [ INFO] - 185.1 MB (24.6%)
+2023-10-19 02:40:39.384 [ INFO] - 185.1 MB (25.7%)
+2023-10-19 02:40:39.624 [ INFO] - 185.1 MB (26.7%)
+2023-10-19 02:40:39.861 [ INFO] - 185.1 MB (27.7%)
+2023-10-19 02:40:40.098 [ INFO] - 185.1 MB (28.7%)
+2023-10-19 02:40:40.539 [ INFO] - 185.1 MB (29.8%)
+2023-10-19 02:40:40.777 [ INFO] - 185.1 MB (30.8%)
+2023-10-19 02:40:41.016 [ INFO] - 185.1 MB (31.8%)
+2023-10-19 02:40:41.254 [ INFO] - 185.1 MB (32.9%)
+2023-10-19 02:40:41.690 [ INFO] - 185.1 MB (33.9%)
+2023-10-19 02:40:41.930 [ INFO] - 185.1 MB (34.9%)
+2023-10-19 02:40:42.171 [ INFO] - 185.1 MB (35.9%)
+2023-10-19 02:40:42.451 [ INFO] - 185.1 MB (37.0%)
+2023-10-19 02:40:42.870 [ INFO] - 185.1 MB (38.0%)
+2023-10-19 02:40:43.116 [ INFO] - 185.1 MB (39.0%)
+2023-10-19 02:40:43.365 [ INFO] - 185.1 MB (40.0%)
+2023-10-19 02:40:43.604 [ INFO] - 185.1 MB (41.1%)
+2023-10-19 02:40:44.021 [ INFO] - 185.1 MB (42.1%)
+2023-10-19 02:40:44.270 [ INFO] - 185.1 MB (43.1%)
+2023-10-19 02:40:44.519 [ INFO] - 185.1 MB (44.1%)
+2023-10-19 02:40:44.755 [ INFO] - 185.1 MB (45.2%)
+2023-10-19 02:40:45.174 [ INFO] - 185.1 MB (46.2%)
+2023-10-19 02:40:45.420 [ INFO] - 185.1 MB (47.2%)
+2023-10-19 02:40:45.665 [ INFO] - 185.1 MB (48.3%)
+2023-10-19 02:40:45.909 [ INFO] - 185.1 MB (49.3%)
+2023-10-19 02:40:46.322 [ INFO] - 185.1 MB (50.3%)
+2023-10-19 02:40:46.569 [ INFO] - 185.1 MB (51.3%)
+2023-10-19 02:40:46.811 [ INFO] - 185.1 MB (52.4%)
+2023-10-19 02:40:47.058 [ INFO] - 185.1 MB (53.4%)
+2023-10-19 02:40:47.444 [ INFO] - 185.1 MB (54.4%)
+2023-10-19 02:40:47.709 [ INFO] - 185.1 MB (55.4%)
+2023-10-19 02:40:47.953 [ INFO] - 185.1 MB (56.5%)
+2023-10-19 02:40:48.195 [ INFO] - 185.1 MB (57.5%)
+2023-10-19 02:40:48.440 [ INFO] - 185.1 MB (58.5%)
+2023-10-19 02:40:48.677 [ INFO] - 185.1 MB (59.5%)
+2023-10-19 02:40:49.083 [ INFO] - 185.1 MB (60.6%)
+2023-10-19 02:40:49.322 [ INFO] - 185.1 MB (61.6%)
+2023-10-19 02:40:49.563 [ INFO] - 185.1 MB (62.6%)
+2023-10-19 02:40:49.800 [ INFO] - 185.1 MB (63.7%)
+2023-10-19 02:40:50.038 [ INFO] - 185.1 MB (64.7%)
+2023-10-19 02:40:50.274 [ INFO] - 185.1 MB (65.7%)
+2023-10-19 02:40:50.512 [ INFO] - 185.1 MB (66.7%)
+2023-10-19 02:40:50.748 [ INFO] - 185.1 MB (67.8%)
+2023-10-19 02:40:50.980 [ INFO] - 185.1 MB (68.8%)
+2023-10-19 02:40:51.210 [ INFO] - 185.1 MB (69.8%)
+2023-10-19 02:40:51.441 [ INFO] - 185.1 MB (70.8%)
+2023-10-19 02:40:51.672 [ INFO] - 185.1 MB (71.9%)
+2023-10-19 02:40:51.902 [ INFO] - 185.1 MB (72.9%)
+2023-10-19 02:40:52.131 [ INFO] - 185.1 MB (73.9%)
+2023-10-19 02:40:52.357 [ INFO] - 185.1 MB (74.9%)
+2023-10-19 02:40:52.582 [ INFO] - 185.1 MB (76.0%)
+2023-10-19 02:40:52.806 [ INFO] - 185.1 MB (77.0%)
+2023-10-19 02:40:53.032 [ INFO] - 185.1 MB (78.0%)
+2023-10-19 02:40:53.255 [ INFO] - 185.1 MB (79.1%)
+2023-10-19 02:40:53.478 [ INFO] - 185.1 MB (80.1%)
+2023-10-19 02:40:53.697 [ INFO] - 185.1 MB (81.1%)
+2023-10-19 02:40:53.913 [ INFO] - 185.1 MB (82.1%)
+2023-10-19 02:40:53.975 [ INFO] - 185.1 MB (83.2%)
+2023-10-19 02:40:54.191 [ INFO] - 185.1 MB (84.2%)
+2023-10-19 02:40:54.408 [ INFO] - 185.1 MB (85.2%)
+2023-10-19 02:40:54.624 [ INFO] - 185.1 MB (86.2%)
+2023-10-19 02:40:54.836 [ INFO] - 185.1 MB (87.3%)
+2023-10-19 02:40:54.895 [ INFO] - 185.1 MB (88.3%)
+2023-10-19 02:40:55.106 [ INFO] - 185.1 MB (89.3%)
+2023-10-19 02:40:55.317 [ INFO] - 185.1 MB (90.3%)
+2023-10-19 02:40:55.525 [ INFO] - 185.1 MB (91.4%)
+2023-10-19 02:40:55.583 [ INFO] - 185.1 MB (92.4%)
+2023-10-19 02:40:55.794 [ INFO] - 185.1 MB (93.4%)
+2023-10-19 02:40:56.003 [ INFO] - 185.1 MB (94.5%)
+2023-10-19 02:40:56.205 [ INFO] - 185.1 MB (95.5%)
+2023-10-19 02:40:56.268 [ INFO] - 185.1 MB (96.5%)
+2023-10-19 02:40:56.480 [ INFO] - 185.1 MB (97.5%)
+2023-10-19 02:40:56.688 [ INFO] - 185.1 MB (98.6%)
+2023-10-19 02:40:56.742 [ INFO] - 185.1 MB (99.6%)
+2023-10-19 02:40:56.918 [ INFO] - 185.1 MB (100.0%)
+2023-10-19 02:40:56.918 [ INFO] Processing  time : 0:45:34.304176
+2023-10-19 02:40:56.923 [ INFO] Downloading time : 0:00:26.112307
+2023-10-19 02:40:56.923 [ INFO] Total time       : 0:46:00.416483
+2023-10-19 02:40:56.923 [ INFO] Download rate    : 6.8 MB/s
+2023-10-19 02:40:56.923 [ INFO] Done
+
+ ... downloading var cur
+
+2023-10-19 02:40:57.498 [ INFO] Asynchronous mode set
+2023-10-19 02:40:57.501 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:41:02.966 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 02:41:10.608 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:41:21.937 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:41:31.947 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:41:43.164 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:41:53.171 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:42:04.387 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:42:14.397 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:42:26.652 [ INFO] The product is ready for download
+2023-10-19 02:42:26.653 [ INFO] Downloading file (this can take a while)...
+2023-10-19 02:42:27.960 [ INFO] File type: application/x-netcdf
+2023-10-19 02:42:27.960 [ INFO] File size: 370.2 MB (370223532 B)
+2023-10-19 02:42:27.960 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_cur.nc
+2023-10-19 02:42:29.719 [ INFO] - 370.2 MB (1.0%)
+2023-10-19 02:42:30.237 [ INFO] - 370.2 MB (2.0%)
+2023-10-19 02:42:30.734 [ INFO] - 370.2 MB (3.0%)
+2023-10-19 02:42:31.248 [ INFO] - 370.2 MB (4.0%)
+2023-10-19 02:42:31.977 [ INFO] - 370.2 MB (5.0%)
+2023-10-19 02:42:32.491 [ INFO] - 370.2 MB (6.1%)
+2023-10-19 02:42:33.220 [ INFO] - 370.2 MB (7.1%)
+2023-10-19 02:42:33.728 [ INFO] - 370.2 MB (8.1%)
+2023-10-19 02:42:34.235 [ INFO] - 370.2 MB (9.1%)
+2023-10-19 02:42:34.741 [ INFO] - 370.2 MB (10.1%)
+2023-10-19 02:42:35.458 [ INFO] - 370.2 MB (11.1%)
+2023-10-19 02:42:35.963 [ INFO] - 370.2 MB (12.1%)
+2023-10-19 02:42:36.469 [ INFO] - 370.2 MB (13.1%)
+2023-10-19 02:42:36.973 [ INFO] - 370.2 MB (14.1%)
+2023-10-19 02:42:37.477 [ INFO] - 370.2 MB (15.1%)
+2023-10-19 02:42:37.982 [ INFO] - 370.2 MB (16.1%)
+2023-10-19 02:42:38.483 [ INFO] - 370.2 MB (17.2%)
+2023-10-19 02:42:39.185 [ INFO] - 370.2 MB (18.2%)
+2023-10-19 02:42:39.690 [ INFO] - 370.2 MB (19.2%)
+2023-10-19 02:42:40.195 [ INFO] - 370.2 MB (20.2%)
+2023-10-19 02:42:40.696 [ INFO] - 370.2 MB (21.2%)
+2023-10-19 02:42:41.200 [ INFO] - 370.2 MB (22.2%)
+2023-10-19 02:42:41.704 [ INFO] - 370.2 MB (23.2%)
+2023-10-19 02:42:42.216 [ INFO] - 370.2 MB (24.2%)
+2023-10-19 02:42:42.719 [ INFO] - 370.2 MB (25.2%)
+2023-10-19 02:42:43.410 [ INFO] - 370.2 MB (26.2%)
+2023-10-19 02:42:43.914 [ INFO] - 370.2 MB (27.2%)
+2023-10-19 02:42:44.417 [ INFO] - 370.2 MB (28.3%)
+2023-10-19 02:42:44.918 [ INFO] - 370.2 MB (29.3%)
+2023-10-19 02:42:45.416 [ INFO] - 370.2 MB (30.3%)
+2023-10-19 02:42:45.913 [ INFO] - 370.2 MB (31.3%)
+2023-10-19 02:42:46.409 [ INFO] - 370.2 MB (32.3%)
+2023-10-19 02:42:46.903 [ INFO] - 370.2 MB (33.3%)
+2023-10-19 02:42:47.392 [ INFO] - 370.2 MB (34.3%)
+2023-10-19 02:42:47.691 [ INFO] - 370.2 MB (35.3%)
+2023-10-19 02:42:48.174 [ INFO] - 370.2 MB (36.3%)
+2023-10-19 02:42:48.662 [ INFO] - 370.2 MB (37.3%)
+2023-10-19 02:42:49.145 [ INFO] - 370.2 MB (38.3%)
+2023-10-19 02:42:49.428 [ INFO] - 370.2 MB (39.4%)
+2023-10-19 02:42:49.908 [ INFO] - 370.2 MB (40.4%)
+2023-10-19 02:42:50.191 [ INFO] - 370.2 MB (41.4%)
+2023-10-19 02:42:50.661 [ INFO] - 370.2 MB (42.4%)
+2023-10-19 02:42:51.120 [ INFO] - 370.2 MB (43.4%)
+2023-10-19 02:42:51.410 [ INFO] - 370.2 MB (44.4%)
+2023-10-19 02:42:51.682 [ INFO] - 370.2 MB (45.4%)
+2023-10-19 02:42:52.153 [ INFO] - 370.2 MB (46.4%)
+2023-10-19 02:42:52.423 [ INFO] - 370.2 MB (47.4%)
+2023-10-19 02:42:52.888 [ INFO] - 370.2 MB (48.4%)
+2023-10-19 02:42:53.162 [ INFO] - 370.2 MB (49.4%)
+2023-10-19 02:42:53.431 [ INFO] - 370.2 MB (50.4%)
+2023-10-19 02:42:53.896 [ INFO] - 370.2 MB (51.5%)
+2023-10-19 02:42:54.166 [ INFO] - 370.2 MB (52.5%)
+2023-10-19 02:42:54.621 [ INFO] - 370.2 MB (53.5%)
+2023-10-19 02:42:54.908 [ INFO] - 370.2 MB (54.5%)
+2023-10-19 02:42:55.171 [ INFO] - 370.2 MB (55.5%)
+2023-10-19 02:42:55.631 [ INFO] - 370.2 MB (56.5%)
+2023-10-19 02:42:55.908 [ INFO] - 370.2 MB (57.5%)
+2023-10-19 02:42:56.175 [ INFO] - 370.2 MB (58.5%)
+2023-10-19 02:42:56.629 [ INFO] - 370.2 MB (59.5%)
+2023-10-19 02:42:56.907 [ INFO] - 370.2 MB (60.5%)
+2023-10-19 02:42:57.175 [ INFO] - 370.2 MB (61.5%)
+2023-10-19 02:42:57.626 [ INFO] - 370.2 MB (62.6%)
+2023-10-19 02:42:57.904 [ INFO] - 370.2 MB (63.6%)
+2023-10-19 02:42:58.171 [ INFO] - 370.2 MB (64.6%)
+2023-10-19 02:42:58.627 [ INFO] - 370.2 MB (65.6%)
+2023-10-19 02:42:58.892 [ INFO] - 370.2 MB (66.6%)
+2023-10-19 02:42:59.168 [ INFO] - 370.2 MB (67.6%)
+2023-10-19 02:42:59.434 [ INFO] - 370.2 MB (68.6%)
+2023-10-19 02:42:59.888 [ INFO] - 370.2 MB (69.6%)
+2023-10-19 02:43:00.158 [ INFO] - 370.2 MB (70.6%)
+2023-10-19 02:43:00.426 [ INFO] - 370.2 MB (71.6%)
+2023-10-19 02:43:00.882 [ INFO] - 370.2 MB (72.6%)
+2023-10-19 02:43:01.153 [ INFO] - 370.2 MB (73.7%)
+2023-10-19 02:43:01.417 [ INFO] - 370.2 MB (74.7%)
+2023-10-19 02:43:01.858 [ INFO] - 370.2 MB (75.7%)
+2023-10-19 02:43:02.147 [ INFO] - 370.2 MB (76.7%)
+2023-10-19 02:43:02.418 [ INFO] - 370.2 MB (77.7%)
+2023-10-19 02:43:02.678 [ INFO] - 370.2 MB (78.7%)
+2023-10-19 02:43:02.939 [ INFO] - 370.2 MB (79.7%)
+2023-10-19 02:43:03.399 [ INFO] - 370.2 MB (80.7%)
+2023-10-19 02:43:03.664 [ INFO] - 370.2 MB (81.7%)
+2023-10-19 02:43:03.932 [ INFO] - 370.2 MB (82.7%)
+2023-10-19 02:43:04.203 [ INFO] - 370.2 MB (83.7%)
+2023-10-19 02:43:04.636 [ INFO] - 370.2 MB (84.8%)
+2023-10-19 02:43:04.905 [ INFO] - 370.2 MB (85.8%)
+2023-10-19 02:43:05.190 [ INFO] - 370.2 MB (86.8%)
+2023-10-19 02:43:05.457 [ INFO] - 370.2 MB (87.8%)
+2023-10-19 02:43:05.722 [ INFO] - 370.2 MB (88.8%)
+2023-10-19 02:43:06.160 [ INFO] - 370.2 MB (89.8%)
+2023-10-19 02:43:06.440 [ INFO] - 370.2 MB (90.8%)
+2023-10-19 02:43:06.703 [ INFO] - 370.2 MB (91.8%)
+2023-10-19 02:43:06.965 [ INFO] - 370.2 MB (92.8%)
+2023-10-19 02:43:07.250 [ INFO] - 370.2 MB (93.8%)
+2023-10-19 02:43:07.676 [ INFO] - 370.2 MB (94.8%)
+2023-10-19 02:43:07.947 [ INFO] - 370.2 MB (95.9%)
+2023-10-19 02:43:08.236 [ INFO] - 370.2 MB (96.9%)
+2023-10-19 02:43:08.498 [ INFO] - 370.2 MB (97.9%)
+2023-10-19 02:43:08.760 [ INFO] - 370.2 MB (98.9%)
+2023-10-19 02:43:09.192 [ INFO] - 370.2 MB (99.9%)
+2023-10-19 02:43:09.217 [ INFO] - 370.2 MB (100.0%)
+2023-10-19 02:43:09.217 [ INFO] Processing  time : 0:01:30.462509
+2023-10-19 02:43:09.218 [ INFO] Downloading time : 0:00:41.256795
+2023-10-19 02:43:09.218 [ INFO] Total time       : 0:02:11.719304
+2023-10-19 02:43:09.218 [ INFO] Download rate    : 8.7 MB/s
+2023-10-19 02:43:09.219 [ INFO] Done
+
+ ... end of get_nemo_anfc_uvts
+
+/home/ivans/.local/lib/python3.8/site-packages/numpy/ma/core.py:1156: RuntimeWarning: overflow encountered in true_divide
+  result = self.f(da, db, *args, **kwargs)
+
+ +++ End of get nemo 06h +++
+
+
+ +++ Starting get nemo 06h +++
+
+
+ ... starting script to get nemo anfc ssh
+
+date ini = 2023-10-20 00:30:00
+date end = 2023-10-20 00:30:00
+
+ ... downloading ssh
+
+2023-10-19 02:44:05.361 [ INFO] Asynchronous mode set
+2023-10-19 02:44:05.366 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:44:11.541 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 02:44:18.764 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:44:30.275 [ERROR] 010-27 : Error in NetcdfWriter finish
+
+ ... starting script to get nemo anfc pt6h1 uvts
+
+date ini = 2023-10-20 00:00:00
+date end = 2023-10-20 00:00:00
+
+
+ ... downloading var thetao
+
+2023-10-19 02:44:30.747 [ INFO] Asynchronous mode set
+2023-10-19 02:44:30.748 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:44:35.143 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 02:44:42.240 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:44:53.560 [ INFO] The product is ready for download
+2023-10-19 02:44:53.560 [ INFO] Downloading file (this can take a while)...
+2023-10-19 02:44:54.749 [ INFO] File type: application/x-netcdf
+2023-10-19 02:44:54.750 [ INFO] File size: 46.3 MB (46284188 B)
+2023-10-19 02:44:54.750 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_thetao.nc
+2023-10-19 02:44:55.686 [ INFO] -  46.3 MB (1.1%)
+2023-10-19 02:44:55.922 [ INFO] -  46.3 MB (2.3%)
+2023-10-19 02:44:56.154 [ INFO] -  46.3 MB (3.4%)
+2023-10-19 02:44:56.161 [ INFO] -  46.3 MB (4.5%)
+2023-10-19 02:44:56.199 [ INFO] -  46.3 MB (5.7%)
+2023-10-19 02:44:56.386 [ INFO] -  46.3 MB (6.8%)
+2023-10-19 02:44:56.394 [ INFO] -  46.3 MB (7.9%)
+2023-10-19 02:44:56.401 [ INFO] -  46.3 MB (9.1%)
+2023-10-19 02:44:56.407 [ INFO] -  46.3 MB (10.2%)
+2023-10-19 02:44:56.437 [ INFO] -  46.3 MB (11.3%)
+2023-10-19 02:44:56.443 [ INFO] -  46.3 MB (12.5%)
+2023-10-19 02:44:56.628 [ INFO] -  46.3 MB (13.6%)
+2023-10-19 02:44:56.635 [ INFO] -  46.3 MB (14.7%)
+2023-10-19 02:44:56.641 [ INFO] -  46.3 MB (15.9%)
+2023-10-19 02:44:56.670 [ INFO] -  46.3 MB (17.0%)
+2023-10-19 02:44:56.676 [ INFO] -  46.3 MB (18.1%)
+2023-10-19 02:44:56.683 [ INFO] -  46.3 MB (19.3%)
+2023-10-19 02:44:56.870 [ INFO] -  46.3 MB (20.4%)
+2023-10-19 02:44:56.877 [ INFO] -  46.3 MB (21.5%)
+2023-10-19 02:44:56.884 [ INFO] -  46.3 MB (22.7%)
+2023-10-19 02:44:56.906 [ INFO] -  46.3 MB (23.8%)
+2023-10-19 02:44:56.915 [ INFO] -  46.3 MB (24.9%)
+2023-10-19 02:44:56.921 [ INFO] -  46.3 MB (26.1%)
+2023-10-19 02:44:57.106 [ INFO] -  46.3 MB (27.2%)
+2023-10-19 02:44:57.117 [ INFO] -  46.3 MB (28.3%)
+2023-10-19 02:44:57.124 [ INFO] -  46.3 MB (29.5%)
+2023-10-19 02:44:57.142 [ INFO] -  46.3 MB (30.6%)
+2023-10-19 02:44:57.150 [ INFO] -  46.3 MB (31.7%)
+2023-10-19 02:44:57.159 [ INFO] -  46.3 MB (32.8%)
+2023-10-19 02:44:57.341 [ INFO] -  46.3 MB (34.0%)
+2023-10-19 02:44:57.356 [ INFO] -  46.3 MB (35.1%)
+2023-10-19 02:44:57.362 [ INFO] -  46.3 MB (36.2%)
+2023-10-19 02:44:57.378 [ INFO] -  46.3 MB (37.4%)
+2023-10-19 02:44:57.392 [ INFO] -  46.3 MB (38.5%)
+2023-10-19 02:44:57.398 [ INFO] -  46.3 MB (39.6%)
+2023-10-19 02:44:57.577 [ INFO] -  46.3 MB (40.8%)
+2023-10-19 02:44:57.597 [ INFO] -  46.3 MB (41.9%)
+2023-10-19 02:44:57.603 [ INFO] -  46.3 MB (43.0%)
+2023-10-19 02:44:57.614 [ INFO] -  46.3 MB (44.2%)
+2023-10-19 02:44:57.632 [ INFO] -  46.3 MB (45.3%)
+2023-10-19 02:44:57.638 [ INFO] -  46.3 MB (46.4%)
+2023-10-19 02:44:57.812 [ INFO] -  46.3 MB (47.6%)
+2023-10-19 02:44:57.835 [ INFO] -  46.3 MB (48.7%)
+2023-10-19 02:44:57.841 [ INFO] -  46.3 MB (49.8%)
+2023-10-19 02:44:57.848 [ INFO] -  46.3 MB (51.0%)
+2023-10-19 02:44:57.867 [ INFO] -  46.3 MB (52.1%)
+2023-10-19 02:44:58.045 [ INFO] -  46.3 MB (53.2%)
+2023-10-19 02:44:58.052 [ INFO] -  46.3 MB (54.4%)
+2023-10-19 02:44:58.070 [ INFO] -  46.3 MB (55.5%)
+2023-10-19 02:44:58.077 [ INFO] -  46.3 MB (56.6%)
+2023-10-19 02:44:58.089 [ INFO] -  46.3 MB (57.8%)
+2023-10-19 02:44:58.101 [ INFO] -  46.3 MB (58.9%)
+2023-10-19 02:44:58.281 [ INFO] -  46.3 MB (60.0%)
+2023-10-19 02:44:58.290 [ INFO] -  46.3 MB (61.2%)
+2023-10-19 02:44:58.305 [ INFO] -  46.3 MB (62.3%)
+2023-10-19 02:44:58.313 [ INFO] -  46.3 MB (63.4%)
+2023-10-19 02:44:58.332 [ INFO] -  46.3 MB (64.6%)
+2023-10-19 02:44:58.339 [ INFO] -  46.3 MB (65.7%)
+2023-10-19 02:44:58.516 [ INFO] -  46.3 MB (66.8%)
+2023-10-19 02:44:58.528 [ INFO] -  46.3 MB (68.0%)
+2023-10-19 02:44:58.541 [ INFO] -  46.3 MB (69.1%)
+2023-10-19 02:44:58.549 [ INFO] -  46.3 MB (70.2%)
+2023-10-19 02:44:58.572 [ INFO] -  46.3 MB (71.4%)
+2023-10-19 02:44:58.578 [ INFO] -  46.3 MB (72.5%)
+2023-10-19 02:44:58.752 [ INFO] -  46.3 MB (73.6%)
+2023-10-19 02:44:58.768 [ INFO] -  46.3 MB (74.8%)
+2023-10-19 02:44:58.777 [ INFO] -  46.3 MB (75.9%)
+2023-10-19 02:44:58.785 [ INFO] -  46.3 MB (77.0%)
+2023-10-19 02:44:58.813 [ INFO] -  46.3 MB (78.2%)
+2023-10-19 02:44:58.819 [ INFO] -  46.3 MB (79.3%)
+2023-10-19 02:44:58.986 [ INFO] -  46.3 MB (80.4%)
+2023-10-19 02:44:59.003 [ INFO] -  46.3 MB (81.6%)
+2023-10-19 02:44:59.016 [ INFO] -  46.3 MB (82.7%)
+2023-10-19 02:44:59.022 [ INFO] -  46.3 MB (83.8%)
+2023-10-19 02:44:59.048 [ INFO] -  46.3 MB (85.0%)
+2023-10-19 02:44:59.057 [ INFO] -  46.3 MB (86.1%)
+2023-10-19 02:44:59.224 [ INFO] -  46.3 MB (87.2%)
+2023-10-19 02:44:59.238 [ INFO] -  46.3 MB (88.4%)
+2023-10-19 02:44:59.255 [ INFO] -  46.3 MB (89.5%)
+2023-10-19 02:44:59.261 [ INFO] -  46.3 MB (90.6%)
+2023-10-19 02:44:59.284 [ INFO] -  46.3 MB (91.8%)
+2023-10-19 02:44:59.296 [ INFO] -  46.3 MB (92.9%)
+2023-10-19 02:44:59.457 [ INFO] -  46.3 MB (94.0%)
+2023-10-19 02:44:59.482 [ INFO] -  46.3 MB (95.2%)
+2023-10-19 02:44:59.495 [ INFO] -  46.3 MB (96.3%)
+2023-10-19 02:44:59.502 [ INFO] -  46.3 MB (97.4%)
+2023-10-19 02:44:59.519 [ INFO] -  46.3 MB (98.5%)
+2023-10-19 02:44:59.534 [ INFO] -  46.3 MB (99.7%)
+2023-10-19 02:44:59.561 [ INFO] -  46.3 MB (100.0%)
+2023-10-19 02:44:59.562 [ INFO] Processing  time : 0:00:24.002907
+2023-10-19 02:44:59.562 [ INFO] Downloading time : 0:00:04.811733
+2023-10-19 02:44:59.562 [ INFO] Total time       : 0:00:28.814640
+2023-10-19 02:44:59.562 [ INFO] Download rate    : 7.7 MB/s
+2023-10-19 02:44:59.562 [ INFO] Done
+
+ ... downloading var so
+
+2023-10-19 02:45:00.080 [ INFO] Asynchronous mode set
+2023-10-19 02:45:00.082 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:45:04.508 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 02:45:11.706 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:45:23.089 [ INFO] The product is ready for download
+2023-10-19 02:45:23.090 [ INFO] Downloading file (this can take a while)...
+2023-10-19 02:45:24.056 [ INFO] File type: application/x-netcdf
+2023-10-19 02:45:24.057 [ INFO] File size: 46.3 MB (46284164 B)
+2023-10-19 02:45:24.057 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_so.nc
+2023-10-19 02:45:25.206 [ INFO] -  46.3 MB (1.1%)
+2023-10-19 02:45:25.438 [ INFO] -  46.3 MB (2.3%)
+2023-10-19 02:45:25.445 [ INFO] -  46.3 MB (3.4%)
+2023-10-19 02:45:25.672 [ INFO] -  46.3 MB (4.5%)
+2023-10-19 02:45:25.678 [ INFO] -  46.3 MB (5.7%)
+2023-10-19 02:45:25.685 [ INFO] -  46.3 MB (6.8%)
+2023-10-19 02:45:25.901 [ INFO] -  46.3 MB (7.9%)
+2023-10-19 02:45:25.908 [ INFO] -  46.3 MB (9.1%)
+2023-10-19 02:45:25.914 [ INFO] -  46.3 MB (10.2%)
+2023-10-19 02:45:26.161 [ INFO] -  46.3 MB (11.3%)
+2023-10-19 02:45:26.166 [ INFO] -  46.3 MB (12.5%)
+2023-10-19 02:45:26.171 [ INFO] -  46.3 MB (13.6%)
+2023-10-19 02:45:26.175 [ INFO] -  46.3 MB (14.7%)
+2023-10-19 02:45:26.179 [ INFO] -  46.3 MB (15.9%)
+2023-10-19 02:45:26.184 [ INFO] -  46.3 MB (17.0%)
+2023-10-19 02:45:26.398 [ INFO] -  46.3 MB (18.1%)
+2023-10-19 02:45:26.405 [ INFO] -  46.3 MB (19.3%)
+2023-10-19 02:45:26.411 [ INFO] -  46.3 MB (20.4%)
+2023-10-19 02:45:26.418 [ INFO] -  46.3 MB (21.5%)
+2023-10-19 02:45:26.853 [ INFO] -  46.3 MB (22.7%)
+2023-10-19 02:45:26.861 [ INFO] -  46.3 MB (23.8%)
+2023-10-19 02:45:26.864 [ INFO] -  46.3 MB (24.9%)
+2023-10-19 02:45:26.867 [ INFO] -  46.3 MB (26.1%)
+2023-10-19 02:45:26.871 [ INFO] -  46.3 MB (27.2%)
+2023-10-19 02:45:26.875 [ INFO] -  46.3 MB (28.3%)
+2023-10-19 02:45:27.091 [ INFO] -  46.3 MB (29.5%)
+2023-10-19 02:45:27.098 [ INFO] -  46.3 MB (30.6%)
+2023-10-19 02:45:27.104 [ INFO] -  46.3 MB (31.7%)
+2023-10-19 02:45:27.111 [ INFO] -  46.3 MB (32.9%)
+2023-10-19 02:45:27.553 [ INFO] -  46.3 MB (34.0%)
+2023-10-19 02:45:27.557 [ INFO] -  46.3 MB (35.1%)
+2023-10-19 02:45:27.560 [ INFO] -  46.3 MB (36.2%)
+2023-10-19 02:45:27.563 [ INFO] -  46.3 MB (37.4%)
+2023-10-19 02:45:27.566 [ INFO] -  46.3 MB (38.5%)
+2023-10-19 02:45:27.570 [ INFO] -  46.3 MB (39.6%)
+2023-10-19 02:45:27.789 [ INFO] -  46.3 MB (40.8%)
+2023-10-19 02:45:27.796 [ INFO] -  46.3 MB (41.9%)
+2023-10-19 02:45:28.035 [ INFO] -  46.3 MB (43.0%)
+2023-10-19 02:45:28.039 [ INFO] -  46.3 MB (44.2%)
+2023-10-19 02:45:28.042 [ INFO] -  46.3 MB (45.3%)
+2023-10-19 02:45:28.044 [ INFO] -  46.3 MB (46.4%)
+2023-10-19 02:45:28.254 [ INFO] -  46.3 MB (47.6%)
+2023-10-19 02:45:28.271 [ INFO] -  46.3 MB (48.7%)
+2023-10-19 02:45:28.278 [ INFO] -  46.3 MB (49.8%)
+2023-10-19 02:45:28.497 [ INFO] -  46.3 MB (51.0%)
+2023-10-19 02:45:28.507 [ INFO] -  46.3 MB (52.1%)
+2023-10-19 02:45:28.717 [ INFO] -  46.3 MB (53.2%)
+2023-10-19 02:45:28.736 [ INFO] -  46.3 MB (54.4%)
+2023-10-19 02:45:28.940 [ INFO] -  46.3 MB (55.5%)
+2023-10-19 02:45:28.962 [ INFO] -  46.3 MB (56.6%)
+2023-10-19 02:45:28.972 [ INFO] -  46.3 MB (57.8%)
+2023-10-19 02:45:29.178 [ INFO] -  46.3 MB (58.9%)
+2023-10-19 02:45:29.198 [ INFO] -  46.3 MB (60.0%)
+2023-10-19 02:45:29.402 [ INFO] -  46.3 MB (61.2%)
+2023-10-19 02:45:29.421 [ INFO] -  46.3 MB (62.3%)
+2023-10-19 02:45:29.435 [ INFO] -  46.3 MB (63.4%)
+2023-10-19 02:45:29.640 [ INFO] -  46.3 MB (64.6%)
+2023-10-19 02:45:29.661 [ INFO] -  46.3 MB (65.7%)
+2023-10-19 02:45:29.670 [ INFO] -  46.3 MB (66.8%)
+2023-10-19 02:45:29.874 [ INFO] -  46.3 MB (68.0%)
+2023-10-19 02:45:29.895 [ INFO] -  46.3 MB (69.1%)
+2023-10-19 02:45:30.097 [ INFO] -  46.3 MB (70.2%)
+2023-10-19 02:45:30.116 [ INFO] -  46.3 MB (71.4%)
+2023-10-19 02:45:30.130 [ INFO] -  46.3 MB (72.5%)
+2023-10-19 02:45:30.331 [ INFO] -  46.3 MB (73.6%)
+2023-10-19 02:45:30.352 [ INFO] -  46.3 MB (74.8%)
+2023-10-19 02:45:30.365 [ INFO] -  46.3 MB (75.9%)
+2023-10-19 02:45:30.566 [ INFO] -  46.3 MB (77.0%)
+2023-10-19 02:45:30.587 [ INFO] -  46.3 MB (78.2%)
+2023-10-19 02:45:30.787 [ INFO] -  46.3 MB (79.3%)
+2023-10-19 02:45:30.806 [ INFO] -  46.3 MB (80.4%)
+2023-10-19 02:45:30.822 [ INFO] -  46.3 MB (81.6%)
+2023-10-19 02:45:31.022 [ INFO] -  46.3 MB (82.7%)
+2023-10-19 02:45:31.042 [ INFO] -  46.3 MB (83.8%)
+2023-10-19 02:45:31.057 [ INFO] -  46.3 MB (85.0%)
+2023-10-19 02:45:31.256 [ INFO] -  46.3 MB (86.1%)
+2023-10-19 02:45:31.277 [ INFO] -  46.3 MB (87.2%)
+2023-10-19 02:45:31.289 [ INFO] -  46.3 MB (88.4%)
+2023-10-19 02:45:31.490 [ INFO] -  46.3 MB (89.5%)
+2023-10-19 02:45:31.508 [ INFO] -  46.3 MB (90.6%)
+2023-10-19 02:45:31.708 [ INFO] -  46.3 MB (91.8%)
+2023-10-19 02:45:31.726 [ INFO] -  46.3 MB (92.9%)
+2023-10-19 02:45:31.745 [ INFO] -  46.3 MB (94.0%)
+2023-10-19 02:45:31.942 [ INFO] -  46.3 MB (95.2%)
+2023-10-19 02:45:31.961 [ INFO] -  46.3 MB (96.3%)
+2023-10-19 02:45:31.976 [ INFO] -  46.3 MB (97.4%)
+2023-10-19 02:45:32.176 [ INFO] -  46.3 MB (98.6%)
+2023-10-19 02:45:32.196 [ INFO] -  46.3 MB (99.7%)
+2023-10-19 02:45:32.200 [ INFO] -  46.3 MB (100.0%)
+2023-10-19 02:45:32.201 [ INFO] Processing  time : 0:00:23.977260
+2023-10-19 02:45:32.201 [ INFO] Downloading time : 0:00:08.143610
+2023-10-19 02:45:32.201 [ INFO] Total time       : 0:00:32.120870
+2023-10-19 02:45:32.201 [ INFO] Download rate    : 5.1 MB/s
+2023-10-19 02:45:32.202 [ INFO] Done
+
+ ... downloading var cur
+
+2023-10-19 02:45:32.687 [ INFO] Asynchronous mode set
+2023-10-19 02:45:32.688 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:45:37.305 [ INFO] Requesting file to download (this can take a while)...
+2023-10-19 02:45:44.304 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:45:55.726 [ INFO] Product is not yet available (request in progress)
+2023-10-19 02:46:05.734 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-19 02:46:17.800 [ INFO] The product is ready for download
+2023-10-19 02:46:17.801 [ INFO] Downloading file (this can take a while)...
+2023-10-19 02:46:18.757 [ INFO] File type: application/x-netcdf
+2023-10-19 02:46:18.757 [ INFO] File size: 92.6 MB (92561508 B)
+2023-10-19 02:46:18.758 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_cur.nc
+2023-10-19 02:46:20.146 [ INFO] -  92.6 MB (1.1%)
+2023-10-19 02:46:20.378 [ INFO] -  92.6 MB (2.1%)
+2023-10-19 02:46:20.390 [ INFO] -  92.6 MB (3.2%)
+2023-10-19 02:46:20.612 [ INFO] -  92.6 MB (4.2%)
+2023-10-19 02:46:20.625 [ INFO] -  92.6 MB (5.3%)
+2023-10-19 02:46:20.874 [ INFO] -  92.6 MB (6.4%)
+2023-10-19 02:46:20.887 [ INFO] -  92.6 MB (7.4%)
+2023-10-19 02:46:20.897 [ INFO] -  92.6 MB (8.5%)
+2023-10-19 02:46:21.120 [ INFO] -  92.6 MB (9.6%)
+2023-10-19 02:46:21.571 [ INFO] -  92.6 MB (10.6%)
+2023-10-19 02:46:21.577 [ INFO] -  92.6 MB (11.7%)
+2023-10-19 02:46:21.586 [ INFO] -  92.6 MB (12.7%)
+2023-10-19 02:46:21.808 [ INFO] -  92.6 MB (13.8%)
+2023-10-19 02:46:21.822 [ INFO] -  92.6 MB (14.9%)
+2023-10-19 02:46:22.273 [ INFO] -  92.6 MB (15.9%)
+2023-10-19 02:46:22.281 [ INFO] -  92.6 MB (17.0%)
+2023-10-19 02:46:22.286 [ INFO] -  92.6 MB (18.1%)
+2023-10-19 02:46:22.508 [ INFO] -  92.6 MB (19.1%)
+2023-10-19 02:46:22.520 [ INFO] -  92.6 MB (20.2%)
+2023-10-19 02:46:22.976 [ INFO] -  92.6 MB (21.2%)
+2023-10-19 02:46:22.983 [ INFO] -  92.6 MB (22.3%)
+2023-10-19 02:46:22.989 [ INFO] -  92.6 MB (23.4%)
+2023-10-19 02:46:23.218 [ INFO] -  92.6 MB (24.4%)
+2023-10-19 02:46:23.443 [ INFO] -  92.6 MB (25.5%)
+2023-10-19 02:46:23.458 [ INFO] -  92.6 MB (26.6%)
+2023-10-19 02:46:23.687 [ INFO] -  92.6 MB (27.6%)
+2023-10-19 02:46:23.912 [ INFO] -  92.6 MB (28.7%)
+2023-10-19 02:46:24.137 [ INFO] -  92.6 MB (29.7%)
+2023-10-19 02:46:24.156 [ INFO] -  92.6 MB (30.8%)
+2023-10-19 02:46:24.379 [ INFO] -  92.6 MB (31.9%)
+2023-10-19 02:46:24.605 [ INFO] -  92.6 MB (32.9%)
+2023-10-19 02:46:24.623 [ INFO] -  92.6 MB (34.0%)
+2023-10-19 02:46:24.847 [ INFO] -  92.6 MB (35.0%)
+2023-10-19 02:46:25.069 [ INFO] -  92.6 MB (36.1%)
+2023-10-19 02:46:25.088 [ INFO] -  92.6 MB (37.2%)
+2023-10-19 02:46:25.312 [ INFO] -  92.6 MB (38.2%)
+2023-10-19 02:46:25.534 [ INFO] -  92.6 MB (39.3%)
+2023-10-19 02:46:25.553 [ INFO] -  92.6 MB (40.4%)
+2023-10-19 02:46:25.777 [ INFO] -  92.6 MB (41.4%)
+2023-10-19 02:46:26.004 [ INFO] -  92.6 MB (42.5%)
+2023-10-19 02:46:26.023 [ INFO] -  92.6 MB (43.5%)
+2023-10-19 02:46:26.252 [ INFO] -  92.6 MB (44.6%)
+2023-10-19 02:46:26.479 [ INFO] -  92.6 MB (45.7%)
+2023-10-19 02:46:26.499 [ INFO] -  92.6 MB (46.7%)
+2023-10-19 02:46:26.725 [ INFO] -  92.6 MB (47.8%)
+2023-10-19 02:46:26.928 [ INFO] -  92.6 MB (48.9%)
+2023-10-19 02:46:26.962 [ INFO] -  92.6 MB (49.9%)
+2023-10-19 02:46:27.185 [ INFO] -  92.6 MB (51.0%)
+2023-10-19 02:46:27.198 [ INFO] -  92.6 MB (52.0%)
+2023-10-19 02:46:27.423 [ INFO] -  92.6 MB (53.1%)
+2023-10-19 02:46:27.639 [ INFO] -  92.6 MB (54.2%)
+2023-10-19 02:46:27.662 [ INFO] -  92.6 MB (55.2%)
+2023-10-19 02:46:27.886 [ INFO] -  92.6 MB (56.3%)
+2023-10-19 02:46:28.090 [ INFO] -  92.6 MB (57.4%)
+2023-10-19 02:46:28.125 [ INFO] -  92.6 MB (58.4%)
+2023-10-19 02:46:28.349 [ INFO] -  92.6 MB (59.5%)
+2023-10-19 02:46:28.364 [ INFO] -  92.6 MB (60.5%)
+2023-10-19 02:46:28.588 [ INFO] -  92.6 MB (61.6%)
+2023-10-19 02:46:28.798 [ INFO] -  92.6 MB (62.7%)
+2023-10-19 02:46:28.827 [ INFO] -  92.6 MB (63.7%)
+2023-10-19 02:46:29.048 [ INFO] -  92.6 MB (64.8%)
+2023-10-19 02:46:29.248 [ INFO] -  92.6 MB (65.8%)
+2023-10-19 02:46:29.289 [ INFO] -  92.6 MB (66.9%)
+2023-10-19 02:46:29.505 [ INFO] -  92.6 MB (68.0%)
+2023-10-19 02:46:29.527 [ INFO] -  92.6 MB (69.0%)
+2023-10-19 02:46:29.749 [ INFO] -  92.6 MB (70.1%)
+2023-10-19 02:46:29.954 [ INFO] -  92.6 MB (71.2%)
+2023-10-19 02:46:29.990 [ INFO] -  92.6 MB (72.2%)
+2023-10-19 02:46:30.206 [ INFO] -  92.6 MB (73.3%)
+2023-10-19 02:46:30.396 [ INFO] -  92.6 MB (74.3%)
+2023-10-19 02:46:30.448 [ INFO] -  92.6 MB (75.4%)
+2023-10-19 02:46:30.659 [ INFO] -  92.6 MB (76.5%)
+2023-10-19 02:46:30.693 [ INFO] -  92.6 MB (77.5%)
+2023-10-19 02:46:30.906 [ INFO] -  92.6 MB (78.6%)
+2023-10-19 02:46:31.105 [ INFO] -  92.6 MB (79.7%)
+2023-10-19 02:46:31.148 [ INFO] -  92.6 MB (80.7%)
+2023-10-19 02:46:31.358 [ INFO] -  92.6 MB (81.8%)
+2023-10-19 02:46:31.540 [ INFO] -  92.6 MB (82.8%)
+2023-10-19 02:46:31.607 [ INFO] -  92.6 MB (83.9%)
+2023-10-19 02:46:31.808 [ INFO] -  92.6 MB (85.0%)
+2023-10-19 02:46:31.850 [ INFO] -  92.6 MB (86.0%)
+2023-10-19 02:46:32.060 [ INFO] -  92.6 MB (87.1%)
+2023-10-19 02:46:32.253 [ INFO] -  92.6 MB (88.1%)
+2023-10-19 02:46:32.308 [ INFO] -  92.6 MB (89.2%)
+2023-10-19 02:46:32.509 [ INFO] -  92.6 MB (90.3%)
+2023-10-19 02:46:32.551 [ INFO] -  92.6 MB (91.3%)
+2023-10-19 02:46:32.761 [ INFO] -  92.6 MB (92.4%)
+2023-10-19 02:46:32.959 [ INFO] -  92.6 MB (93.5%)
+2023-10-19 02:46:33.007 [ INFO] -  92.6 MB (94.5%)
+2023-10-19 02:46:33.211 [ INFO] -  92.6 MB (95.6%)
+2023-10-19 02:46:33.397 [ INFO] -  92.6 MB (96.6%)
+2023-10-19 02:46:33.463 [ INFO] -  92.6 MB (97.7%)
+2023-10-19 02:46:33.661 [ INFO] -  92.6 MB (98.8%)
+2023-10-19 02:46:33.706 [ INFO] -  92.6 MB (99.8%)
+2023-10-19 02:46:33.844 [ INFO] -  92.6 MB (100.0%)
+2023-10-19 02:46:33.844 [ INFO] Processing  time : 0:00:46.070969
+2023-10-19 02:46:33.844 [ INFO] Downloading time : 0:00:15.086609
+2023-10-19 02:46:33.844 [ INFO] Total time       : 0:01:01.157578
+2023-10-19 02:46:33.844 [ INFO] Download rate    : 5.8 MB/s
+2023-10-19 02:46:33.845 [ INFO] Done
+
+ ... end of get_nemo_anfc_uvts
+
+ncks: ERROR file nemo_ssh_20231020.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'nemo_ssh_20231020.nc': No such file or directory
+ncap2: ERROR file ssh2.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncap2: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+ncks: ERROR file ssh3.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'ssh2.nc': No such file or directory
+rm: cannot remove 'ssh3.nc': No such file or directory
+ncdump: nemo_ssh_20231020.nc: No such file or directory
+ncdump: nemo_ssh_20231020.nc: No such file or directory
+ncgen: cdf.cdf line 5: syntax error, unexpected ';'
+Traceback (most recent call last):
+  File "write_nemo_file.py", line 11, in <module>
+    infile2 = Dataset(in2,'r')
+  File "src/netCDF4/_netCDF4.pyx", line 2353, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 1963, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'nemo_ssh_20231020.nc'
+rm: cannot remove 'nemo_ssh_20231020.nc': No such file or directory
+
+ +++ End of get nemo 06h +++
+
+ ... merge downloaded files into file nemo_npo0.08_20231019.nc
+ ... fix longitudes
+ ... include new attributes: _FillValue and missing values
+cdo    setmissval: Processed 5 variables over 4 timesteps [8.01s 104MB].
+cdo    setmissval: Processed 5 variables over 4 timesteps [11.51s 108MB].
+
+ ... check integrity of downloaded file 
+
+
+ ... after check procedure check status is 0
+
+ ... %%%%%% Downloaded file is OK !! %%%%%%
+
+ ... move file to storage 
+
+
+ ==> 2023/10/19 02:47:04 FINISHED downloading OGCM nemo for ROMS <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/19 02:47:04 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 04: make input files for ROMS <==
+
+
+ ... today is 2023-10-19, ogcm is nemo
+ ... will read 5 time steps every 24 hours
+ ... will run for 1 day(s)
+ ... donor file is /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019/nemo_npo0.08_20231019.nc
+
+
+     ... horizontal interpolation: remap donor ogcm to roms grid
+
+ ... found file grid_r_npo0.08.nc; will use it !!
+
+
+     ... vertical interpolation: interp remaped ogcm to sigma level
+
+Warning (cdfInqContents): Coordinates variable sigma can't be assigned!
+Warning (cdfInqContents): Coordinates variable level can't be assigned!
+Warning: Non monotonic zaxis!
+     ... inpaint nans on remaped, sigma coord ogcm
+
+     ... will use a temporary roms mask /home/ivans/operational/pacific_npo_2gr/forecast/d-interp/roms_npo0.08_07e_tmpmsk.nc
+     ... to avoid inpainting on land points
+
+ 
+ +++ Starting python program to inpaint nans on donor OGCM +++
+ 
+ ... arguments are: ['/home/ivans/scripts/4roms/make_clim_step01_inpaint_nans_on_remaped_ogcm.py', '20231019', 'nemo', '5', '30', '24', '/home/ivans/operational/roms/grids/grid_npo0.08_07e.nc', 'remaped_nemo_20231019', '/home/ivans/operational/pacific_npo_2gr/forecast/d-interp/roms_npo0.08_07e_tmpmsk.nc']
+ 
+ 
+ ... ogcm is nemo
+ ... ntimes is 5
+ ... storage interval is 24.0
+ ... start date is 2023/10/19
+ 
+ 
+ ... ogcm NaN is -9999.0
+ 
+ ... doing time step 0 ... at time 750988800.0 secs
+ ... doing time step 1 ... at time 751075200.0 secs
+ ... doing time step 2 ... at time 751161600.0 secs
+ ... doing time step 3 ... at time 751248000.0 secs
+ ... doing time step 4 ... at time 751334400.0 secs
+Traceback (most recent call last):
+  File "/home/ivans/scripts/4roms/make_clim_step01_inpaint_nans_on_remaped_ogcm.py", line 128, in <module>
+    ssh = inpfile.variables[donor_e] [nt,:,:]
+  File "src/netCDF4/_netCDF4.pyx", line 4739, in netCDF4._netCDF4.Variable.__getitem__
+  File "src/netCDF4/_netCDF4.pyx", line 5686, in netCDF4._netCDF4.Variable._get
+IndexError: index exceeds dimension bounds
+     ... re-write interpolated ogcm vars on staggered grid
+
+ +++ Scripts to create climatology & obc files for ROMS +++
+
+ ... will output empty netcdf files named clm.nc & bry.nc 
+ ... ref date, nlon, nlat, nsig = 20000101, 601, 376, 30
+
+ 
+ +++ Starting python program to write vars on clim files +++
+ 
+ ... arguments are: ['/home/ivans/scripts/4roms/make_clim_step02_write_clm_bry_files.py', '5', '20231019', 'nemo', '0.', '1', '2', '4', '10.0', '4.0', '150', '150', '30', 'remaped_nemo_20231019_nonans.nc', '/home/ivans/operational/roms/grids/grid_npo0.08_07e.nc', 'input_clm_npo0.08_07e_20231019_nemo.nc', 'input_bry_npo0.08_07e_20231019_nemo.nc']
+ 
+ 
+ ... ogcm is nemo
+ ... ntimes is 5
+ ... rotation ang is 0.0
+ ... start date is 2023/10/19
+ 
+ 
+ ... will write clim file input_clm_npo0.08_07e_20231019_nemo.nc
+ ... and bdry file input_bry_npo0.08_07e_20231019_nemo.nc
+ 
+ ... grid size is 601 x 376
+ 
+ ... writing grid params in roms file ...
+ 
+ 
+ ... writing grid params in roms file ...
+ 
+ 
+ ... writing lon/lat in clm file ...
+ 
+ 
+ ... writing lon/lat in bry file ...
+ 
+ ... reading time 646896.0
+ 
+##############################################################################
+#                                                                             
+#    ... writing vars in clmfile @ day: 8692.0, ntime: 0
+#                                                                             
+##############################################################################
+ 
+Traceback (most recent call last):
+  File "/home/ivans/scripts/4roms/make_clim_step02_write_clm_bry_files.py", line 223, in <module>
+    write_clm_vars(clmfile, OGCM, n, outtime, 1)
+  File "/home/ivans/scripts/python/io_tools_v1.py", line 593, in write_clm_vars
+    out.variables[varname][it, :, :, :] = clmvars.var3d
+AttributeError: type object 'Object' has no attribute 'var3d'
+
+ ==> 2023/10/19 03:05:41 FINISHED making input files for ROMS <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/19 03:05:41 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 05: run ROMS <==
+
+
+ ... today is 2023-10-19
+
+ ... roms grid size is 601 x 376 x 30
+ ... roms grid limits are: x1,x2 = -166,-118, y1,y2 = 16,46
+ ... roms grid resolution is regular: 0.08 x 0.08
+
+ ... will store outputs in folder /home/ivans/operational/pacific_npo_2gr/forecast/d-storage
+
+ ... start day is 20231019
+ ... the expt is npo0.08_07e_20231019
+ ... will run for 1 day(s)
+
+ ... the donor file is /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019/nemo_npo0.08_20231019.nc
+ ... will read donor 5 time steps every 24 hours
+
+ ... the grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... the ngc  file is /home/ivans/operational/roms/grids/ngc_npo0.08_07e+npo0.0267_01c.nc
+ ... the nudg file is /home/ivans/operational/roms/nudge/nudge_npo0.08_07e_exp_strong.nc
+ ... the tide file is /home/ivans/operational/roms/tides/tide_npo0.08_07e_2023_ref2000.nc
+
+
+ ... will read roms input files from /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_in
+ ... will output roms results to /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_out
+
+ ... /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_in DOES NOT exist, will create it
+ ... /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_out DOES NOT exist, will create it
+
+ ... make links to ROMS input files
+
+
+ ... accessing ROMS grid file /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+
+
+ ... accessing ROMS grid file /home/ivans/operational/roms/grids/grid_npo0.0267_01c.nc
+
+
+ ... accessing ROMS ngc file /home/ivans/operational/roms/grids/ngc_npo0.08_07e+npo0.0267_01c.nc
+
+
+ ... accessing ROMS tide file /home/ivans/operational/roms/tides/tide_npo0.08_07e_2023_ref2000.nc
+
+
+ ... this implementation uses no rivers
+
+
+ ... accessing ROMS nudg file /home/ivans/operational/roms/nudge/nudge_npo0.08_07e_exp_strong.nc
+
+
+ ... didnt find ROMS init file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231018/roms_rst_npo0.08_07e_20231019_nemo.nc
+
+ ... will use file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019/input_clm_npo0.08_07e_20231019_nemo.nc
+
+
+ ... didnt find ROMS init file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231018/roms_rst_npo0.0267_01c_20231019_nemo.nc
+
+ ... will use file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231019/input_clm_npo0.0267_01c_20231019_nemo.nc
+
+
+ +++ Starting script to interp climatology to higher resolution +++
+
+ ... DIDNT find file /home/ivans/oper/pacific_npo_2gr/forecast/d-storage/20231019/input_clm_npo0.08_07e_20231019_glby.nc, exiting now 
+
+ ... DIDNT find file input_clm_npo0.0267_01c_20231019_nemo.nc, exiting !!
+
+
+ ==> FINISHED ROMS/WW3 7-DAY FORECAST @ 2023/10/19 03:05:41 <== 
+

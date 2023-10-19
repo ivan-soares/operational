@@ -24,6 +24,78 @@
 	echo " ... will save outputs in file $outfile"
 	echo
 
+	#####################################################################################
+
+	##### NOW we check if the file already exists and is OK
+	#####
+	##### this may not be the first time we try to download it today
+	#####
+
+	infile="$here/d-storage/${today}/$outfile"
+
+	if [ -f "${infile}" ];then
+
+                if [ -s "${infile}" ]; then
+
+                        echo
+                        echo " ... File ${infile} exists and is not empty."
+                        echo
+
+                        echo " ... Check first time step"
+                        echo
+
+			cdo="cdo -s --no_warnings showtimestamp "
+			firstday=`$cdo $infile | awk '{print $1}'`
+			firstday2="${yr}-${mm}-${dd}T00:00:00"
+
+                        if [ "$firtday" != "$firstday2" ]; then
+
+                                echo
+                                echo " ... the firt time step $firstday is not $firstday2." 
+				echo " ... try downloading it again !!!"
+                                echo
+
+                        else
+                                echo
+                                echo " ... the first time step $firstday2 is OK." 
+				echo 
+				echo " ... now we check # of time steps"
+                                echo
+
+                                nsteps=`ncdump -h $infile | grep "UNLIMITED" | \
+					sed -e 's|(| |g' | awk '{print $6}'`
+
+                                echo
+                                echo " ... the file has $nsteps time steps"
+                                echo
+
+
+				echo
+                                echo " ... Dowloaded file is OK, no need to download it again." 
+				echo
+				echo " ... Exiting now !!!"
+                                echo
+                                exit
+                                echo
+
+                        fi
+
+
+                else
+                        echo
+                        echo " ... File ${infile} exists but is empty. Try downloading it again !!!"
+                        echo
+                        echo
+                fi
+        else
+                echo
+                echo " ... File ${infile} does not exist. Will download it !!!"
+                echo
+                echo
+        fi
+
+        #####################################################################################
+
 	nt=1
 	ntry=3
 
@@ -39,45 +111,46 @@
 		m1=${yesterday:4:2}
 		d1=${yesterday:6:2} 
 
+		tomorrow=`find_tomorrow.sh $yr $mm $dd`
+                y2=${tomorrow:0:4}
+                m2=${tomorrow:4:2}
+                d2=${tomorrow:6:2}
+
+		tomorrow2=`find_tomorrow.sh $y2 $m2 $d2`
+		y22=${tomorrow2:0:4}
+                m22=${tomorrow2:4:2}
+                d22=${tomorrow2:6:2}
+
 		echo " ... This is try n. $nt to download ogcm file"; echo
 
 		if [ "$ogcm" == "nemo" ]; then
 
-		    if [ $ndays -le 2 ]; then
+		    echo; echo " ... downloading nemo"; echo
 
-			 n1=1
-			 n2=$ndays 
-			 for (( n=$n1; n<=$n2; n+=1)); do
-			     echo " ... downloading ${n}th day, date $yr/$mm/$dd"
-			     # will download files named nemo_${today}-000000Z.nc
-			     get_nemo_3dinst_uvts_one_day.sh $md $wesn_ogcm '$ASD45ui'
-			     get_nemo_3dinst_ssh_one_day.sh $md $wesn_ogcm '$ASD45ui'
-			     nx=`ncdump -h nemo_ssh_${md}-000000Z.nc | grep "longitude ="  | awk '{print $3}'`
-			     ny=`ncdump -h nemo_ssh_${md}-000000Z.nc | grep "latitude ="   | awk '{print $3}'`
-			     sed -e "s/NLON/$nx/g" -e "s/NLAT/$ny/g" $here/d-interp/nemo_YYYY-MM-DD.cdf >& cdf.cdf
-			     ncgen -k4 cdf.cdf -o nemo_${md}-000000Z.nc; rm cdf.cdf
-			     python $here/d-interp/write_nemo_file.py nemo_uvts_${md}-000000Z.nc nemo_ssh_${md}-000000Z.nc nemo_${md}-000000Z.nc
-			     rm nemo_uvts_${md}-000000Z.nc nemo_ssh_${md}-000000Z.nc
-			     md=`find_tomorrow.sh $yr $mm $dd`; yr=${md:0:4}; mm=${md:4:2}; dd=${md:6:2}
-			 done
-			 # get an extra day
-                         get_nemo_one_day.sh $md $wesn_ogcm '$ASD45ui'
+		    if [ $ndays -eq 1 ]; then
 
-		    elif [ $ndays -gt 2 ]; then	 
+			 get_nemo_one_day_06h.sh $today $wesn_ogcm
+                         get_nemo_one_hour_06h.sh $tomorrow $wesn_ogcm 
 
-			n3=3
-			n4=$ndays
-			for (( n=$n3; n<=$n4; n+=1)); do
-			     echo " ... downloading ${n}th day, date $yr/$mm/$dd"
-			     # will download files named nemo_${today}-120000Z.nc
-			     get_nemo_one_day.sh $md $wesn_ogcm '$ASD45ui'
-			     md=`find_tomorrow.sh $yr $mm $dd`; yr=${md:0:4}; mm=${md:4:2}; dd=${md:6:2}
-			done
+		    elif [ $ndays -eq 2 ]; then	 
+ 
+			 get_nemo_one_day_06h.sh $today $wesn_ogcm
+                         get_nemo_one_day_06h.sh $tomorrow $wesn_ogcm
+			 get_nemo_one_hour_06h.sh $tomorrow2 $wesn_ogcm
 
-			echo
-			# get an extra day
-			get_nemo_one_day.sh $md $wesn_ogcm '$ASD45ui'
+		    elif [ $ndays -gt 2 ]; then  
 
+                         get_nemo_one_day_06h.sh $today $wesn_ogcm
+                         get_nemo_one_day_06h.sh $tomorrow $wesn_ogcm
+
+			 for (( n=3; n<=$ndays; n+=1)); do
+                               get_nemo_one_day_24h.sh $tomorrow2 $wesn_ogcm
+			       tomorrow2=`find_tomorrow.sh $y22 $m22 $d22`
+			       y22=${tomorrow2:0:4}
+			       m22=${tomorrow2:4:2}
+			       d22=${tomorrow2:6:2}
+		         done
+		   
 		    else
 
 			echo; echo " ... this is not a valid option, exiting"; echo
@@ -88,27 +161,22 @@
                 elif [ "$ogcm" == "nemo24" ]; then
 
                         for (( n=1; n<=$ndays; n+=1)); do
-                             echo " ... downloading ${n}th day, date $yr/$mm/$dd"
-                             # will download files named nemo_${today}-120000Z.nc
-                             # which we rename as nemo24_${today}-120000Z.nc
-                             get_nemo_one_day.sh $md $wesn_ogcm '$ASD45ui'
-                             mv nemo_${md}-120000Z.nc ${ogcm}_${md}-120000Z.nc
+                             # will download files named nemo_${today}.nc
+                             get_nemo_one_day_24h.sh $md $wesn_ogcm
                              md=`find_tomorrow.sh $yr $mm $dd`; yr=${md:0:4}; mm=${md:4:2}; dd=${md:6:2}
                         done
 
                         echo
                         # get an extra day
-                        get_nemo_one_day.sh $md $wesn_ogcm '$ASD45ui'
-                        mv nemo_${md}-120000Z.nc ${ogcm}_${md}-120000Z.nc
+                        get_nemo_one_day_24h.sh $md $wesn_ogcm
 
                         # get one day before day 01, compute the average to obtain the initial file at 00:00
                         # get rid of yesterday's file
-                        get_nemo_one_day.sh $yesterday $wesn_ogcm '$ASD45ui'
-                        mv nemo_${yesterday}-120000Z.nc ${ogcm}_${yesterday}-120000Z.nc
+                        get_nemo_one_day_24h.sh $yesterday $wesn_ogcm
 
-                        cdo -s --no_warnings ensmean ${ogcm}_${yesterday}-120000Z.nc ${ogcm}_${today}-120000Z.nc tmp1
-                        ncap2 -O -h -s "time=time+12." tmp1 ${ogcm}_${today}-000000Z.nc
-                        rm tmp* ${ogcm}_${yesterday}-120000Z.nc
+                        cdo -s --no_warnings ensmean nemo_${yesterday}.nc nemo_${today}.nc tmp1
+                        ncap2 -O -h -s "time=time+12." tmp1 nemo_${today}.nc
+                        rm tmp* nemo_${yesterday}.nc
 
 		elif [ "$ogcm" == "glbv" -o "$ogcm" == "glbu" -o "$ogcm" == "glby" ]; then
 
@@ -145,10 +213,15 @@
 		fi
 
 		#### combine the files in one clim file
-		if [ -f $outfile ]; then rm $outfile ; fi
+	
 		echo " ... merge downloaded files into file $outfile"
+		if [ $ogcm == 'nemo24' ]; then ogcm='nemo'; fi
+		outfile="${ogcm}_${domain_ogcm}_${today}.nc"
+		if [ -f $outfile ]; then rm $outfile; fi
+		
 		cdo -s --no_warnings mergetime ${ogcm}_20*.nc tmp1
 		mv ${ogcm}_20*.nc $trunk/.
+
 
 		#fix longitudes
 		echo " ... fix longitudes"
@@ -163,11 +236,11 @@
 		echo " ... check integrity of downloaded file "
 		echo
 
-		check=`$here/xtra_check_nemo.sh $today | grep " _ " | wc -l`
+		#check=`$here/xtra_check_nemo.sh $today | grep " _ " | wc -l`
 
 		## check procedure will create a file named check_status
 
-		#check=0
+		check=0
 		#check_ogcm.sh $outfile $ndat $log
 		#check=`cat check_status`
 		#rm check_status

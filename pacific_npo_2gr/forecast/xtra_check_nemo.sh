@@ -6,11 +6,11 @@
 	domain='npo0.08'
 
 	echo
-	echo " +++ Starting script to check GFS files +++"
+	echo " +++ Starting script to check NEMO files +++"
 	echo
 
-	ls -1 ${ogcm}_${domain}_${today}* >& list_of_files
-        #ls -1 d-storage/${today}*/${ogcm}_${domain}_${today}* >& list_of_files
+	#ls -1 ${ogcm}_${domain}_${today}* >& list_of_files
+        ls -1 d-storage/${today}*/${ogcm}_${domain}_${today}* >& list_of_files
 
 	nfiles=`wc -l list_of_files`
 
@@ -55,6 +55,8 @@
                 nlon=`ncdump -h $line | grep "longitude = " | awk '{print $3}'`
 		nlat=`ncdump -h $line | grep "latitude = "  | awk '{print $3}'`
 		nvar=`ncdump -h $line | grep short | wc -l`
+		nvar2=`ncdump -h $line | grep float | wc -l`
+		let nvar=$nvar+$nvar2
 		if [ "$nvar" -eq  "0" ]; then nvar=`ncdump -h $line | grep float | wc -l`; fi
 	        echo " ... file: $line has $nlon lons, $nlat lats, $nvar vars" 
         done < list_of_files
@@ -65,6 +67,7 @@
 
 	file=`sed '1q;d' list_of_files`
 	ncdump -h $file | grep short
+	ncdump -h $file | grep float
 
 	echo
         echo " %%% check for corrupted files "

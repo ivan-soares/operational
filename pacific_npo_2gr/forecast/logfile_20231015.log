@@ -1,0 +1,1241 @@
+
+ ==> STARTING ROMS/WW3 7-DAY FORECAST @ 2023/10/15 01:11:01 <== 
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/15 01:11:02 HERE I am for step 01: start forecast <==
+
+
+ ... today is 2023-10-15
+
+ ... dir /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015 doesnt exist, will create it
+ ... dir /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary exists, will clean it
+
+ ... end of step 01 
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/15 01:11:02 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 02: download forcing gfs data <==
+
+
+ ... today is 2023-10-15
+ ... will download 24 hours
+ ... will store downloaded files in folder /home/ivans/operational/pacific_npo_2gr/forecast/d-storage
+
+
+ +++ Starting script get_gfs_nomads_oneday+forecast.sh +++
+
+ ... today is 20231015
+ ... will download 1 day(s)
+
+
+vars = :UGRD:10 m above|:VGRD:10 m above|:PREMSL|:RH:2 m above|:SPFH:2 m above|:TMP:2 m above|:PRMSL|:DSWRF|:DLWRF|:USWRF:surface|:ULWRF:surface|:PRATE:surface|:TMP:surface|:TCDC:entire atmosphere|:TCDC:high cloud layer|:TCDC:low cloud layer|:TCDC:middle cloud layer
+
+2023-10-15 01:11:18 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231014/18/atmos/gfs.t18z.pgrb2.0p25.f006 [543900593/543900593] -> "nomads.tmp" [1]
+1:0:d=2023101418:PRMSL:mean sea level:6 hour fcst:
+563:412374605:d=2023101418:TMP:surface:6 hour fcst:
+581:419834924:d=2023101418:TMP:2 m above ground:6 hour fcst:
+582:420709317:d=2023101418:SPFH:2 m above ground:6 hour fcst:
+584:422455508:d=2023101418:RH:2 m above ground:6 hour fcst:
+588:424785606:d=2023101418:UGRD:10 m above ground:6 hour fcst:
+589:425754005:d=2023101418:VGRD:10 m above ground:6 hour fcst:
+593:427844801:d=2023101418:PRATE:surface:6 hour fcst:
+595:429108506:d=2023101418:PRATE:surface:0-6 hour ave fcst:
+636:448397717:d=2023101418:TCDC:entire atmosphere:6 hour fcst:
+637:449215858:d=2023101418:TCDC:entire atmosphere:0-6 hour ave fcst:
+653:465029073:d=2023101418:DSWRF:surface:0-6 hour ave fcst:
+654:465989427:d=2023101418:DLWRF:surface:0-6 hour ave fcst:
+655:466916162:d=2023101418:USWRF:surface:0-6 hour ave fcst:
+656:467799745:d=2023101418:ULWRF:surface:0-6 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f003
+
+2023-10-15 01:11:42 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f003 [539242919/539242919] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:3 hour fcst:
+563:408469930:d=2023101500:TMP:surface:3 hour fcst:
+581:415925481:d=2023101500:TMP:2 m above ground:3 hour fcst:
+582:416798302:d=2023101500:SPFH:2 m above ground:3 hour fcst:
+584:418928463:d=2023101500:RH:2 m above ground:3 hour fcst:
+588:421981206:d=2023101500:UGRD:10 m above ground:3 hour fcst:
+589:422947313:d=2023101500:VGRD:10 m above ground:3 hour fcst:
+593:425039987:d=2023101500:PRATE:surface:3 hour fcst:
+595:426385116:d=2023101500:PRATE:surface:0-3 hour ave fcst:
+636:444931457:d=2023101500:TCDC:entire atmosphere:3 hour fcst:
+637:445735226:d=2023101500:TCDC:entire atmosphere:0-3 hour ave fcst:
+653:460750797:d=2023101500:DSWRF:surface:0-3 hour ave fcst:
+654:461549060:d=2023101500:DLWRF:surface:0-3 hour ave fcst:
+655:462502487:d=2023101500:USWRF:surface:0-3 hour ave fcst:
+656:463267223:d=2023101500:ULWRF:surface:0-3 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f006
+
+2023-10-15 01:12:05 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f006 [543214386/543214386] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:6 hour fcst:
+563:410472322:d=2023101500:TMP:surface:6 hour fcst:
+581:417936425:d=2023101500:TMP:2 m above ground:6 hour fcst:
+582:418809175:d=2023101500:SPFH:2 m above ground:6 hour fcst:
+584:420552845:d=2023101500:RH:2 m above ground:6 hour fcst:
+588:423597389:d=2023101500:UGRD:10 m above ground:6 hour fcst:
+589:424564045:d=2023101500:VGRD:10 m above ground:6 hour fcst:
+593:426736732:d=2023101500:PRATE:surface:6 hour fcst:
+595:427999271:d=2023101500:PRATE:surface:0-6 hour ave fcst:
+636:447513061:d=2023101500:TCDC:entire atmosphere:6 hour fcst:
+637:448321106:d=2023101500:TCDC:entire atmosphere:0-6 hour ave fcst:
+653:464120575:d=2023101500:DSWRF:surface:0-6 hour ave fcst:
+654:465057344:d=2023101500:DLWRF:surface:0-6 hour ave fcst:
+655:465976544:d=2023101500:USWRF:surface:0-6 hour ave fcst:
+656:466858701:d=2023101500:ULWRF:surface:0-6 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f009
+
+2023-10-15 01:12:31 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f009 [541201703/541201703] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:9 hour fcst:
+563:409956249:d=2023101500:TMP:surface:9 hour fcst:
+581:417420226:d=2023101500:TMP:2 m above ground:9 hour fcst:
+582:418299769:d=2023101500:SPFH:2 m above ground:9 hour fcst:
+584:420429803:d=2023101500:RH:2 m above ground:9 hour fcst:
+588:423485287:d=2023101500:UGRD:10 m above ground:9 hour fcst:
+589:424454038:d=2023101500:VGRD:10 m above ground:9 hour fcst:
+593:426629424:d=2023101500:PRATE:surface:9 hour fcst:
+595:427888186:d=2023101500:PRATE:surface:6-9 hour ave fcst:
+636:446642957:d=2023101500:TCDC:entire atmosphere:9 hour fcst:
+637:447462000:d=2023101500:TCDC:entire atmosphere:6-9 hour ave fcst:
+653:462520380:d=2023101500:DSWRF:surface:6-9 hour ave fcst:
+654:463322546:d=2023101500:DLWRF:surface:6-9 hour ave fcst:
+655:464272601:d=2023101500:USWRF:surface:6-9 hour ave fcst:
+656:464987943:d=2023101500:ULWRF:surface:6-9 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f012
+
+2023-10-15 01:12:53 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f012 [541279781/541279781] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:12 hour fcst:
+563:410122328:d=2023101500:TMP:surface:12 hour fcst:
+581:417411012:d=2023101500:TMP:2 m above ground:12 hour fcst:
+582:417922223:d=2023101500:SPFH:2 m above ground:12 hour fcst:
+584:419664655:d=2023101500:RH:2 m above ground:12 hour fcst:
+588:422723095:d=2023101500:UGRD:10 m above ground:12 hour fcst:
+589:423695690:d=2023101500:VGRD:10 m above ground:12 hour fcst:
+593:425867998:d=2023101500:PRATE:surface:12 hour fcst:
+595:427213224:d=2023101500:PRATE:surface:6-12 hour ave fcst:
+636:446211091:d=2023101500:TCDC:entire atmosphere:12 hour fcst:
+637:447030452:d=2023101500:TCDC:entire atmosphere:6-12 hour ave fcst:
+653:462899706:d=2023101500:DSWRF:surface:6-12 hour ave fcst:
+654:463843588:d=2023101500:DLWRF:surface:6-12 hour ave fcst:
+655:464763317:d=2023101500:USWRF:surface:6-12 hour ave fcst:
+656:465661819:d=2023101500:ULWRF:surface:6-12 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f015
+
+2023-10-15 01:13:22 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f015 [542850863/542850863] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:15 hour fcst:
+563:414108947:d=2023101500:TMP:surface:15 hour fcst:
+581:421395865:d=2023101500:TMP:2 m above ground:15 hour fcst:
+582:421905356:d=2023101500:SPFH:2 m above ground:15 hour fcst:
+584:423646249:d=2023101500:RH:2 m above ground:15 hour fcst:
+588:425980997:d=2023101500:UGRD:10 m above ground:15 hour fcst:
+589:426954418:d=2023101500:VGRD:10 m above ground:15 hour fcst:
+593:429067085:d=2023101500:PRATE:surface:15 hour fcst:
+595:430425913:d=2023101500:PRATE:surface:12-15 hour ave fcst:
+636:448670569:d=2023101500:TCDC:entire atmosphere:15 hour fcst:
+637:449488423:d=2023101500:TCDC:entire atmosphere:12-15 hour ave fcst:
+653:464583960:d=2023101500:DSWRF:surface:12-15 hour ave fcst:
+654:465398033:d=2023101500:DLWRF:surface:12-15 hour ave fcst:
+655:466351114:d=2023101500:USWRF:surface:12-15 hour ave fcst:
+656:467067078:d=2023101500:ULWRF:surface:12-15 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f018
+
+2023-10-15 01:14:04 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f018 [543851288/543851288] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:18 hour fcst:
+563:413217848:d=2023101500:TMP:surface:18 hour fcst:
+581:420511662:d=2023101500:TMP:2 m above ground:18 hour fcst:
+582:421025998:d=2023101500:SPFH:2 m above ground:18 hour fcst:
+584:422763541:d=2023101500:RH:2 m above ground:18 hour fcst:
+588:425100278:d=2023101500:UGRD:10 m above ground:18 hour fcst:
+589:426069627:d=2023101500:VGRD:10 m above ground:18 hour fcst:
+593:428254754:d=2023101500:PRATE:surface:18 hour fcst:
+595:429611830:d=2023101500:PRATE:surface:12-18 hour ave fcst:
+636:448681423:d=2023101500:TCDC:entire atmosphere:18 hour fcst:
+637:449499019:d=2023101500:TCDC:entire atmosphere:12-18 hour ave fcst:
+653:465418173:d=2023101500:DSWRF:surface:12-18 hour ave fcst:
+654:466349722:d=2023101500:DLWRF:surface:12-18 hour ave fcst:
+655:467269214:d=2023101500:USWRF:surface:12-18 hour ave fcst:
+656:468075045:d=2023101500:ULWRF:surface:12-18 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f021
+
+2023-10-15 01:14:43 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f021 [541276379/541276379] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:21 hour fcst:
+563:412276178:d=2023101500:TMP:surface:21 hour fcst:
+581:419562503:d=2023101500:TMP:2 m above ground:21 hour fcst:
+582:420070494:d=2023101500:SPFH:2 m above ground:21 hour fcst:
+584:421805631:d=2023101500:RH:2 m above ground:21 hour fcst:
+588:424136667:d=2023101500:UGRD:10 m above ground:21 hour fcst:
+589:425107358:d=2023101500:VGRD:10 m above ground:21 hour fcst:
+593:427257068:d=2023101500:PRATE:surface:21 hour fcst:
+595:428590625:d=2023101500:PRATE:surface:18-21 hour ave fcst:
+636:447608406:d=2023101500:TCDC:entire atmosphere:21 hour fcst:
+637:448421592:d=2023101500:TCDC:entire atmosphere:18-21 hour ave fcst:
+653:463529359:d=2023101500:DSWRF:surface:18-21 hour ave fcst:
+654:464358775:d=2023101500:DLWRF:surface:18-21 hour ave fcst:
+655:465310331:d=2023101500:USWRF:surface:18-21 hour ave fcst:
+656:466013647:d=2023101500:ULWRF:surface:18-21 hour ave fcst:
+
+ ... downloading file https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f024
+
+2023-10-15 01:15:07 URL:https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20231015/00/atmos/gfs.t00z.pgrb2.0p25.f024 [543740863/543740863] -> "nomads.tmp" [1]
+1:0:d=2023101500:PRMSL:mean sea level:24 hour fcst:
+563:412491656:d=2023101500:TMP:surface:24 hour fcst:
+581:419965256:d=2023101500:TMP:2 m above ground:24 hour fcst:
+582:420835314:d=2023101500:SPFH:2 m above ground:24 hour fcst:
+584:422952919:d=2023101500:RH:2 m above ground:24 hour fcst:
+588:425626823:d=2023101500:UGRD:10 m above ground:24 hour fcst:
+589:426588517:d=2023101500:VGRD:10 m above ground:24 hour fcst:
+593:428658028:d=2023101500:PRATE:surface:24 hour fcst:
+595:429998444:d=2023101500:PRATE:surface:18-24 hour ave fcst:
+636:449389066:d=2023101500:TCDC:entire atmosphere:24 hour fcst:
+637:450195284:d=2023101500:TCDC:entire atmosphere:18-24 hour ave fcst:
+653:466032013:d=2023101500:DSWRF:surface:18-24 hour ave fcst:
+654:466989055:d=2023101500:DLWRF:surface:18-24 hour ave fcst:
+655:467905648:d=2023101500:USWRF:surface:18-24 hour ave fcst:
+656:468783557:d=2023101500:ULWRF:surface:18-24 hour ave fcst:
+cdo    mergetime: Processed 117 variables over 9 timesteps [0.83s 56MB].
+
+ +++ End of script get_gfs_nomads_oneday+forecast.sh +++
+
+
+ ==> HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary to execute check procedure on file gfs_20231015.nc <==
+
+
+ ... Initiating routine to check integrity of file 
+
+ ... gfs_20231015.nc exists !!!
+ ... No NaNs found !!!
+ ... $test_nan is empty
+ ... gfs file nbytes = 106683563
+ ... donwloaded file nbytes = 485918292
+ ... downloaded file is OK !!!
+ ... after checking procedure check status is 0
+
+ ==> FINISHED checking file <==
+
+ ... %%%%%% Downloaded file is OK !! %%%%%%
+
+ ... Starting script to fix GFS variables and attibutes for ROMS ...
+
+cdo    sellonlatbox: Processed 13 variables over 9 timesteps [0.38s 62MB].
+
+ ... add attribute time & coordinates to all vars
+
+
+ ... modify attribute long-name in all vars
+
+
+ ... modify attribute units in all vars
+
+
+ ... fix lon/lat
+
+
+ ... END of script to fix GFS variables and attibutes for ROMS ...
+
+
+ ==> 2023/10/15 01:15:16 FINISHED downloading of forcing gfs data <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/15 01:15:16 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 03: download ogcm nemo data <==
+
+
+ ... today is 2023-10-15, ogcm is nemo
+ ... will download 1 day(s), with interval of 24 hours 
+ ... will save outputs in file nemo_npo0.08_20231015.nc
+
+
+ ... File /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/nemo_npo0.08_20231015.nc does not exist. Will download it !!!
+
+
+ ... This is try n. 1 to download ogcm file
+
+
+ ... downloading nemo
+
+
+ +++ Starting get nemo 06h +++
+
+
+ ... starting script to get nemo anfc ssh
+
+date ini = 2023-10-15 00:30:00
+date end = 2023-10-15 23:30:00
+
+ ... downloading ssh
+
+2023-10-15 01:15:16.985 [ INFO] Asynchronous mode set
+2023-10-15 01:15:16.986 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:15:23.477 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:15:30.655 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:15:44.454 [ERROR] 010-27 : Error in NetcdfWriter finish
+
+ ... starting script to get nemo anfc uvts
+
+date ini = 2023-10-15 00:00:00
+date end = 2023-10-15 23:59:59
+
+
+ ... downloading var thetao
+
+2023-10-15 01:15:44.704 [ INFO] Asynchronous mode set
+2023-10-15 01:15:44.704 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:15:51.621 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:15:58.966 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:16:13.773 [ INFO] Product is not yet available (request in progress)
+2023-10-15 01:16:23.784 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:16:35.914 [ INFO] The product is ready for download
+2023-10-15 01:16:35.914 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:16:36.866 [ INFO] File type: application/x-netcdf
+2023-10-15 01:16:36.866 [ INFO] File size: 185.1 MB (185115212 B)
+2023-10-15 01:16:36.866 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_thetao.nc
+2023-10-15 01:16:38.470 [ INFO] - 185.1 MB (1.0%)
+2023-10-15 01:16:38.703 [ INFO] - 185.1 MB (2.1%)
+2023-10-15 01:16:38.959 [ INFO] - 185.1 MB (3.1%)
+2023-10-15 01:16:39.168 [ INFO] - 185.1 MB (4.1%)
+2023-10-15 01:16:39.404 [ INFO] - 185.1 MB (5.1%)
+2023-10-15 01:16:39.664 [ INFO] - 185.1 MB (6.2%)
+2023-10-15 01:16:39.892 [ INFO] - 185.1 MB (7.2%)
+2023-10-15 01:16:40.347 [ INFO] - 185.1 MB (8.2%)
+2023-10-15 01:16:40.356 [ INFO] - 185.1 MB (9.2%)
+2023-10-15 01:16:41.035 [ INFO] - 185.1 MB (10.3%)
+2023-10-15 01:16:41.050 [ INFO] - 185.1 MB (11.3%)
+2023-10-15 01:16:41.287 [ INFO] - 185.1 MB (12.3%)
+2023-10-15 01:16:41.731 [ INFO] - 185.1 MB (13.3%)
+2023-10-15 01:16:41.972 [ INFO] - 185.1 MB (14.4%)
+2023-10-15 01:16:42.211 [ INFO] - 185.1 MB (15.4%)
+2023-10-15 01:16:42.655 [ INFO] - 185.1 MB (16.4%)
+2023-10-15 01:16:42.893 [ INFO] - 185.1 MB (17.5%)
+2023-10-15 01:16:43.132 [ INFO] - 185.1 MB (18.5%)
+2023-10-15 01:16:43.571 [ INFO] - 185.1 MB (19.5%)
+2023-10-15 01:16:43.810 [ INFO] - 185.1 MB (20.5%)
+2023-10-15 01:16:44.048 [ INFO] - 185.1 MB (21.6%)
+2023-10-15 01:16:44.462 [ INFO] - 185.1 MB (22.6%)
+2023-10-15 01:16:44.721 [ INFO] - 185.1 MB (23.6%)
+2023-10-15 01:16:44.958 [ INFO] - 185.1 MB (24.6%)
+2023-10-15 01:16:45.194 [ INFO] - 185.1 MB (25.7%)
+2023-10-15 01:16:45.431 [ INFO] - 185.1 MB (26.7%)
+2023-10-15 01:16:45.859 [ INFO] - 185.1 MB (27.7%)
+2023-10-15 01:16:46.104 [ INFO] - 185.1 MB (28.7%)
+2023-10-15 01:16:46.340 [ INFO] - 185.1 MB (29.8%)
+2023-10-15 01:16:46.576 [ INFO] - 185.1 MB (30.8%)
+2023-10-15 01:16:46.813 [ INFO] - 185.1 MB (31.8%)
+2023-10-15 01:16:47.235 [ INFO] - 185.1 MB (32.9%)
+2023-10-15 01:16:47.479 [ INFO] - 185.1 MB (33.9%)
+2023-10-15 01:16:47.718 [ INFO] - 185.1 MB (34.9%)
+2023-10-15 01:16:47.954 [ INFO] - 185.1 MB (35.9%)
+2023-10-15 01:16:48.190 [ INFO] - 185.1 MB (37.0%)
+2023-10-15 01:16:48.605 [ INFO] - 185.1 MB (38.0%)
+2023-10-15 01:16:48.853 [ INFO] - 185.1 MB (39.0%)
+2023-10-15 01:16:49.096 [ INFO] - 185.1 MB (40.0%)
+2023-10-15 01:16:49.331 [ INFO] - 185.1 MB (41.1%)
+2023-10-15 01:16:49.568 [ INFO] - 185.1 MB (42.1%)
+2023-10-15 01:16:49.969 [ INFO] - 185.1 MB (43.1%)
+2023-10-15 01:16:50.226 [ INFO] - 185.1 MB (44.1%)
+2023-10-15 01:16:50.469 [ INFO] - 185.1 MB (45.2%)
+2023-10-15 01:16:50.708 [ INFO] - 185.1 MB (46.2%)
+2023-10-15 01:16:50.945 [ INFO] - 185.1 MB (47.2%)
+2023-10-15 01:16:51.338 [ INFO] - 185.1 MB (48.3%)
+2023-10-15 01:16:51.598 [ INFO] - 185.1 MB (49.3%)
+2023-10-15 01:16:51.847 [ INFO] - 185.1 MB (50.3%)
+2023-10-15 01:16:52.089 [ INFO] - 185.1 MB (51.3%)
+2023-10-15 01:16:52.323 [ INFO] - 185.1 MB (52.4%)
+2023-10-15 01:16:52.692 [ INFO] - 185.1 MB (53.4%)
+2023-10-15 01:16:52.963 [ INFO] - 185.1 MB (54.4%)
+2023-10-15 01:16:53.215 [ INFO] - 185.1 MB (55.4%)
+2023-10-15 01:16:53.457 [ INFO] - 185.1 MB (56.5%)
+2023-10-15 01:16:53.695 [ INFO] - 185.1 MB (57.5%)
+2023-10-15 01:16:53.934 [ INFO] - 185.1 MB (58.5%)
+2023-10-15 01:16:54.258 [ INFO] - 185.1 MB (59.5%)
+2023-10-15 01:16:54.558 [ INFO] - 185.1 MB (60.6%)
+2023-10-15 01:16:54.808 [ INFO] - 185.1 MB (61.6%)
+2023-10-15 01:16:55.047 [ INFO] - 185.1 MB (62.6%)
+2023-10-15 01:16:55.285 [ INFO] - 185.1 MB (63.7%)
+2023-10-15 01:16:55.526 [ INFO] - 185.1 MB (64.7%)
+2023-10-15 01:16:55.761 [ INFO] - 185.1 MB (65.7%)
+2023-10-15 01:16:55.995 [ INFO] - 185.1 MB (66.7%)
+2023-10-15 01:16:56.229 [ INFO] - 185.1 MB (67.8%)
+2023-10-15 01:16:56.463 [ INFO] - 185.1 MB (68.8%)
+2023-10-15 01:16:56.697 [ INFO] - 185.1 MB (69.8%)
+2023-10-15 01:16:56.968 [ INFO] - 185.1 MB (70.8%)
+2023-10-15 01:16:57.253 [ INFO] - 185.1 MB (71.9%)
+2023-10-15 01:16:57.489 [ INFO] - 185.1 MB (72.9%)
+2023-10-15 01:16:57.707 [ INFO] - 185.1 MB (73.9%)
+2023-10-15 01:16:57.844 [ INFO] - 185.1 MB (74.9%)
+2023-10-15 01:16:58.069 [ INFO] - 185.1 MB (76.0%)
+2023-10-15 01:16:58.295 [ INFO] - 185.1 MB (77.0%)
+2023-10-15 01:16:58.523 [ INFO] - 185.1 MB (78.0%)
+2023-10-15 01:16:58.748 [ INFO] - 185.1 MB (79.1%)
+2023-10-15 01:16:58.971 [ INFO] - 185.1 MB (80.1%)
+2023-10-15 01:16:59.192 [ INFO] - 185.1 MB (81.1%)
+2023-10-15 01:16:59.407 [ INFO] - 185.1 MB (82.1%)
+2023-10-15 01:16:59.619 [ INFO] - 185.1 MB (83.2%)
+2023-10-15 01:16:59.817 [ INFO] - 185.1 MB (84.2%)
+2023-10-15 01:16:59.912 [ INFO] - 185.1 MB (85.2%)
+2023-10-15 01:17:00.131 [ INFO] - 185.1 MB (86.2%)
+2023-10-15 01:17:00.347 [ INFO] - 185.1 MB (87.3%)
+2023-10-15 01:17:00.552 [ INFO] - 185.1 MB (88.3%)
+2023-10-15 01:17:00.749 [ INFO] - 185.1 MB (89.3%)
+2023-10-15 01:17:00.831 [ INFO] - 185.1 MB (90.3%)
+2023-10-15 01:17:01.046 [ INFO] - 185.1 MB (91.4%)
+2023-10-15 01:17:01.257 [ INFO] - 185.1 MB (92.4%)
+2023-10-15 01:17:01.448 [ INFO] - 185.1 MB (93.4%)
+2023-10-15 01:17:01.572 [ INFO] - 185.1 MB (94.5%)
+2023-10-15 01:17:01.737 [ INFO] - 185.1 MB (95.5%)
+2023-10-15 01:17:01.945 [ INFO] - 185.1 MB (96.5%)
+2023-10-15 01:17:02.130 [ INFO] - 185.1 MB (97.5%)
+2023-10-15 01:17:02.211 [ INFO] - 185.1 MB (98.6%)
+2023-10-15 01:17:02.423 [ INFO] - 185.1 MB (99.6%)
+2023-10-15 01:17:02.453 [ INFO] - 185.1 MB (100.0%)
+2023-10-15 01:17:02.453 [ INFO] Processing  time : 0:00:52.163074
+2023-10-15 01:17:02.453 [ INFO] Downloading time : 0:00:25.586334
+2023-10-15 01:17:02.453 [ INFO] Total time       : 0:01:17.749408
+2023-10-15 01:17:02.453 [ INFO] Download rate    : 7.0 MB/s
+2023-10-15 01:17:02.453 [ INFO] Done
+
+ ... downloading var so
+
+2023-10-15 01:17:02.727 [ INFO] Asynchronous mode set
+2023-10-15 01:17:02.727 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:17:08.180 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:17:16.815 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:17:31.668 [ INFO] Product is not yet available (request in progress)
+2023-10-15 01:17:41.674 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:17:57.787 [ INFO] The product is ready for download
+2023-10-15 01:17:57.787 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:17:58.985 [ INFO] File type: application/x-netcdf
+2023-10-15 01:17:58.985 [ INFO] File size: 185.1 MB (185115188 B)
+2023-10-15 01:17:58.985 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_so.nc
+2023-10-15 01:18:00.383 [ INFO] - 185.1 MB (1.0%)
+2023-10-15 01:18:00.626 [ INFO] - 185.1 MB (2.1%)
+2023-10-15 01:18:01.073 [ INFO] - 185.1 MB (3.1%)
+2023-10-15 01:18:01.318 [ INFO] - 185.1 MB (4.1%)
+2023-10-15 01:18:01.556 [ INFO] - 185.1 MB (5.1%)
+2023-10-15 01:18:01.793 [ INFO] - 185.1 MB (6.2%)
+2023-10-15 01:18:02.029 [ INFO] - 185.1 MB (7.2%)
+2023-10-15 01:18:02.264 [ INFO] - 185.1 MB (8.2%)
+2023-10-15 01:18:02.499 [ INFO] - 185.1 MB (9.2%)
+2023-10-15 01:18:02.732 [ INFO] - 185.1 MB (10.3%)
+2023-10-15 01:18:02.965 [ INFO] - 185.1 MB (11.3%)
+2023-10-15 01:18:03.196 [ INFO] - 185.1 MB (12.3%)
+2023-10-15 01:18:03.425 [ INFO] - 185.1 MB (13.3%)
+2023-10-15 01:18:03.652 [ INFO] - 185.1 MB (14.4%)
+2023-10-15 01:18:03.879 [ INFO] - 185.1 MB (15.4%)
+2023-10-15 01:18:04.092 [ INFO] - 185.1 MB (16.4%)
+2023-10-15 01:18:04.135 [ INFO] - 185.1 MB (17.5%)
+2023-10-15 01:18:04.362 [ INFO] - 185.1 MB (18.5%)
+2023-10-15 01:18:04.583 [ INFO] - 185.1 MB (19.5%)
+2023-10-15 01:18:04.800 [ INFO] - 185.1 MB (20.5%)
+2023-10-15 01:18:04.837 [ INFO] - 185.1 MB (21.6%)
+2023-10-15 01:18:05.060 [ INFO] - 185.1 MB (22.6%)
+2023-10-15 01:18:05.283 [ INFO] - 185.1 MB (23.6%)
+2023-10-15 01:18:05.498 [ INFO] - 185.1 MB (24.6%)
+2023-10-15 01:18:05.538 [ INFO] - 185.1 MB (25.7%)
+2023-10-15 01:18:05.758 [ INFO] - 185.1 MB (26.7%)
+2023-10-15 01:18:05.978 [ INFO] - 185.1 MB (27.7%)
+2023-10-15 01:18:06.186 [ INFO] - 185.1 MB (28.7%)
+2023-10-15 01:18:06.232 [ INFO] - 185.1 MB (29.8%)
+2023-10-15 01:18:06.452 [ INFO] - 185.1 MB (30.8%)
+2023-10-15 01:18:06.664 [ INFO] - 185.1 MB (31.8%)
+2023-10-15 01:18:06.704 [ INFO] - 185.1 MB (32.9%)
+2023-10-15 01:18:06.923 [ INFO] - 185.1 MB (33.9%)
+2023-10-15 01:18:07.138 [ INFO] - 185.1 MB (34.9%)
+2023-10-15 01:18:07.172 [ INFO] - 185.1 MB (35.9%)
+2023-10-15 01:18:07.392 [ INFO] - 185.1 MB (37.0%)
+2023-10-15 01:18:07.608 [ INFO] - 185.1 MB (38.0%)
+2023-10-15 01:18:07.640 [ INFO] - 185.1 MB (39.0%)
+2023-10-15 01:18:07.865 [ INFO] - 185.1 MB (40.0%)
+2023-10-15 01:18:08.069 [ INFO] - 185.1 MB (41.1%)
+2023-10-15 01:18:08.113 [ INFO] - 185.1 MB (42.1%)
+2023-10-15 01:18:08.330 [ INFO] - 185.1 MB (43.1%)
+2023-10-15 01:18:08.536 [ INFO] - 185.1 MB (44.1%)
+2023-10-15 01:18:08.581 [ INFO] - 185.1 MB (45.2%)
+2023-10-15 01:18:08.798 [ INFO] - 185.1 MB (46.2%)
+2023-10-15 01:18:08.997 [ INFO] - 185.1 MB (47.2%)
+2023-10-15 01:18:09.045 [ INFO] - 185.1 MB (48.3%)
+2023-10-15 01:18:09.264 [ INFO] - 185.1 MB (49.3%)
+2023-10-15 01:18:09.464 [ INFO] - 185.1 MB (50.3%)
+2023-10-15 01:18:09.512 [ INFO] - 185.1 MB (51.3%)
+2023-10-15 01:18:09.737 [ INFO] - 185.1 MB (52.4%)
+2023-10-15 01:18:09.762 [ INFO] - 185.1 MB (53.4%)
+2023-10-15 01:18:09.988 [ INFO] - 185.1 MB (54.4%)
+2023-10-15 01:18:10.170 [ INFO] - 185.1 MB (55.4%)
+2023-10-15 01:18:10.247 [ INFO] - 185.1 MB (56.5%)
+2023-10-15 01:18:10.462 [ INFO] - 185.1 MB (57.5%)
+2023-10-15 01:18:10.495 [ INFO] - 185.1 MB (58.5%)
+2023-10-15 01:18:10.710 [ INFO] - 185.1 MB (59.5%)
+2023-10-15 01:18:10.872 [ INFO] - 185.1 MB (60.6%)
+2023-10-15 01:18:10.957 [ INFO] - 185.1 MB (61.6%)
+2023-10-15 01:18:11.181 [ INFO] - 185.1 MB (62.6%)
+2023-10-15 01:18:11.338 [ INFO] - 185.1 MB (63.7%)
+2023-10-15 01:18:11.429 [ INFO] - 185.1 MB (64.7%)
+2023-10-15 01:18:11.643 [ INFO] - 185.1 MB (65.7%)
+2023-10-15 01:18:11.788 [ INFO] - 185.1 MB (66.7%)
+2023-10-15 01:18:11.904 [ INFO] - 185.1 MB (67.8%)
+2023-10-15 01:18:12.040 [ INFO] - 185.1 MB (68.8%)
+2023-10-15 01:18:12.151 [ INFO] - 185.1 MB (69.8%)
+2023-10-15 01:18:12.371 [ INFO] - 185.1 MB (70.8%)
+2023-10-15 01:18:12.489 [ INFO] - 185.1 MB (71.9%)
+2023-10-15 01:18:12.619 [ INFO] - 185.1 MB (72.9%)
+2023-10-15 01:18:12.843 [ INFO] - 185.1 MB (73.9%)
+2023-10-15 01:18:12.867 [ INFO] - 185.1 MB (74.9%)
+2023-10-15 01:18:13.089 [ INFO] - 185.1 MB (76.0%)
+2023-10-15 01:18:13.202 [ INFO] - 185.1 MB (77.0%)
+2023-10-15 01:18:13.338 [ INFO] - 185.1 MB (78.0%)
+2023-10-15 01:18:13.567 [ INFO] - 185.1 MB (79.1%)
+2023-10-15 01:18:13.607 [ INFO] - 185.1 MB (80.1%)
+2023-10-15 01:18:13.828 [ INFO] - 185.1 MB (81.1%)
+2023-10-15 01:18:13.985 [ INFO] - 185.1 MB (82.1%)
+2023-10-15 01:18:14.072 [ INFO] - 185.1 MB (83.2%)
+2023-10-15 01:18:14.294 [ INFO] - 185.1 MB (84.2%)
+2023-10-15 01:18:14.352 [ INFO] - 185.1 MB (85.2%)
+2023-10-15 01:18:14.543 [ INFO] - 185.1 MB (86.2%)
+2023-10-15 01:18:14.740 [ INFO] - 185.1 MB (87.3%)
+2023-10-15 01:18:14.816 [ INFO] - 185.1 MB (88.3%)
+2023-10-15 01:18:15.010 [ INFO] - 185.1 MB (89.3%)
+2023-10-15 01:18:15.147 [ INFO] - 185.1 MB (90.3%)
+2023-10-15 01:18:15.260 [ INFO] - 185.1 MB (91.4%)
+2023-10-15 01:18:15.478 [ INFO] - 185.1 MB (92.4%)
+2023-10-15 01:18:15.527 [ INFO] - 185.1 MB (93.4%)
+2023-10-15 01:18:15.724 [ INFO] - 185.1 MB (94.5%)
+2023-10-15 01:18:15.945 [ INFO] - 185.1 MB (95.5%)
+2023-10-15 01:18:15.969 [ INFO] - 185.1 MB (96.5%)
+2023-10-15 01:18:16.194 [ INFO] - 185.1 MB (97.5%)
+2023-10-15 01:18:16.230 [ INFO] - 185.1 MB (98.6%)
+2023-10-15 01:18:16.443 [ INFO] - 185.1 MB (99.6%)
+2023-10-15 01:18:16.453 [ INFO] - 185.1 MB (100.0%)
+2023-10-15 01:18:16.453 [ INFO] Processing  time : 0:00:56.258620
+2023-10-15 01:18:16.453 [ INFO] Downloading time : 0:00:17.467753
+2023-10-15 01:18:16.453 [ INFO] Total time       : 0:01:13.726373
+2023-10-15 01:18:16.453 [ INFO] Download rate    : 9.9 MB/s
+2023-10-15 01:18:16.453 [ INFO] Done
+
+ ... downloading var cur
+
+2023-10-15 01:18:16.715 [ INFO] Asynchronous mode set
+2023-10-15 01:18:16.716 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:18:22.352 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:18:30.259 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:18:43.981 [ INFO] Product is not yet available (request in progress)
+2023-10-15 01:18:53.991 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:19:08.116 [ INFO] Product is not yet available (request in progress)
+2023-10-15 01:19:18.127 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:19:32.302 [ INFO] The product is ready for download
+2023-10-15 01:19:32.303 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:19:33.517 [ INFO] File type: application/x-netcdf
+2023-10-15 01:19:33.517 [ INFO] File size: 370.2 MB (370223532 B)
+2023-10-15 01:19:33.517 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_cur.nc
+2023-10-15 01:19:35.163 [ INFO] - 370.2 MB (1.0%)
+2023-10-15 01:19:35.856 [ INFO] - 370.2 MB (2.0%)
+2023-10-15 01:19:36.337 [ INFO] - 370.2 MB (3.0%)
+2023-10-15 01:19:36.811 [ INFO] - 370.2 MB (4.0%)
+2023-10-15 01:19:37.281 [ INFO] - 370.2 MB (5.0%)
+2023-10-15 01:19:37.747 [ INFO] - 370.2 MB (6.1%)
+2023-10-15 01:19:38.198 [ INFO] - 370.2 MB (7.1%)
+2023-10-15 01:19:38.463 [ INFO] - 370.2 MB (8.1%)
+2023-10-15 01:19:38.918 [ INFO] - 370.2 MB (9.1%)
+2023-10-15 01:19:39.172 [ INFO] - 370.2 MB (10.1%)
+2023-10-15 01:19:39.623 [ INFO] - 370.2 MB (11.1%)
+2023-10-15 01:19:39.877 [ INFO] - 370.2 MB (12.1%)
+2023-10-15 01:19:40.325 [ INFO] - 370.2 MB (13.1%)
+2023-10-15 01:19:40.578 [ INFO] - 370.2 MB (14.1%)
+2023-10-15 01:19:40.833 [ INFO] - 370.2 MB (15.1%)
+2023-10-15 01:19:41.275 [ INFO] - 370.2 MB (16.1%)
+2023-10-15 01:19:41.528 [ INFO] - 370.2 MB (17.2%)
+2023-10-15 01:19:41.968 [ INFO] - 370.2 MB (18.2%)
+2023-10-15 01:19:42.230 [ INFO] - 370.2 MB (19.2%)
+2023-10-15 01:19:42.497 [ INFO] - 370.2 MB (20.2%)
+2023-10-15 01:19:42.912 [ INFO] - 370.2 MB (21.2%)
+2023-10-15 01:19:43.183 [ INFO] - 370.2 MB (22.2%)
+2023-10-15 01:19:43.436 [ INFO] - 370.2 MB (23.2%)
+2023-10-15 01:19:43.850 [ INFO] - 370.2 MB (24.2%)
+2023-10-15 01:19:44.133 [ INFO] - 370.2 MB (25.2%)
+2023-10-15 01:19:44.381 [ INFO] - 370.2 MB (26.2%)
+2023-10-15 01:19:44.763 [ INFO] - 370.2 MB (27.2%)
+2023-10-15 01:19:45.025 [ INFO] - 370.2 MB (28.3%)
+2023-10-15 01:19:45.328 [ INFO] - 370.2 MB (29.3%)
+2023-10-15 01:19:45.578 [ INFO] - 370.2 MB (30.3%)
+2023-10-15 01:19:45.827 [ INFO] - 370.2 MB (31.3%)
+2023-10-15 01:19:46.188 [ INFO] - 370.2 MB (32.3%)
+2023-10-15 01:19:46.524 [ INFO] - 370.2 MB (33.3%)
+2023-10-15 01:19:46.774 [ INFO] - 370.2 MB (34.3%)
+2023-10-15 01:19:47.024 [ INFO] - 370.2 MB (35.3%)
+2023-10-15 01:19:47.272 [ INFO] - 370.2 MB (36.3%)
+2023-10-15 01:19:47.657 [ INFO] - 370.2 MB (37.3%)
+2023-10-15 01:19:47.967 [ INFO] - 370.2 MB (38.3%)
+2023-10-15 01:19:48.216 [ INFO] - 370.2 MB (39.4%)
+2023-10-15 01:19:48.459 [ INFO] - 370.2 MB (40.4%)
+2023-10-15 01:19:48.828 [ INFO] - 370.2 MB (41.4%)
+2023-10-15 01:19:49.155 [ INFO] - 370.2 MB (42.4%)
+2023-10-15 01:19:49.412 [ INFO] - 370.2 MB (43.4%)
+2023-10-15 01:19:49.661 [ INFO] - 370.2 MB (44.4%)
+2023-10-15 01:19:49.911 [ INFO] - 370.2 MB (45.4%)
+2023-10-15 01:19:50.247 [ INFO] - 370.2 MB (46.4%)
+2023-10-15 01:19:50.604 [ INFO] - 370.2 MB (47.4%)
+2023-10-15 01:19:50.851 [ INFO] - 370.2 MB (48.4%)
+2023-10-15 01:19:51.101 [ INFO] - 370.2 MB (49.4%)
+2023-10-15 01:19:51.350 [ INFO] - 370.2 MB (50.4%)
+2023-10-15 01:19:51.649 [ INFO] - 370.2 MB (51.5%)
+2023-10-15 01:19:52.050 [ INFO] - 370.2 MB (52.5%)
+2023-10-15 01:19:52.298 [ INFO] - 370.2 MB (53.5%)
+2023-10-15 01:19:52.547 [ INFO] - 370.2 MB (54.5%)
+2023-10-15 01:19:52.796 [ INFO] - 370.2 MB (55.5%)
+2023-10-15 01:19:53.221 [ INFO] - 370.2 MB (56.5%)
+2023-10-15 01:19:53.489 [ INFO] - 370.2 MB (57.5%)
+2023-10-15 01:19:53.736 [ INFO] - 370.2 MB (58.5%)
+2023-10-15 01:19:53.984 [ INFO] - 370.2 MB (59.5%)
+2023-10-15 01:19:54.422 [ INFO] - 370.2 MB (60.5%)
+2023-10-15 01:19:54.678 [ INFO] - 370.2 MB (61.5%)
+2023-10-15 01:19:54.926 [ INFO] - 370.2 MB (62.6%)
+2023-10-15 01:19:55.178 [ INFO] - 370.2 MB (63.6%)
+2023-10-15 01:19:55.430 [ INFO] - 370.2 MB (64.6%)
+2023-10-15 01:19:55.839 [ INFO] - 370.2 MB (65.6%)
+2023-10-15 01:19:56.124 [ INFO] - 370.2 MB (66.6%)
+2023-10-15 01:19:56.373 [ INFO] - 370.2 MB (67.6%)
+2023-10-15 01:19:56.621 [ INFO] - 370.2 MB (68.6%)
+2023-10-15 01:19:56.870 [ INFO] - 370.2 MB (69.6%)
+2023-10-15 01:19:57.251 [ INFO] - 370.2 MB (70.6%)
+2023-10-15 01:19:57.560 [ INFO] - 370.2 MB (71.6%)
+2023-10-15 01:19:57.813 [ INFO] - 370.2 MB (72.6%)
+2023-10-15 01:19:58.056 [ INFO] - 370.2 MB (73.7%)
+2023-10-15 01:19:58.308 [ INFO] - 370.2 MB (74.7%)
+2023-10-15 01:19:58.724 [ INFO] - 370.2 MB (75.7%)
+2023-10-15 01:19:58.995 [ INFO] - 370.2 MB (76.7%)
+2023-10-15 01:19:59.242 [ INFO] - 370.2 MB (77.7%)
+2023-10-15 01:19:59.491 [ INFO] - 370.2 MB (78.7%)
+2023-10-15 01:19:59.898 [ INFO] - 370.2 MB (79.7%)
+2023-10-15 01:20:00.170 [ INFO] - 370.2 MB (80.7%)
+2023-10-15 01:20:00.424 [ INFO] - 370.2 MB (81.7%)
+2023-10-15 01:20:00.672 [ INFO] - 370.2 MB (82.7%)
+2023-10-15 01:20:00.923 [ INFO] - 370.2 MB (83.7%)
+2023-10-15 01:20:01.331 [ INFO] - 370.2 MB (84.8%)
+2023-10-15 01:20:01.589 [ INFO] - 370.2 MB (85.8%)
+2023-10-15 01:20:01.841 [ INFO] - 370.2 MB (86.8%)
+2023-10-15 01:20:02.108 [ INFO] - 370.2 MB (87.8%)
+2023-10-15 01:20:02.367 [ INFO] - 370.2 MB (88.8%)
+2023-10-15 01:20:02.755 [ INFO] - 370.2 MB (89.8%)
+2023-10-15 01:20:03.028 [ INFO] - 370.2 MB (90.8%)
+2023-10-15 01:20:03.286 [ INFO] - 370.2 MB (91.8%)
+2023-10-15 01:20:03.533 [ INFO] - 370.2 MB (92.8%)
+2023-10-15 01:20:03.822 [ INFO] - 370.2 MB (93.8%)
+2023-10-15 01:20:04.192 [ INFO] - 370.2 MB (94.8%)
+2023-10-15 01:20:04.440 [ INFO] - 370.2 MB (95.9%)
+2023-10-15 01:20:04.690 [ INFO] - 370.2 MB (96.9%)
+2023-10-15 01:20:04.974 [ INFO] - 370.2 MB (97.9%)
+2023-10-15 01:20:05.348 [ INFO] - 370.2 MB (98.9%)
+2023-10-15 01:20:05.596 [ INFO] - 370.2 MB (99.9%)
+2023-10-15 01:20:05.619 [ INFO] - 370.2 MB (100.0%)
+2023-10-15 01:20:05.619 [ INFO] Processing  time : 0:01:16.802131
+2023-10-15 01:20:05.619 [ INFO] Downloading time : 0:00:32.102080
+2023-10-15 01:20:05.619 [ INFO] Total time       : 0:01:48.904211
+2023-10-15 01:20:05.619 [ INFO] Download rate    : 11.1 MB/s
+2023-10-15 01:20:05.619 [ INFO] Done
+
+ ... end of get_nemo_anfc_uvts
+
+ncks: ERROR file nemo_ssh_20231015.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'nemo_ssh_20231015.nc': No such file or directory
+ncap2: ERROR file ssh2.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncap2: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+ncks: ERROR file ssh3.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'ssh2.nc': No such file or directory
+rm: cannot remove 'ssh3.nc': No such file or directory
+ncdump: nemo_ssh_20231015.nc: No such file or directory
+ncdump: nemo_ssh_20231015.nc: No such file or directory
+ncgen: cdf.cdf line 5: syntax error, unexpected ';'
+Traceback (most recent call last):
+  File "write_nemo_file.py", line 11, in <module>
+    infile2 = Dataset(in2,'r')
+  File "src/netCDF4/_netCDF4.pyx", line 2353, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 1963, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'nemo_ssh_20231015.nc'
+rm: cannot remove 'nemo_ssh_20231015.nc': No such file or directory
+
+ +++ End of get nemo 06h +++
+
+
+ +++ Starting get nemo 06h +++
+
+
+ ... starting script to get nemo anfc ssh
+
+date ini = 2023-10-16 00:30:00
+date end = 2023-10-16 00:30:00
+
+ ... downloading ssh
+
+2023-10-15 01:20:11.124 [ INFO] Asynchronous mode set
+2023-10-15 01:20:11.124 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:20:17.910 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:20:26.512 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:20:40.523 [ERROR] 010-27 : Error in NetcdfWriter finish
+
+ ... starting script to get nemo anfc pt6h1 uvts
+
+date ini = 2023-10-16 00:00:00
+date end = 2023-10-16 00:00:00
+
+
+ ... downloading var thetao
+
+2023-10-15 01:20:40.742 [ INFO] Asynchronous mode set
+2023-10-15 01:20:40.743 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:20:47.283 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:20:56.140 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:21:14.757 [ INFO] The product is ready for download
+2023-10-15 01:21:14.757 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:21:15.771 [ INFO] File type: application/x-netcdf
+2023-10-15 01:21:15.771 [ INFO] File size: 46.3 MB (46284188 B)
+2023-10-15 01:21:15.771 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_thetao.nc
+2023-10-15 01:21:17.014 [ INFO] -  46.3 MB (1.1%)
+2023-10-15 01:21:17.264 [ INFO] -  46.3 MB (2.3%)
+2023-10-15 01:21:17.270 [ INFO] -  46.3 MB (3.4%)
+2023-10-15 01:21:17.515 [ INFO] -  46.3 MB (4.5%)
+2023-10-15 01:21:17.521 [ INFO] -  46.3 MB (5.7%)
+2023-10-15 01:21:17.760 [ INFO] -  46.3 MB (6.8%)
+2023-10-15 01:21:17.768 [ INFO] -  46.3 MB (7.9%)
+2023-10-15 01:21:17.775 [ INFO] -  46.3 MB (9.1%)
+2023-10-15 01:21:18.012 [ INFO] -  46.3 MB (10.2%)
+2023-10-15 01:21:18.021 [ INFO] -  46.3 MB (11.3%)
+2023-10-15 01:21:18.028 [ INFO] -  46.3 MB (12.5%)
+2023-10-15 01:21:18.264 [ INFO] -  46.3 MB (13.6%)
+2023-10-15 01:21:18.273 [ INFO] -  46.3 MB (14.7%)
+2023-10-15 01:21:18.296 [ INFO] -  46.3 MB (15.9%)
+2023-10-15 01:21:18.516 [ INFO] -  46.3 MB (17.0%)
+2023-10-15 01:21:18.524 [ INFO] -  46.3 MB (18.1%)
+2023-10-15 01:21:18.545 [ INFO] -  46.3 MB (19.3%)
+2023-10-15 01:21:18.765 [ INFO] -  46.3 MB (20.4%)
+2023-10-15 01:21:18.774 [ INFO] -  46.3 MB (21.5%)
+2023-10-15 01:21:18.781 [ INFO] -  46.3 MB (22.7%)
+2023-10-15 01:21:19.012 [ INFO] -  46.3 MB (23.8%)
+2023-10-15 01:21:19.024 [ INFO] -  46.3 MB (24.9%)
+2023-10-15 01:21:19.030 [ INFO] -  46.3 MB (26.1%)
+2023-10-15 01:21:19.259 [ INFO] -  46.3 MB (27.2%)
+2023-10-15 01:21:19.271 [ INFO] -  46.3 MB (28.3%)
+2023-10-15 01:21:19.279 [ INFO] -  46.3 MB (29.5%)
+2023-10-15 01:21:19.502 [ INFO] -  46.3 MB (30.6%)
+2023-10-15 01:21:19.518 [ INFO] -  46.3 MB (31.7%)
+2023-10-15 01:21:19.527 [ INFO] -  46.3 MB (32.8%)
+2023-10-15 01:21:19.536 [ INFO] -  46.3 MB (34.0%)
+2023-10-15 01:21:19.760 [ INFO] -  46.3 MB (35.1%)
+2023-10-15 01:21:19.771 [ INFO] -  46.3 MB (36.2%)
+2023-10-15 01:21:19.780 [ INFO] -  46.3 MB (37.4%)
+2023-10-15 01:21:19.999 [ INFO] -  46.3 MB (38.5%)
+2023-10-15 01:21:20.015 [ INFO] -  46.3 MB (39.6%)
+2023-10-15 01:21:20.026 [ INFO] -  46.3 MB (40.8%)
+2023-10-15 01:21:20.033 [ INFO] -  46.3 MB (41.9%)
+2023-10-15 01:21:20.256 [ INFO] -  46.3 MB (43.0%)
+2023-10-15 01:21:20.268 [ INFO] -  46.3 MB (44.2%)
+2023-10-15 01:21:20.277 [ INFO] -  46.3 MB (45.3%)
+2023-10-15 01:21:20.285 [ INFO] -  46.3 MB (46.4%)
+2023-10-15 01:21:20.506 [ INFO] -  46.3 MB (47.6%)
+2023-10-15 01:21:20.518 [ INFO] -  46.3 MB (48.7%)
+2023-10-15 01:21:20.528 [ INFO] -  46.3 MB (49.8%)
+2023-10-15 01:21:20.535 [ INFO] -  46.3 MB (51.0%)
+2023-10-15 01:21:20.754 [ INFO] -  46.3 MB (52.1%)
+2023-10-15 01:21:20.767 [ INFO] -  46.3 MB (53.2%)
+2023-10-15 01:21:20.777 [ INFO] -  46.3 MB (54.4%)
+2023-10-15 01:21:20.785 [ INFO] -  46.3 MB (55.5%)
+2023-10-15 01:21:20.999 [ INFO] -  46.3 MB (56.6%)
+2023-10-15 01:21:21.014 [ INFO] -  46.3 MB (57.8%)
+2023-10-15 01:21:21.024 [ INFO] -  46.3 MB (58.9%)
+2023-10-15 01:21:21.032 [ INFO] -  46.3 MB (60.0%)
+2023-10-15 01:21:21.040 [ INFO] -  46.3 MB (61.2%)
+2023-10-15 01:21:21.259 [ INFO] -  46.3 MB (62.3%)
+2023-10-15 01:21:21.271 [ INFO] -  46.3 MB (63.4%)
+2023-10-15 01:21:21.280 [ INFO] -  46.3 MB (64.6%)
+2023-10-15 01:21:21.288 [ INFO] -  46.3 MB (65.7%)
+2023-10-15 01:21:21.501 [ INFO] -  46.3 MB (66.8%)
+2023-10-15 01:21:21.514 [ INFO] -  46.3 MB (68.0%)
+2023-10-15 01:21:21.525 [ INFO] -  46.3 MB (69.1%)
+2023-10-15 01:21:21.534 [ INFO] -  46.3 MB (70.2%)
+2023-10-15 01:21:21.738 [ INFO] -  46.3 MB (71.4%)
+2023-10-15 01:21:21.758 [ INFO] -  46.3 MB (72.5%)
+2023-10-15 01:21:21.768 [ INFO] -  46.3 MB (73.6%)
+2023-10-15 01:21:21.778 [ INFO] -  46.3 MB (74.8%)
+2023-10-15 01:21:21.787 [ INFO] -  46.3 MB (75.9%)
+2023-10-15 01:21:21.994 [ INFO] -  46.3 MB (77.0%)
+2023-10-15 01:21:22.010 [ INFO] -  46.3 MB (78.2%)
+2023-10-15 01:21:22.021 [ INFO] -  46.3 MB (79.3%)
+2023-10-15 01:21:22.030 [ INFO] -  46.3 MB (80.4%)
+2023-10-15 01:21:22.039 [ INFO] -  46.3 MB (81.6%)
+2023-10-15 01:21:22.247 [ INFO] -  46.3 MB (82.7%)
+2023-10-15 01:21:22.262 [ INFO] -  46.3 MB (83.8%)
+2023-10-15 01:21:22.272 [ INFO] -  46.3 MB (85.0%)
+2023-10-15 01:21:22.282 [ INFO] -  46.3 MB (86.1%)
+2023-10-15 01:21:22.290 [ INFO] -  46.3 MB (87.2%)
+2023-10-15 01:21:22.497 [ INFO] -  46.3 MB (88.4%)
+2023-10-15 01:21:22.512 [ INFO] -  46.3 MB (89.5%)
+2023-10-15 01:21:22.523 [ INFO] -  46.3 MB (90.6%)
+2023-10-15 01:21:22.534 [ INFO] -  46.3 MB (91.8%)
+2023-10-15 01:21:22.542 [ INFO] -  46.3 MB (92.9%)
+2023-10-15 01:21:22.751 [ INFO] -  46.3 MB (94.0%)
+2023-10-15 01:21:22.763 [ INFO] -  46.3 MB (95.2%)
+2023-10-15 01:21:22.774 [ INFO] -  46.3 MB (96.3%)
+2023-10-15 01:21:22.784 [ INFO] -  46.3 MB (97.4%)
+2023-10-15 01:21:22.792 [ INFO] -  46.3 MB (98.5%)
+2023-10-15 01:21:23.000 [ INFO] -  46.3 MB (99.7%)
+2023-10-15 01:21:23.005 [ INFO] -  46.3 MB (100.0%)
+2023-10-15 01:21:23.005 [ INFO] Processing  time : 0:00:35.029054
+2023-10-15 01:21:23.005 [ INFO] Downloading time : 0:00:07.234174
+2023-10-15 01:21:23.005 [ INFO] Total time       : 0:00:42.263228
+2023-10-15 01:21:23.005 [ INFO] Download rate    : 5.6 MB/s
+2023-10-15 01:21:23.005 [ INFO] Done
+
+ ... downloading var so
+
+2023-10-15 01:21:23.232 [ INFO] Asynchronous mode set
+2023-10-15 01:21:23.233 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:21:31.703 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:21:42.096 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:21:56.274 [ INFO] The product is ready for download
+2023-10-15 01:21:56.274 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:21:57.227 [ INFO] File type: application/x-netcdf
+2023-10-15 01:21:57.227 [ INFO] File size: 46.3 MB (46284164 B)
+2023-10-15 01:21:57.227 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_so.nc
+2023-10-15 01:21:58.385 [ INFO] -  46.3 MB (1.1%)
+2023-10-15 01:21:58.616 [ INFO] -  46.3 MB (2.3%)
+2023-10-15 01:21:58.625 [ INFO] -  46.3 MB (3.4%)
+2023-10-15 01:21:58.850 [ INFO] -  46.3 MB (4.5%)
+2023-10-15 01:21:58.858 [ INFO] -  46.3 MB (5.7%)
+2023-10-15 01:21:59.076 [ INFO] -  46.3 MB (6.8%)
+2023-10-15 01:21:59.088 [ INFO] -  46.3 MB (7.9%)
+2023-10-15 01:21:59.094 [ INFO] -  46.3 MB (9.1%)
+2023-10-15 01:21:59.314 [ INFO] -  46.3 MB (10.2%)
+2023-10-15 01:21:59.324 [ INFO] -  46.3 MB (11.3%)
+2023-10-15 01:21:59.330 [ INFO] -  46.3 MB (12.5%)
+2023-10-15 01:21:59.550 [ INFO] -  46.3 MB (13.6%)
+2023-10-15 01:21:59.559 [ INFO] -  46.3 MB (14.7%)
+2023-10-15 01:21:59.581 [ INFO] -  46.3 MB (15.9%)
+2023-10-15 01:21:59.784 [ INFO] -  46.3 MB (17.0%)
+2023-10-15 01:21:59.792 [ INFO] -  46.3 MB (18.1%)
+2023-10-15 01:21:59.815 [ INFO] -  46.3 MB (19.3%)
+2023-10-15 01:22:00.017 [ INFO] -  46.3 MB (20.4%)
+2023-10-15 01:22:00.026 [ INFO] -  46.3 MB (21.5%)
+2023-10-15 01:22:00.033 [ INFO] -  46.3 MB (22.7%)
+2023-10-15 01:22:00.250 [ INFO] -  46.3 MB (23.8%)
+2023-10-15 01:22:00.258 [ INFO] -  46.3 MB (24.9%)
+2023-10-15 01:22:00.265 [ INFO] -  46.3 MB (26.1%)
+2023-10-15 01:22:00.477 [ INFO] -  46.3 MB (27.2%)
+2023-10-15 01:22:00.489 [ INFO] -  46.3 MB (28.3%)
+2023-10-15 01:22:00.497 [ INFO] -  46.3 MB (29.5%)
+2023-10-15 01:22:00.700 [ INFO] -  46.3 MB (30.6%)
+2023-10-15 01:22:00.719 [ INFO] -  46.3 MB (31.7%)
+2023-10-15 01:22:00.727 [ INFO] -  46.3 MB (32.9%)
+2023-10-15 01:22:00.734 [ INFO] -  46.3 MB (34.0%)
+2023-10-15 01:22:00.943 [ INFO] -  46.3 MB (35.1%)
+2023-10-15 01:22:00.956 [ INFO] -  46.3 MB (36.2%)
+2023-10-15 01:22:00.963 [ INFO] -  46.3 MB (37.4%)
+2023-10-15 01:22:01.161 [ INFO] -  46.3 MB (38.5%)
+2023-10-15 01:22:01.183 [ INFO] -  46.3 MB (39.6%)
+2023-10-15 01:22:01.191 [ INFO] -  46.3 MB (40.8%)
+2023-10-15 01:22:01.198 [ INFO] -  46.3 MB (41.9%)
+2023-10-15 01:22:01.397 [ INFO] -  46.3 MB (43.0%)
+2023-10-15 01:22:01.416 [ INFO] -  46.3 MB (44.2%)
+2023-10-15 01:22:01.425 [ INFO] -  46.3 MB (45.3%)
+2023-10-15 01:22:01.432 [ INFO] -  46.3 MB (46.4%)
+2023-10-15 01:22:01.633 [ INFO] -  46.3 MB (47.6%)
+2023-10-15 01:22:01.648 [ INFO] -  46.3 MB (48.7%)
+2023-10-15 01:22:01.657 [ INFO] -  46.3 MB (49.8%)
+2023-10-15 01:22:01.665 [ INFO] -  46.3 MB (51.0%)
+2023-10-15 01:22:01.862 [ INFO] -  46.3 MB (52.1%)
+2023-10-15 01:22:01.879 [ INFO] -  46.3 MB (53.2%)
+2023-10-15 01:22:01.889 [ INFO] -  46.3 MB (54.4%)
+2023-10-15 01:22:01.897 [ INFO] -  46.3 MB (55.5%)
+2023-10-15 01:22:01.904 [ INFO] -  46.3 MB (56.6%)
+2023-10-15 01:22:02.107 [ INFO] -  46.3 MB (57.8%)
+2023-10-15 01:22:02.118 [ INFO] -  46.3 MB (58.9%)
+2023-10-15 01:22:02.127 [ INFO] -  46.3 MB (60.0%)
+2023-10-15 01:22:02.135 [ INFO] -  46.3 MB (61.2%)
+2023-10-15 01:22:02.332 [ INFO] -  46.3 MB (62.3%)
+2023-10-15 01:22:02.347 [ INFO] -  46.3 MB (63.4%)
+2023-10-15 01:22:02.355 [ INFO] -  46.3 MB (64.6%)
+2023-10-15 01:22:02.363 [ INFO] -  46.3 MB (65.7%)
+2023-10-15 01:22:02.370 [ INFO] -  46.3 MB (66.8%)
+2023-10-15 01:22:02.570 [ INFO] -  46.3 MB (68.0%)
+2023-10-15 01:22:02.583 [ INFO] -  46.3 MB (69.1%)
+2023-10-15 01:22:02.591 [ INFO] -  46.3 MB (70.2%)
+2023-10-15 01:22:02.598 [ INFO] -  46.3 MB (71.4%)
+2023-10-15 01:22:02.607 [ INFO] -  46.3 MB (72.5%)
+2023-10-15 01:22:02.804 [ INFO] -  46.3 MB (73.6%)
+2023-10-15 01:22:02.818 [ INFO] -  46.3 MB (74.8%)
+2023-10-15 01:22:02.826 [ INFO] -  46.3 MB (75.9%)
+2023-10-15 01:22:02.833 [ INFO] -  46.3 MB (77.0%)
+2023-10-15 01:22:03.024 [ INFO] -  46.3 MB (78.2%)
+2023-10-15 01:22:03.040 [ INFO] -  46.3 MB (79.3%)
+2023-10-15 01:22:03.051 [ INFO] -  46.3 MB (80.4%)
+2023-10-15 01:22:03.059 [ INFO] -  46.3 MB (81.6%)
+2023-10-15 01:22:03.067 [ INFO] -  46.3 MB (82.7%)
+2023-10-15 01:22:03.258 [ INFO] -  46.3 MB (83.8%)
+2023-10-15 01:22:03.273 [ INFO] -  46.3 MB (85.0%)
+2023-10-15 01:22:03.284 [ INFO] -  46.3 MB (86.1%)
+2023-10-15 01:22:03.294 [ INFO] -  46.3 MB (87.2%)
+2023-10-15 01:22:03.302 [ INFO] -  46.3 MB (88.4%)
+2023-10-15 01:22:03.492 [ INFO] -  46.3 MB (89.5%)
+2023-10-15 01:22:03.507 [ INFO] -  46.3 MB (90.6%)
+2023-10-15 01:22:03.518 [ INFO] -  46.3 MB (91.8%)
+2023-10-15 01:22:03.528 [ INFO] -  46.3 MB (92.9%)
+2023-10-15 01:22:03.535 [ INFO] -  46.3 MB (94.0%)
+2023-10-15 01:22:03.727 [ INFO] -  46.3 MB (95.2%)
+2023-10-15 01:22:03.739 [ INFO] -  46.3 MB (96.3%)
+2023-10-15 01:22:03.752 [ INFO] -  46.3 MB (97.4%)
+2023-10-15 01:22:03.761 [ INFO] -  46.3 MB (98.6%)
+2023-10-15 01:22:03.769 [ INFO] -  46.3 MB (99.7%)
+2023-10-15 01:22:03.771 [ INFO] -  46.3 MB (100.0%)
+2023-10-15 01:22:03.771 [ INFO] Processing  time : 0:00:33.995519
+2023-10-15 01:22:03.771 [ INFO] Downloading time : 0:00:06.544027
+2023-10-15 01:22:03.771 [ INFO] Total time       : 0:00:40.539546
+2023-10-15 01:22:03.771 [ INFO] Download rate    : 6.2 MB/s
+2023-10-15 01:22:03.772 [ INFO] Done
+
+ ... downloading var cur
+
+2023-10-15 01:22:04.018 [ INFO] Asynchronous mode set
+2023-10-15 01:22:04.018 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:22:10.091 [ INFO] Requesting file to download (this can take a while)...
+2023-10-15 01:22:18.790 [ INFO] Authenticating user isoares for service https://nrt.cmems-du.eu/motu-web/Motu
+2023-10-15 01:22:33.583 [ INFO] The product is ready for download
+2023-10-15 01:22:33.583 [ INFO] Downloading file (this can take a while)...
+2023-10-15 01:22:34.613 [ INFO] File type: application/x-netcdf
+2023-10-15 01:22:34.613 [ INFO] File size: 92.6 MB (92561508 B)
+2023-10-15 01:22:34.613 [ INFO] Downloading file /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/nemo_cur.nc
+2023-10-15 01:22:36.119 [ INFO] -  92.6 MB (1.1%)
+2023-10-15 01:22:36.370 [ INFO] -  92.6 MB (2.1%)
+2023-10-15 01:22:36.382 [ INFO] -  92.6 MB (3.2%)
+2023-10-15 01:22:36.630 [ INFO] -  92.6 MB (4.2%)
+2023-10-15 01:22:36.877 [ INFO] -  92.6 MB (5.3%)
+2023-10-15 01:22:36.889 [ INFO] -  92.6 MB (6.4%)
+2023-10-15 01:22:37.135 [ INFO] -  92.6 MB (7.4%)
+2023-10-15 01:22:37.379 [ INFO] -  92.6 MB (8.5%)
+2023-10-15 01:22:37.393 [ INFO] -  92.6 MB (9.6%)
+2023-10-15 01:22:37.637 [ INFO] -  92.6 MB (10.6%)
+2023-10-15 01:22:37.878 [ INFO] -  92.6 MB (11.7%)
+2023-10-15 01:22:37.893 [ INFO] -  92.6 MB (12.7%)
+2023-10-15 01:22:38.134 [ INFO] -  92.6 MB (13.8%)
+2023-10-15 01:22:38.148 [ INFO] -  92.6 MB (14.9%)
+2023-10-15 01:22:38.389 [ INFO] -  92.6 MB (15.9%)
+2023-10-15 01:22:38.402 [ INFO] -  92.6 MB (17.0%)
+2023-10-15 01:22:38.642 [ INFO] -  92.6 MB (18.1%)
+2023-10-15 01:22:38.655 [ INFO] -  92.6 MB (19.1%)
+2023-10-15 01:22:38.895 [ INFO] -  92.6 MB (20.2%)
+2023-10-15 01:22:38.907 [ INFO] -  92.6 MB (21.2%)
+2023-10-15 01:22:39.146 [ INFO] -  92.6 MB (22.3%)
+2023-10-15 01:22:39.158 [ INFO] -  92.6 MB (23.4%)
+2023-10-15 01:22:39.397 [ INFO] -  92.6 MB (24.4%)
+2023-10-15 01:22:39.409 [ INFO] -  92.6 MB (25.5%)
+2023-10-15 01:22:39.645 [ INFO] -  92.6 MB (26.6%)
+2023-10-15 01:22:39.658 [ INFO] -  92.6 MB (27.6%)
+2023-10-15 01:22:39.892 [ INFO] -  92.6 MB (28.7%)
+2023-10-15 01:22:39.907 [ INFO] -  92.6 MB (29.7%)
+2023-10-15 01:22:40.127 [ INFO] -  92.6 MB (30.8%)
+2023-10-15 01:22:40.154 [ INFO] -  92.6 MB (31.9%)
+2023-10-15 01:22:40.167 [ INFO] -  92.6 MB (32.9%)
+2023-10-15 01:22:40.398 [ INFO] -  92.6 MB (34.0%)
+2023-10-15 01:22:40.413 [ INFO] -  92.6 MB (35.0%)
+2023-10-15 01:22:40.634 [ INFO] -  92.6 MB (36.1%)
+2023-10-15 01:22:40.659 [ INFO] -  92.6 MB (37.2%)
+2023-10-15 01:22:40.672 [ INFO] -  92.6 MB (38.2%)
+2023-10-15 01:22:40.902 [ INFO] -  92.6 MB (39.3%)
+2023-10-15 01:22:40.917 [ INFO] -  92.6 MB (40.4%)
+2023-10-15 01:22:41.139 [ INFO] -  92.6 MB (41.4%)
+2023-10-15 01:22:41.162 [ INFO] -  92.6 MB (42.5%)
+2023-10-15 01:22:41.175 [ INFO] -  92.6 MB (43.5%)
+2023-10-15 01:22:41.404 [ INFO] -  92.6 MB (44.6%)
+2023-10-15 01:22:41.420 [ INFO] -  92.6 MB (45.7%)
+2023-10-15 01:22:41.634 [ INFO] -  92.6 MB (46.7%)
+2023-10-15 01:22:41.664 [ INFO] -  92.6 MB (47.8%)
+2023-10-15 01:22:41.677 [ INFO] -  92.6 MB (48.9%)
+2023-10-15 01:22:41.904 [ INFO] -  92.6 MB (49.9%)
+2023-10-15 01:22:41.921 [ INFO] -  92.6 MB (51.0%)
+2023-10-15 01:22:41.935 [ INFO] -  92.6 MB (52.0%)
+2023-10-15 01:22:42.162 [ INFO] -  92.6 MB (53.1%)
+2023-10-15 01:22:42.178 [ INFO] -  92.6 MB (54.2%)
+2023-10-15 01:22:42.393 [ INFO] -  92.6 MB (55.2%)
+2023-10-15 01:22:42.420 [ INFO] -  92.6 MB (56.3%)
+2023-10-15 01:22:42.435 [ INFO] -  92.6 MB (57.4%)
+2023-10-15 01:22:42.657 [ INFO] -  92.6 MB (58.4%)
+2023-10-15 01:22:42.677 [ INFO] -  92.6 MB (59.5%)
+2023-10-15 01:22:42.691 [ INFO] -  92.6 MB (60.5%)
+2023-10-15 01:22:42.915 [ INFO] -  92.6 MB (61.6%)
+2023-10-15 01:22:42.933 [ INFO] -  92.6 MB (62.7%)
+2023-10-15 01:22:43.145 [ INFO] -  92.6 MB (63.7%)
+2023-10-15 01:22:43.175 [ INFO] -  92.6 MB (64.8%)
+2023-10-15 01:22:43.190 [ INFO] -  92.6 MB (65.8%)
+2023-10-15 01:22:43.409 [ INFO] -  92.6 MB (66.9%)
+2023-10-15 01:22:43.432 [ INFO] -  92.6 MB (68.0%)
+2023-10-15 01:22:43.446 [ INFO] -  92.6 MB (69.0%)
+2023-10-15 01:22:43.667 [ INFO] -  92.6 MB (70.1%)
+2023-10-15 01:22:43.690 [ INFO] -  92.6 MB (71.2%)
+2023-10-15 01:22:43.895 [ INFO] -  92.6 MB (72.2%)
+2023-10-15 01:22:43.926 [ INFO] -  92.6 MB (73.3%)
+2023-10-15 01:22:43.946 [ INFO] -  92.6 MB (74.3%)
+2023-10-15 01:22:44.157 [ INFO] -  92.6 MB (75.4%)
+2023-10-15 01:22:44.185 [ INFO] -  92.6 MB (76.5%)
+2023-10-15 01:22:44.202 [ INFO] -  92.6 MB (77.5%)
+2023-10-15 01:22:44.417 [ INFO] -  92.6 MB (78.6%)
+2023-10-15 01:22:44.441 [ INFO] -  92.6 MB (79.7%)
+2023-10-15 01:22:44.639 [ INFO] -  92.6 MB (80.7%)
+2023-10-15 01:22:44.675 [ INFO] -  92.6 MB (81.8%)
+2023-10-15 01:22:44.698 [ INFO] -  92.6 MB (82.8%)
+2023-10-15 01:22:44.905 [ INFO] -  92.6 MB (83.9%)
+2023-10-15 01:22:44.936 [ INFO] -  92.6 MB (85.0%)
+2023-10-15 01:22:44.956 [ INFO] -  92.6 MB (86.0%)
+2023-10-15 01:22:45.164 [ INFO] -  92.6 MB (87.1%)
+2023-10-15 01:22:45.193 [ INFO] -  92.6 MB (88.1%)
+2023-10-15 01:22:45.271 [ INFO] -  92.6 MB (89.2%)
+2023-10-15 01:22:45.422 [ INFO] -  92.6 MB (90.3%)
+2023-10-15 01:22:45.449 [ INFO] -  92.6 MB (91.3%)
+2023-10-15 01:22:45.647 [ INFO] -  92.6 MB (92.4%)
+2023-10-15 01:22:45.683 [ INFO] -  92.6 MB (93.5%)
+2023-10-15 01:22:45.705 [ INFO] -  92.6 MB (94.5%)
+2023-10-15 01:22:45.910 [ INFO] -  92.6 MB (95.6%)
+2023-10-15 01:22:45.942 [ INFO] -  92.6 MB (96.6%)
+2023-10-15 01:22:45.964 [ INFO] -  92.6 MB (97.7%)
+2023-10-15 01:22:46.172 [ INFO] -  92.6 MB (98.8%)
+2023-10-15 01:22:46.199 [ INFO] -  92.6 MB (99.8%)
+2023-10-15 01:22:46.203 [ INFO] -  92.6 MB (100.0%)
+2023-10-15 01:22:46.203 [ INFO] Processing  time : 0:00:30.595809
+2023-10-15 01:22:46.204 [ INFO] Downloading time : 0:00:11.590237
+2023-10-15 01:22:46.204 [ INFO] Total time       : 0:00:42.186046
+2023-10-15 01:22:46.204 [ INFO] Download rate    : 7.3 MB/s
+2023-10-15 01:22:46.204 [ INFO] Done
+
+ ... end of get_nemo_anfc_uvts
+
+ncks: ERROR file nemo_ssh_20231016.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'nemo_ssh_20231016.nc': No such file or directory
+ncap2: ERROR file ssh2.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncap2: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+ncks: ERROR file ssh3.nc not found. It does not exist on the local filesystem, nor does it match remote filename patterns (e.g., http://foo or foo.bar.edu:file).
+ncks: HINT file-not-found errors usually arise from filename typos, incorrect paths, missing files, or capricious gods. Please verify spelling and location of requested file. If the file resides on a High Performance Storage System (HPSS) accessible via the 'hsi' command, then add the --hpss option and re-try command.
+rm: cannot remove 'ssh2.nc': No such file or directory
+rm: cannot remove 'ssh3.nc': No such file or directory
+ncdump: nemo_ssh_20231016.nc: No such file or directory
+ncdump: nemo_ssh_20231016.nc: No such file or directory
+ncgen: cdf.cdf line 5: syntax error, unexpected ';'
+Traceback (most recent call last):
+  File "write_nemo_file.py", line 11, in <module>
+    infile2 = Dataset(in2,'r')
+  File "src/netCDF4/_netCDF4.pyx", line 2353, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 1963, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'nemo_ssh_20231016.nc'
+rm: cannot remove 'nemo_ssh_20231016.nc': No such file or directory
+
+ +++ End of get nemo 06h +++
+
+ ... merge downloaded files into file nemo_npo0.08_20231015.nc
+cdo    mergetime: Open failed on >nemo_20*.nc<
+                  No such file or directory
+mv: cannot stat 'nemo_20*.nc': No such file or directory
+ ... fix longitudes
+ ... include new attributes: _FillValue and missing values
+cdo    setmissval: Open failed on >tmp1<
+                   No such file or directory
+cdo    setmissval: Open failed on >tmp2<
+                   No such file or directory
+rm: cannot remove 'tmp*': No such file or directory
+
+ ... check integrity of downloaded file 
+
+
+ ... after check procedure check status is 0
+
+ ... %%%%%% Downloaded file is OK !! %%%%%%
+
+ ... move file to storage 
+
+mv: cannot stat 'nemo_npo0.08_20231015.nc': No such file or directory
+
+ ==> 2023/10/15 01:22:48 FINISHED downloading OGCM nemo for ROMS <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/15 01:22:48 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 04: make input files for ROMS <==
+
+
+ ... today is 2023-10-15, ogcm is nemo
+ ... will read 5 time steps every 24 hours
+ ... will run for 1 day(s)
+ ... donor file is /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/nemo_npo0.08_20231015.nc
+
+
+     ... horizontal interpolation: remap donor ogcm to roms grid
+
+ ... found file grid_r_npo0.08.nc; will use it !!
+
+cdo    genbil: Open failed on >/home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/nemo_npo0.08_20231015.nc<
+               No such file or directory
+cdo    remap: Open failed on >/home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/nemo_npo0.08_20231015.nc<
+              No such file or directory
+
+     ... vertical interpolation: interp remaped ogcm to sigma level
+
+cdo    intlevel3d: Open failed on >remaped_nemo_20231015.nc<
+                   No such file or directory
+cp: cannot stat 'remaped_nemo_20231015_sig.nc': No such file or directory
+     ... inpaint nans on remaped, sigma coord ogcm
+
+     ... will use a temporary roms mask /home/ivans/operational/pacific_npo_2gr/forecast/d-interp/roms_npo0.08_07e_tmpmsk.nc
+     ... to avoid inpainting on land points
+
+ 
+ +++ Starting python program to inpaint nans on donor OGCM +++
+ 
+ ... arguments are: ['/home/ivans/scripts/4roms/make_clim_step01_inpaint_nans_on_remaped_ogcm.py', '20231015', 'nemo', '5', '30', '24', '/home/ivans/operational/roms/grids/grid_npo0.08_07e.nc', 'remaped_nemo_20231015', '/home/ivans/operational/pacific_npo_2gr/forecast/d-interp/roms_npo0.08_07e_tmpmsk.nc']
+ 
+ 
+ ... ogcm is nemo
+ ... ntimes is 5
+ ... storage interval is 24.0
+ ... start date is 2023/10/15
+ 
+Traceback (most recent call last):
+  File "/home/ivans/scripts/4roms/make_clim_step01_inpaint_nans_on_remaped_ogcm.py", line 58, in <module>
+    inpfile = Dataset(file2 + '_sig.nc','r')
+  File "src/netCDF4/_netCDF4.pyx", line 2353, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 1963, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'remaped_nemo_20231015_sig.nc'
+     ... re-write interpolated ogcm vars on staggered grid
+
+ +++ Scripts to create climatology & obc files for ROMS +++
+
+ ... will output empty netcdf files named clm.nc & bry.nc 
+ ... ref date, nlon, nlat, nsig = 20000101, 601, 376, 30
+
+ 
+ +++ Starting python program to write vars on clim files +++
+ 
+ ... arguments are: ['/home/ivans/scripts/4roms/make_clim_step02_write_clm_bry_files.py', '5', '20231015', 'nemo', '0.', '1', '2', '4', '10.0', '4.0', '150', '150', '30', 'remaped_nemo_20231015_nonans.nc', '/home/ivans/operational/roms/grids/grid_npo0.08_07e.nc', 'input_clm_npo0.08_07e_20231015_nemo.nc', 'input_bry_npo0.08_07e_20231015_nemo.nc']
+ 
+ 
+ ... ogcm is nemo
+ ... ntimes is 5
+ ... rotation ang is 0.0
+ ... start date is 2023/10/15
+ 
+Traceback (most recent call last):
+  File "/home/ivans/scripts/4roms/make_clim_step02_write_clm_bry_files.py", line 73, in <module>
+    INP = Dataset(inpfile, 'r')
+  File "src/netCDF4/_netCDF4.pyx", line 2353, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 1963, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: b'remaped_nemo_20231015_nonans.nc'
+
+ ==> 2023/10/15 01:22:51 FINISHED making input files for ROMS <==
+
+
+ ==> Sourcing forecast_setup.sh for general forecast settings <==
+
+ ... roms grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... grid box is -166 -118 16 46
+
+ ... grid size is 601 lons,  376 lats, 30 layers
+
+
+ ==> 2023/10/15 01:22:51 HERE I am @ /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary for step 05: run ROMS <==
+
+
+ ... today is 2023-10-15
+
+ ... roms grid size is 601 x 376 x 30
+ ... roms grid limits are: x1,x2 = -166,-118, y1,y2 = 16,46
+ ... roms grid resolution is regular: 0.08 x 0.08
+
+ ... will store outputs in folder /home/ivans/operational/pacific_npo_2gr/forecast/d-storage
+
+ ... start day is 20231015
+ ... the expt is npo0.08_07e_20231015
+ ... will run for 1 day(s)
+
+ ... the donor file is /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/nemo_npo0.08_20231015.nc
+ ... will read donor 5 time steps every 24 hours
+
+ ... the grid file is /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+ ... the ngc  file is /home/ivans/operational/roms/grids/ngc_npo0.08_07e+npo0.0267_01c.nc
+ ... the nudg file is /home/ivans/operational/roms/nudge/nudge_npo0.08_07e_exp_strong.nc
+ ... the tide file is /home/ivans/operational/roms/tides/tide_npo0.08_07e_2023_ref2000.nc
+
+
+ ... will read roms input files from /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_in
+ ... will output roms results to /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_out
+
+ ... /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_in DOES NOT exist, will create it
+ ... /home/ivans/operational/pacific_npo_2gr/forecast/d-temporary/roms_out DOES NOT exist, will create it
+
+ ... make links to ROMS input files
+
+
+ ... accessing ROMS grid file /home/ivans/operational/roms/grids/grid_npo0.08_07e.nc
+
+
+ ... accessing ROMS grid file /home/ivans/operational/roms/grids/grid_npo0.0267_01c.nc
+
+
+ ... accessing ROMS ngc file /home/ivans/operational/roms/grids/ngc_npo0.08_07e+npo0.0267_01c.nc
+
+
+ ... accessing ROMS tide file /home/ivans/operational/roms/tides/tide_npo0.08_07e_2023_ref2000.nc
+
+
+ ... this implementation uses no rivers
+
+
+ ... accessing ROMS nudg file /home/ivans/operational/roms/nudge/nudge_npo0.08_07e_exp_strong.nc
+
+
+ ... didnt find ROMS init file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231014/roms_rst_npo0.08_07e_20231015_nemo.nc
+
+ ... will use file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/input_clm_npo0.08_07e_20231015_nemo.nc
+
+
+ ... didnt find ROMS init file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231014/roms_rst_npo0.0267_01c_20231015_nemo.nc
+
+ ... will use file /home/ivans/operational/pacific_npo_2gr/forecast/d-storage/20231015/input_clm_npo0.0267_01c_20231015_nemo.nc
+
+
+ +++ Starting script to interp climatology to higher resolution +++
+
+ ... DIDNT find file /home/ivans/oper/pacific_npo_2gr/forecast/d-storage/20231015/input_clm_npo0.08_07e_20231015_glby.nc, exiting now 
+
+ ... DIDNT find file input_clm_npo0.0267_01c_20231015_nemo.nc, exiting !!
+
+
+ ==> FINISHED ROMS/WW3 7-DAY FORECAST @ 2023/10/15 01:22:51 <== 
+

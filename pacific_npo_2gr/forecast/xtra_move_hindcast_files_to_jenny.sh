@@ -1,93 +1,92 @@
 #!/bin/bash
 #
 
-        echo
-        echo " +++ Move HINDCAST files to storage JENNY +++ "
-        echo
+	echo
+	echo " +++ Move HINDCAST files to storage JENNY +++ "
+	echo
 
-        set -o nounset
-        set -o errexit
-        set -o pipefail
+	set -o nounset
+	set -o errexit
+	set -o pipefail
 
 	today=$1
-	ogcm='glby'
+	yr=${today:0:4}
+	mm=${today:4:2}
+	dd=${today:6:2}
 
-	here=`pwd`
+	yesterday=`find_yesterday.sh $yr $mm $dd`
 
-	source forecast_setup.sh
+####################### FILE NAMES
 
+	here=$PWD
 	sto1="$here/d-storage/$today"
-        sto2="$here/d-storage/$yesterday"
+	sto2="$here/d-storage/$yesterday"
+	jenny="$HOME/storage-jenny/operational/${today}/hindcast"
 
-	##################################### MAKE TODAY'S DIR IN STORAGE JENNY
+	wind="$sto2/gfs_${yesterday}.nc"
 
-        source step11_sub00_check_jenny_dirs.sh
-	cd $here
+	roms1="$sto2/roms_zlevs_jenny_npo0.08_07e_${yesterday}_glby.nc"
+	roms2="$sto2/roms_zlevs_jenny_npo0.0267_01c_${yesterday}_glby.nc"
 
+	ogcm1="$sto2/glby_zlevs_jenny_npo0.08_07e_${yesterday}.nc"
+	ogcm2="$sto2/nemo_zlevs_jenny_npo0.08_07e_${yesterday}.nc"
 
-        #################################### EXTRACT DAY 1 FOR HINDCAST DIR
+	wave1="$sto2/ww3_his_npo0.33_${yesterday}.nc"
+	wave2="$sto2/noaa_ww3_npo0.25_${yesterday}.nc"
 
-        echo ; echo " ... extract DAY 1 from files in $sto2 to dir $jenny  "; echo
+	sat="$sto2/cmems_sla_vels_npo0.25_${yesterday}.nc"
+	mld="$sto2/mld_npo0.08_07e_${yesterday}.nc"
 
-	roms1="roms_zlevs_jenny_npo0.08_07e_${yesterday}_glby.nc"
-	roms2="roms_zlevs_jenny_npo0.0267_01c_${yesterday}_glby.nc"
-	ogcm1="glby_zlevs_jenny_npo0.08_07e_${yesterday}.nc"
-	ogcm2="nemo_zlevs_jenny_npo0.08_07e_${yesterday}.nc"
+	####### files in the storage
 
-	wave1="ww3_his_npo0.33_${yesterday}.nc"
-	wave2="noaa_ww3_npo0.25_${yesterday}.nc"
+	swind="$jenny/Wind_Models/gfs_${today}.nc"
+	swave1="$jenny/Wave_Models/ww3_toc_${today}.nc"
+	swave2="$jenny/Wave_Models/ww3_noaa_${today}.nc"
 
-	sat="cmems_sla_vels_atl0.25_${yesterday}.nc"
-	mld="mld_npo0.08_07e_${yesterday}.nc"
+	sroms1="$jenny/Regional_Ocean_Models/roms+hycom_${today}_1.nc"
+	sroms2="$jenny/Regional_Ocean_Models/roms+hycom_${today}_1.nc"
 
-        outsat="sat_sla+vel_${today}.nc"
-        outmld="mld+langmuir_${today}.nc"
+	sogcm1="$jenny/Regional_Ocean_Models/hycom_${today}.nc"
+	sogcm2="$jenny/Regional_Ocean_Models/nemo_${today}.nc"
 
-        #################  WAVE MODELS: both TOC WW3 and NOAA WW3 are hourly
-
-	if [ -e hindcast.nc ]; then 
-		echo " ... file hindcast.nc exists, I am removing it !!!"; echo
-		rm hindcast.nc
-	fi
-
-        echo; echo " ... WAVE models "; echo
-
-        ncks -h -d time,0,24 $sto2/$wave1  hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Wave_Models/ww3_toc_${today}.nc; wait
-	if [ -e hindcast.nc ]; then rm hindcast.nc; fi
-
-        ncks -h -d time,0,24 $sto2/$wave2  hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Wave_Models/ww3_noaa_${today}.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
-
-        #################  WIND MODEL: GFS is 3 hourly
-
-        echo ; echo " ... WIND models "; echo
-
-        ncks -h -d time,0,8 $sto2/gfs_${yesterday}.nc hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Wind_Models/gfs_${today}.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+	smld="$jenny/Regional_Ocean_Models/mld+langmuir_${today}.nc"
+	ssat="$jenny/Regional_Ocean_Models/sat_sla+vel_${today}.nc"
 
 
-        ##################  OCEAN MODELS: ROMS is hourly, HYCOM is 6 hourly, NEMO is 6 hourly
+###################### LOOP TRHOUGH FILES
 
-        echo; echo " ... OCEAN models"; echo
+	names_in=($roms1 $roms2 $ogcm1 $ogcm2 $wave1 $wave2 $wind $mld $sat)
+	names_out=($sroms1 $sroms2 $sogcm1 $sogcm2 $swave1 $swave2 $swind $smld $ssat) 
+	ndat=(24 24 4 4 24 24 8 4 0)
 
-        ncks -h -d time,0,24 $sto2/$roms1 hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/roms+hycom_${today}_1.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+	for n in 0 1 2 3 4 5 6 7 8; do
 
-        ncks -h -d time,0,24 $sto2/$roms2 hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/roms+hycom_${today}_2.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+		echo 
+		echo " ==> doing file  ${names_in[n]}"
+		echo
 
-        ncks -h -d time,0,4  $sto2/$ogcm1 hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/hycom_${today}.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+		if [ -e ${names_in[n]} ]; then
+			ntimes=`ncdump -h ${names_in[n]} | grep "UNLIMITED" | \
+			awk '{print $6}' | sed -e 's/(//g'`
+			echo " ... ntimes $ntimes, ndat ${ndat[n]}"; echo
+			if [ $ntimes -ge ${ndat[n]} ]; then 
 
-        ncks -h -d time,0,4  $sto2/$ogcm2 hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/nemo_${today}.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+				echo
+				echo " ... the files is OK, will move it to storage"
+				echo
 
-	ncks -h -d time,0,4  $sto2/$mld hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/mld+langmuir_${today}.nc; wait
-	if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+				ncks -h -d time,0,${ndat[n]} ${names_in[n]} hindcast.nc; wait
+				mv hindcast.nc ${names_out[n]}; wait
+			fi
 
-	cp $sto2/$sat hindcast.nc ; wait ; mv hindcast.nc $jenny/hindcast/Regional_Ocean_Models/sat_sla+vel_${today}.nc; wait
-        if [ -e hindcast.nc ]; then rm hindcast.nc; fi
-	
+		fi
+		if [ -e hindcast.nc ]; then rm hindcast.nc; fi
+	done
 
-	### the end
+	echo
+	echo " +++ END of Script +++"
+	echo
+
+
+############################## the end
 
